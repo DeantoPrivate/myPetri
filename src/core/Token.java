@@ -20,6 +20,9 @@ public class Token {
     private Integer _id;
     private ArrayList<Property> _properties;
 
+    public Integer GetID(){
+        return  _id;
+    }
     public Token(){
         _id = getNextID();
         _name = _defaultName;

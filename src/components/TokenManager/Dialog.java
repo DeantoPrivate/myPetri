@@ -3,8 +3,6 @@ package components.TokenManager;
 import base.TokensBase;
 import core.Token;
 import fileSavers.FSRToken;
-import javafx.scene.layout.Pane;
-import javafx.stage.DirectoryChooser;
 import org.w3c.dom.css.RGBColor;
 
 import javax.swing.*;

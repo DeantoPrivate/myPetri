@@ -1,7 +1,5 @@
 package internalComponents;
 
-import com.sun.prism.PixelFormat;
-import com.sun.prism.j2d.J2DTexture;
 import core.StringValue;
 
 import javax.swing.*;

@@ -1,7 +1,6 @@
 package base;
 
 import core.Token;
-import javafx.scene.layout.Pane;
 import views.VToken;
 
 import javax.swing.*;

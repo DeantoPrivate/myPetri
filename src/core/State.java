@@ -11,7 +11,14 @@ public class State {
     private Integer _id;
     private static Integer ids = 0;
 
+    // TODO сделать интерфейс отдающий имена и id
+    public Integer GetID(){
+        return _id;
+    }
     private String _name;
+    public String GetName(){
+        return _name;
+    }
     public static String DefaultStateName = "nonamed state";
 
     private Integer getNextId(){
