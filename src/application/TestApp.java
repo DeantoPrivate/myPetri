@@ -1,7 +1,6 @@
 package application;
 
-import components.TokenManager.Dialog;
-import internalComponents.WWToken;
+import components.Constructor.Constructor;
 
 /**
  * Created by Денис on 11.03.14.
@@ -9,10 +8,11 @@ import internalComponents.WWToken;
 public class TestApp {
     public static void main(String arg[]){
 
-        Dialog d = new Dialog();
-        d.Show();
+        //Dialog d = new Dialog();
+        //d.Show();
 
-
+        Constructor c = new Constructor();
+        c.setVisible(true);
 
 
     }

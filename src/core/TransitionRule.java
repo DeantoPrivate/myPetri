@@ -4,6 +4,7 @@ package core;
  * Created by deanto on 18.03.14.
  *
  * the rool for transition when it can start
+ * transition Rule can contain multiple rules. but wokrs the same. just process multiple rules and AND OR ... statements between rules
  */
 public class TransitionRule {
 
