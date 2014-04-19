@@ -67,7 +67,7 @@ public class TransitionRule {
         }
 
         int construct = JOptionPane.showOptionDialog(null,"Do you want to specify outgoung Token?","Option",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,null,1);
-        if (construct==1){
+        if (construct==0){
             Token = new WWToken();
             Token.ConstructToken();
             Token outgoing = Token.GetToken();
@@ -81,6 +81,8 @@ public class TransitionRule {
     }
 
     public Token get_outgoingToken(){
+        if (_outgoingToken==null) return null;
+
         return _outgoingToken.Clone();
     }
 

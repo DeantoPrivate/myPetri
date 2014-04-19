@@ -73,7 +73,7 @@ public class Transition {
             _incomingState.TokenGone(token);
 
         boolean copy = false;
-        if (rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_KEEP) || rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_KEEP_TRANSFER))
+        if (rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_TRANSFER) || rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_KEEP_TRANSFER))
             copy = true;
 
         if (copy)
