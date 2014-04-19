@@ -13,7 +13,7 @@ public class Transition {
     }
 
     public void assignTransitionRule(TransitionRule rule){
-        _rule = _rule;
+        _rule = rule;
     }
 
     public boolean canBeActivated(){
@@ -35,7 +35,6 @@ public class Transition {
     public boolean isActive(){
         return _active;
     }
-
 
     // indicates transaction was started
     private boolean _wasStarted = false;
@@ -88,7 +87,6 @@ public class Transition {
     // revert back
     public boolean Revert(){
         if (!_wasStarted) return true;
-
 
         return false;
     }

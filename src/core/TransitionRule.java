@@ -22,10 +22,10 @@ public class TransitionRule {
     String _actionIncomingToken = INCOMING_TOKEN_REMOVE;
 
     // what we can do with incoming token
-    public static String INCOMING_TOKEN_REMOVE;
-    public static String INCOMING_TOKEN_TRANSFER;
-    public static String INCOMING_TOKEN_KEEP;
-    public static String INCOMING_TOKEN_KEEP_TRANSFER;
+    public static String INCOMING_TOKEN_REMOVE = "INCOMING_TOKEN_REMOVE";
+    public static String INCOMING_TOKEN_TRANSFER = "INCOMING_TOKEN_TRANSFER";
+    public static String INCOMING_TOKEN_KEEP = "INCOMING_TOKEN_KEEP";
+    public static String INCOMING_TOKEN_KEEP_TRANSFER = "INCOMING_TOKEN_KEEP_TRANSFER";
 
 
     // outgoing pattern may be null - it means rule does not put any token into outgoung state
@@ -55,10 +55,12 @@ public class TransitionRule {
         if (pattern!=null)
             _incomingTokenPattern = pattern;
 
-        if (JOptionPane.showOptionDialog(null,"Should incoming token stays in incoming state?","Option",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,null,1) == 1)
+        if (JOptionPane.showOptionDialog(null,"Should incoming token stays in incoming state?","Option",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,null,1) == 0)
             _actionIncomingToken = INCOMING_TOKEN_KEEP;
 
-        if (JOptionPane.showOptionDialog(null,"Should incoming token be transfered?","Option",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,null,1) == 1){
+        int choise = JOptionPane.showOptionDialog(null,"Should incoming token be transfered?","Option",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,null,1);
+        if (choise==0)
+        {
             if (_actionIncomingToken.equals(INCOMING_TOKEN_KEEP))
                 _actionIncomingToken = INCOMING_TOKEN_KEEP_TRANSFER;
             else _actionIncomingToken = INCOMING_TOKEN_TRANSFER;
@@ -100,7 +102,7 @@ public class TransitionRule {
                         found = true;
 
                         // check values of properties
-                        if (!template.get_properties().get(i).getValue().equals(incoming.get_properties().get(j).getValue()))
+                        if (!template.get_properties().get(i).getValue().getStringValue().equals(incoming.get_properties().get(j).getValue().getStringValue()))
                             throw e;
                     }
                     if (found) break;

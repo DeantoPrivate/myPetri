@@ -1,10 +1,45 @@
 package application;
 
+import core.State;
+import core.Token;
+import core.Transition;
+import core.TransitionRule;
+import internalComponents.WWToken;
+
 /**
  * Created by Денис on 11.03.14.
  */
 public class TestApp {
     public static void main(String arg[]){
+
+
+        State s1 = new State();
+        s1.ChangeName("s1");
+
+        State s2 = new State();
+        s2.ChangeName("s2");
+
+        Transition transition = new Transition();
+        transition.buildTransition(s1,s2);
+
+        WWToken wt1 = new WWToken();
+        wt1.ConstructToken();
+
+        Token t1 = wt1.GetToken();
+
+        s1.LocateToken(t1);
+
+        TransitionRule r1 = new TransitionRule();
+        r1.constructRule();
+
+        transition.assignTransitionRule(r1);
+
+        if (transition.canBeActivated()){
+            transition.Activate();
+            transition.Exec();
+        }
+
+        int t=0;
 
         //Dialog d = new Dialog();
         //d.Show();
