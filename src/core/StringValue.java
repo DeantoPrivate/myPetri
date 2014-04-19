@@ -30,6 +30,11 @@ public class StringValue implements IValue {
         _value = newvalue;
     }
 
+    public IValue Clone(){
+        StringValue clone = new StringValue();
+        clone._value = this._value;
+        return clone;
+    }
 }
 
 

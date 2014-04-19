@@ -41,4 +41,15 @@ public class Token {
     public ArrayList<Property> get_properties(){
         return _properties;
     }
+
+
+    public Token Clone(){
+        Token clone = new Token();
+        clone._name = this._name;
+
+        for (int i=0;i<this._properties.size();i++)
+            clone._properties.add(this._properties.get(i).Clone());
+
+        return clone;
+    }
 }

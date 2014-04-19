@@ -13,6 +13,8 @@ public interface IValue {
     // id to identify the value object
     String getId();
 
+    IValue Clone();
+
     static String StringValue = "StringValue";
     static String IntegerValue = "IntegerValue";
 }

@@ -28,4 +28,11 @@ public class Property{
         _name = name;
         _value = value;
     }
+
+    public Property Clone(){
+        Property clone = new Property();
+        clone._name = this._name;
+        clone._value=this._value.Clone();
+        return clone;
+    }
 }

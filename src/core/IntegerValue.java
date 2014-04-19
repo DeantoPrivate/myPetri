@@ -28,4 +28,9 @@ public class IntegerValue implements IValue {
     public void SetValue(Integer newvalue){
         _value = newvalue;
     }
+
+    public IValue Clone(){
+        IntegerValue clone = new IntegerValue(this._value);
+        return clone;
+    }
 }
