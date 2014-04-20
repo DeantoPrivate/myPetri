@@ -3,10 +3,14 @@ package components.TokenManager;
 import base.TokensBase;
 import core.Token;
 import fileSavers.FSRToken;
+import internalComponents.WWToken;
 import org.w3c.dom.css.RGBColor;
+import views.VToken;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +21,7 @@ import java.util.ArrayList;
 /**
  * Created by Денис on 14.03.14.
  */
-public class Dialog extends JDialog implements ActionListener{
+public class Dialog extends JDialog implements ActionListener, ListSelectionListener {
 
     public static String ButtonSaveBase = "saveBase";
     public static String ButtonLoadBase = "loadBase";
@@ -70,6 +74,7 @@ public class Dialog extends JDialog implements ActionListener{
 
             newToken = new JButton(ButtonNewToken);
                 newToken.setBounds(200,580,100,20);
+                newToken.addActionListener(this);
             saveToken = new JButton(ButtonSaveToken);
                 saveToken.setBounds(300,580,100,20);
             deleteToken = new JButton(ButtonDeleteToken);
@@ -105,6 +110,49 @@ public class Dialog extends JDialog implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==loadBase)
             LoadBase();
+        if (e.getSource()==newToken)
+            newToken();
+        if (e.getSource()==saveBase)
+            SaveBase();
+
+    }
+
+    void SaveBase(){
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Выберите папку, куда сохранить базу");
+        fileChooser.showDialog(null, "SelectThisFolder");
+
+        File directory = fileChooser.getCurrentDirectory();
+
+        for (Token token : TokensBase.GetTokenBase().GetTokens()){
+
+            String tokenFileName = token.GetName()+".txt";
+
+            File exists = null;
+            File files[] = directory.listFiles();
+            for (int i=0;i<files.length;i++)
+                if (files[i].isFile())
+                    if (files[i].getName().equals(tokenFileName))
+                        exists = files[i];
+
+            if (exists!=null)
+                exists.delete();
+
+            File file = new File(directory.getAbsolutePath()+"/"+tokenFileName);
+            FSRToken.SaveToFile(token,file);
+
+
+        }
+
+
+    }
+
+    void newToken(){
+        WWToken newOne = new WWToken();
+        newOne.ConstructToken();
+
+        TokensBase.GetTokenBase().AddToken(newOne.GetToken());
+        updatePanelToken_base();
     }
 
     void LoadBase(){
@@ -120,6 +168,8 @@ public class Dialog extends JDialog implements ActionListener{
     TokensBase.GetTokenBase().Clear();
 
     ProcessDirectory(file);
+
+
 
     //TokensBase.GetTokenBase().ShowTokensInSystem();
 
@@ -146,20 +196,37 @@ public class Dialog extends JDialog implements ActionListener{
         Status.removeAll();
         Status.add(new JLabel(_status));
     }
+
+    JList token_list;
+
     void updatePanelToken_base(){
         String token_names[] = new String[TokensBase.GetTokenBase().GetTokens().size()];
         for (int i=0;i<token_names.length;i++)
             token_names[i] = TokensBase.GetTokenBase().GetTokens().get(i).GetName();
 
-        JList token_list = new JList(token_names);
+        token_list = new JList(token_names);
         token_list.setLayoutOrientation(JList.VERTICAL);
+        token_list.addListSelectionListener(this);
 
-        PanelToken_base.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        PanelToken_base.removeAll();
         PanelToken_base.add(token_list);
+        PanelToken_base.updateUI();
+
+        PanelToken_view.removeAll();
+        PanelToken_view.updateUI();
 
     }
 
 
+    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        int pos = token_list.getSelectedIndex();
+        VToken vToken = new VToken(TokensBase.GetTokenBase().GetTokens().get(pos));
+
+        PanelToken_view.removeAll();
+        PanelToken_view.add(vToken);
+        PanelToken_view.updateUI();
 
 
+    }
 }

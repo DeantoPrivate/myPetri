@@ -22,6 +22,7 @@ public class VToken extends JPanel{
         for (int i=0;i<properties.size();i++)
             _VTokenProperties.add(new WWProperty(properties.get(i)));
 
+        setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         add(new JLabel(vTokenName));
         for (int i=0;i<_VTokenProperties.size();i++)
         add(_VTokenProperties.get(i));

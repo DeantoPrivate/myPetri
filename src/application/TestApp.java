@@ -1,5 +1,6 @@
 package application;
 
+import components.TokenManager.Dialog;
 import core.State;
 import core.Token;
 import core.Transition;
@@ -12,7 +13,9 @@ import internalComponents.WWToken;
 public class TestApp {
     public static void main(String arg[]){
 
-
+        Dialog a = new Dialog();
+        a.Show();
+/*
         State s1 = new State();
         s1.ChangeName("s1");
 
@@ -37,6 +40,7 @@ public class TestApp {
         if (transition.canBeActivated()){
             transition.Activate();
             transition.Exec();
+            transition.Deactivate();
         }
 
         int t=0;

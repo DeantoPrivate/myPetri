@@ -16,7 +16,8 @@ import java.util.concurrent.ExecutionException;
  */
 public class FSRToken {
     public static String FileToken = "Token File";
-    public static void SaveToFile(Token token){
+    public static void SaveToFile(Token token,File file){
+
         StringBuilder sFile = new StringBuilder();
         sFile.append(FileToken+'\n');
         sFile.append(token.GetName()+'\n');
@@ -25,21 +26,26 @@ public class FSRToken {
         for (int i=0;i<token_properties.size();i++)
             sFile.append(FSRProperty.SaveProperty(token_properties.get(i)));
 
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Сохранить токен "+token.GetName());
-        fileChooser.showSaveDialog(null);
-        File file = fileChooser.getSelectedFile();
         String filename = file.getAbsolutePath();
         try{
-        FileWriter fw = new FileWriter(filename);
-        BufferedWriter bw = new BufferedWriter(fw);
+            FileWriter fw = new FileWriter(filename);
+            BufferedWriter bw = new BufferedWriter(fw);
 
-        fw.write(sFile.toString());
-        fw.close();
+            fw.write(sFile.toString());
+            fw.close();
         }catch (Exception e)
         {
             JOptionPane.showMessageDialog(null,"Запись в файл "+filename+" не удалась!");
         }
+    }
+    public static void SaveToFile(Token token){
+
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Сохранить токен "+token.GetName());
+        fileChooser.showSaveDialog(null);
+        File file = fileChooser.getSelectedFile();
+
+        SaveToFile(token,file);
 
     }
 

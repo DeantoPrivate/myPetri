@@ -65,13 +65,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestApp.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TestApp.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/TestApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="44" selection-start="731" selection-end="731" vertical-scroll-proportion="0.41584158" vertical-offset="410" max-vertical-offset="1343">
+            <state line="17" column="2" selection-start="348" selection-end="348" vertical-scroll-proportion="19.28" vertical-offset="771" max-vertical-offset="1411">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dialog.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="198" column="0" selection-start="6057" selection-end="6057" vertical-scroll-proportion="0.4520548" vertical-offset="3168" max-vertical-offset="4046">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FSRState.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="1916" selection-end="1916" vertical-scroll-proportion="-34.68" vertical-offset="0" max-vertical-offset="1003">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FSRToken.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="-4.76" vertical-offset="85" max-vertical-offset="1700">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,12 +127,9 @@
         <option value="$PROJECT_DIR$/src/fileSavers/FSRProperty.java" />
         <option value="$PROJECT_DIR$/src/components/WWToken.java" />
         <option value="$PROJECT_DIR$/src/application/CreateToken.java" />
-        <option value="$PROJECT_DIR$/src/views/VToken.java" />
         <option value="$PROJECT_DIR$/src/components/WWProperty.java" />
         <option value="$PROJECT_DIR$/src/internalComponents/WWToken.java" />
-        <option value="$PROJECT_DIR$/src/fileSavers/FSRToken.java" />
         <option value="$PROJECT_DIR$/src/base/TokensBase.java" />
-        <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
         <option value="$PROJECT_DIR$/src/internalComponents/WWStringValue.java" />
         <option value="$PROJECT_DIR$/src/core/State.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/FSRState.java" />
@@ -125,13 +151,17 @@
         <option value="$PROJECT_DIR$/src/core/TransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/Transition.java" />
         <option value="$PROJECT_DIR$/src/application/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/views/VToken.java" />
+        <option value="$PROJECT_DIR$/src/fileSavers/FSRToken.java" />
+        <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="126" />
-    <option name="width" value="1697" />
-    <option name="height" value="1080" />
+    <option name="x" value="128" />
+    <option name="y" value="81" />
+    <option name="width" value="1725" />
+    <option name="height" value="795" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -159,7 +189,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,6 +220,24 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -206,7 +253,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="fileSavers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,6 +295,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -330,6 +378,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -355,19 +416,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -451,17 +499,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="126" y="0" width="1697" height="1080" extended-state="0" />
-    <editor active="false" />
+    <frame x="128" y="81" width="1725" height="795" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2053476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49514562" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26576576" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -471,12 +518,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20866382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20515896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2053476" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -502,6 +550,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/application/TestApp.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="44" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="410" max-vertical-offset="1343">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/TestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <folding>
             <element signature="imports" expanded="true" />
@@ -512,7 +569,9 @@
     <entry file="file://$PROJECT_DIR$/src/core/State.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="0" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="986">
-          <folding />
+          <folding>
+            <element signature="e#1044#1051#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,39 +733,14 @@
         <state line="27" column="26" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1122" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/VToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="578" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/internalComponents/WWStringValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="0.103869654" vertical-offset="0" max-vertical-offset="901" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="104" selection-end="104" vertical-scroll-proportion="0.13492064" vertical-offset="0" max-vertical-offset="2839" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="33" selection-end="33" vertical-scroll-proportion="0.06746032" vertical-offset="0" max-vertical-offset="1122" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="24" selection-start="890" selection-end="890" vertical-scroll-proportion="-15.04" vertical-offset="49" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="50" selection-start="408" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1717" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1916" selection-end="1916" vertical-scroll-proportion="0.875" vertical-offset="562" max-vertical-offset="1139" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/TransitionRules.java">
@@ -721,11 +755,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Cloneable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="1338" selection-end="1338" vertical-scroll-proportion="-18.36" vertical-offset="51" max-vertical-offset="646">
-          <folding>
-            <element signature="e#0#1353#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="35" column="17" selection-start="1338" selection-end="1338" vertical-scroll-proportion="-18.36" vertical-offset="51" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/StringValue.java">
@@ -741,22 +771,7 @@
           <folding>
             <element signature="e#312#313#0" expanded="false" />
             <element signature="e#338#339#0" expanded="false" />
-            <marker date="1397912891663" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="30" selection-start="2762" selection-end="2776" vertical-scroll-proportion="-21.76" vertical-offset="1122" max-vertical-offset="2414">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/CreateToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="5" selection-start="677" selection-end="677" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="833">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -771,16 +786,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="-7.32" vertical-offset="72" max-vertical-offset="714">
           <folding>
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="false" />
+            <element signature="e#378#379#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="-7.32" vertical-offset="395" max-vertical-offset="986">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -797,8 +805,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="0" selection-start="2477" selection-end="2477" vertical-scroll-proportion="-11.24" vertical-offset="1164" max-vertical-offset="1683">
           <folding>
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#779#780#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -807,14 +815,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="0" selection-start="1886" selection-end="1886" vertical-scroll-proportion="-5.36" vertical-offset="699" max-vertical-offset="2380">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/CreateToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="680" selection-end="680" vertical-scroll-proportion="-16.08" vertical-offset="6" max-vertical-offset="833">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/TestApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="44" selection-start="731" selection-end="731" vertical-scroll-proportion="0.41584158" vertical-offset="410" max-vertical-offset="1343">
+        <state line="17" column="2" selection-start="348" selection-end="348" vertical-scroll-proportion="19.28" vertical-offset="771" max-vertical-offset="1411">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/VToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="9" selection-start="842" selection-end="842" vertical-scroll-proportion="0.7988722" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="24" selection-start="977" selection-end="993" vertical-scroll-proportion="-0.2236842" vertical-offset="714" max-vertical-offset="2414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.34398496" vertical-offset="395" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="1916" selection-end="1916" vertical-scroll-proportion="-34.68" vertical-offset="0" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="812" selection-end="812" vertical-scroll-proportion="0.88778406" vertical-offset="4" max-vertical-offset="1122">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="-4.76" vertical-offset="85" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="0" selection-start="6057" selection-end="6057" vertical-scroll-proportion="0.4520548" vertical-offset="3168" max-vertical-offset="4046">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
