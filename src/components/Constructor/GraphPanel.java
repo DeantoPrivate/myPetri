@@ -17,7 +17,6 @@ public class GraphPanel extends JPanel {
 
     public void Init(){
         setLayout(null);
-        setBounds(0,0,800,800);
 
         setBorder(BorderFactory.createLineBorder(Color.RED));
 

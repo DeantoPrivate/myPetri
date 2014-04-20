@@ -13,6 +13,7 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
     public static String GraphicalConstructorTitle = "Construcror";
 
     private GraphPanel graphPanel;
+    private StatusPanel statusPanel;
 
     public void Show(){
         Init();
@@ -29,7 +30,14 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
             graphPanel.Init();
             add(graphPanel);
 
-        setBounds(0, 0, 1280, 828);
+            statusPanel = new StatusPanel();
+            statusPanel.setBounds(800,0,480,800);
+            statusPanel.Init();
+            add(statusPanel);
+
+
+
+        setBounds(0, 0, 1286, 828);
         setResizable(false);
     }
 
