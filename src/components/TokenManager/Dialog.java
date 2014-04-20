@@ -26,13 +26,13 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
     public static String ButtonSaveBase = "saveBase";
     public static String ButtonLoadBase = "loadBase";
     public static String ButtonNewToken = "newToken";
-    public static String ButtonSaveToken = "saveToken";
+    public static String ButtonEditToken = "editToken";
     public static String ButtonDeleteToken = "deleteToken";
     public static String ButtonCopyToken = "copyToken";
     public static String ComponentTokenManagerTitle = "Token Manager";
 
     private JPanel Panel,PanelButtons,PanelToken_base,PanelToken_view,Status;
-    private JButton saveBase,loadBase, newToken,saveToken,deleteToken,copyToken;
+    private JButton saveBase,loadBase, newToken, editToken,deleteToken,copyToken;
 
     private String _status = "";
 
@@ -75,8 +75,9 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
             newToken = new JButton(ButtonNewToken);
                 newToken.setBounds(200,580,100,20);
                 newToken.addActionListener(this);
-            saveToken = new JButton(ButtonSaveToken);
-                saveToken.setBounds(300,580,100,20);
+            editToken = new JButton(ButtonEditToken);
+                editToken.setBounds(300,580,100,20);
+                editToken.addActionListener(this);
             deleteToken = new JButton(ButtonDeleteToken);
                 deleteToken.setBounds(400,580,100,20);
             copyToken = new JButton(ButtonCopyToken);
@@ -92,7 +93,7 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
         Panel.add(PanelToken_base);
         Panel.add(PanelToken_view);
         Panel.add(newToken);
-        Panel.add(saveToken);
+        Panel.add(editToken);
         Panel.add(deleteToken);
         Panel.add(copyToken);
         Panel.add(Status);
@@ -114,9 +115,23 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
             newToken();
         if (e.getSource()==saveBase)
             SaveBase();
+        if (e.getSource()==editToken){
+            OpenToken();
+        }
 
     }
 
+    void  OpenToken(){
+        if (PanelToken_view.getComponents().length!=0){
+            WWToken token = new WWToken();
+            token.SetToken(TokensBase.GetTokenBase().GetTokens().get(token_list.getSelectedIndex()));
+            token.ShowToken();
+
+            updatePanelToken_view();
+
+        }
+
+    }
     void SaveBase(){
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Выберите папку, куда сохранить базу");
@@ -220,13 +235,17 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
+
+        updatePanelToken_view();
+
+    }
+
+    void updatePanelToken_view(){
         int pos = token_list.getSelectedIndex();
         VToken vToken = new VToken(TokensBase.GetTokenBase().GetTokens().get(pos));
 
         PanelToken_view.removeAll();
         PanelToken_view.add(vToken);
         PanelToken_view.updateUI();
-
-
     }
 }
