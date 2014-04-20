@@ -7,18 +7,23 @@ import java.awt.*;
  * Created by deanto on 20.04.14.
  */
 public class GraphPanel extends JPanel {
+    // buttons on top
     private JButton viewIncrease,viewReduce,viewLeft,viewRight,viewUp,viewDown;
 
-    int buttonSize = 40;
+    // button on bottom
+    private JButton newState,newTransaction,deleteState,deleteTransaction;
+
+    int buttonSize = 50;
 
     public void Init(){
         setLayout(null);
         setBounds(0,0,800,800);
 
+        setBorder(BorderFactory.createLineBorder(Color.RED));
+
         int t = 800/2 - 3*buttonSize;
 
         viewIncrease = new JButton("+");
-            viewIncrease.setLayout(null);
             viewIncrease.setBounds(t,0,buttonSize,buttonSize);
             add(viewIncrease);
         viewReduce = new JButton("-");
@@ -34,9 +39,24 @@ public class GraphPanel extends JPanel {
             viewUp.setBounds(t+buttonSize*4,0,buttonSize,buttonSize);
             add(viewUp);
         viewDown = new JButton("v");
-            viewDown.setBounds(440,0,20,20);
+            viewDown.setBounds(t+buttonSize*5,0,buttonSize,buttonSize);
             add(viewDown);
 
+
+        int b = 800/2 - 2*buttonSize;
+
+        newState = new JButton("+O");
+            newState.setBounds(b,800-buttonSize,buttonSize,buttonSize);
+            add(newState);
+        newTransaction = new JButton("++");
+            newTransaction.setBounds(b+buttonSize,800-buttonSize,buttonSize,buttonSize);
+            add(newTransaction);
+        deleteState = new JButton("-O");
+            deleteState.setBounds(b+buttonSize*2,800-buttonSize,buttonSize,buttonSize);
+            add(deleteState);
+        deleteTransaction = new JButton("-+");
+            deleteTransaction.setBounds(b+buttonSize*3,800-buttonSize,buttonSize,buttonSize);
+            add(deleteTransaction);
 
         setBackground(Color.WHITE);
         setVisible(true);

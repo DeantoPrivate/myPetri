@@ -29,7 +29,7 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
             graphPanel.Init();
             add(graphPanel);
 
-        setBounds(0, 0, 1280, 800);
+        setBounds(0, 0, 1280, 828);
         setResizable(false);
     }
 

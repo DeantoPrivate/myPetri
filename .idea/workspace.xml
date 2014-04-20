@@ -79,7 +79,7 @@
       <file leaf-file-name="GraphPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="313" selection-end="313" vertical-scroll-proportion="0.252" vertical-offset="112" max-vertical-offset="850">
+            <state line="24" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.3488372" vertical-offset="153" max-vertical-offset="1190">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,7 +99,7 @@
       <file leaf-file-name="GraphicalConstructor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="-17.96" vertical-offset="129" max-vertical-offset="782">
+            <state line="37" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="-23.12" vertical-offset="51" max-vertical-offset="782">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,19 +107,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/JDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="968" column="20" selection-start="38082" selection-end="38091" vertical-scroll-proportion="-8.48" vertical-offset="15870" max-vertical-offset="20893">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Dialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="27" selection-start="2234" selection-end="2249" vertical-scroll-proportion="-8.4" vertical-offset="963" max-vertical-offset="3655">
+            <state line="68" column="43" selection-start="2221" selection-end="2221" vertical-scroll-proportion="-32.2" vertical-offset="351" max-vertical-offset="3655">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#OpenToken#0;class#Dialog#0" expanded="false" />
@@ -177,19 +168,19 @@
         <option value="$PROJECT_DIR$/src/core/Transition.java" />
         <option value="$PROJECT_DIR$/src/views/VToken.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/FSRToken.java" />
-        <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
         <option value="$PROJECT_DIR$/src/application/TestApp.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/StatusPanel.java" />
-        <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
+        <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
+        <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="39" />
-    <option name="width" value="1725" />
-    <option name="height" value="1017" />
+    <option name="x" value="3" />
+    <option name="y" value="8" />
+    <option name="width" value="1830" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -517,7 +508,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="39" width="1725" height="1017" extended-state="1" />
+    <frame x="3" y="8" width="1830" height="1060" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -527,7 +518,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17005076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3795045" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16004297" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -537,8 +528,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20515896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24955009" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19300225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -857,27 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="-11.32" vertical-offset="125" max-vertical-offset="1479">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="27" selection-start="2234" selection-end="2249" vertical-scroll-proportion="-8.4" vertical-offset="963" max-vertical-offset="3655">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#OpenToken#0;class#Dialog#0" expanded="false" />
-            <element signature="method#SaveBase#0;class#Dialog#0" expanded="false" />
-            <element signature="method#newToken#0;class#Dialog#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="272">
@@ -887,14 +857,35 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/JDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="968" column="20" selection-start="38082" selection-end="38091" vertical-scroll-proportion="-8.48" vertical-offset="15870" max-vertical-offset="20893">
+        <state line="966" column="44" selection-start="38062" selection-end="38062" vertical-scroll-proportion="0.38997215" vertical-offset="15768" max-vertical-offset="20893">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="43" selection-start="2221" selection-end="2221" vertical-scroll-proportion="-32.2" vertical-offset="351" max-vertical-offset="3655">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#OpenToken#0;class#Dialog#0" expanded="false" />
+            <element signature="method#SaveBase#0;class#Dialog#0" expanded="false" />
+            <element signature="method#newToken#0;class#Dialog#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="-17.96" vertical-offset="129" max-vertical-offset="782">
+        <state line="37" column="0" selection-start="830" selection-end="830" vertical-scroll-proportion="-23.12" vertical-offset="51" max-vertical-offset="782">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/TestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="-11.32" vertical-offset="125" max-vertical-offset="1479">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -903,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="313" selection-end="313" vertical-scroll-proportion="0.252" vertical-offset="112" max-vertical-offset="850">
+        <state line="24" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.3488372" vertical-offset="153" max-vertical-offset="1190">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
