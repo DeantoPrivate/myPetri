@@ -36,6 +36,25 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
     private String _status = "";
 
+    public Dialog(){
+        super();
+        _instance = this;
+    }
+
+    private static Dialog _instance;
+    private static void makeInstance(){
+        if (_instance == null)
+        {
+            _instance = new Dialog();
+            _instance.Init();
+        }
+    }
+
+    public static void ShowDialog(){
+        makeInstance();
+        _instance.setVisible(true);
+    }
+
     public void Show(){
         Init();
         setVisible(true);
@@ -102,7 +121,7 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
         updateStatus("initialized");
 
-        setBounds(0, 0, 605, 645);
+        setBounds(1000, 300, 605, 645);
         setResizable(false);
 
     }

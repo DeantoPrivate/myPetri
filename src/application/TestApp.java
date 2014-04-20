@@ -14,11 +14,11 @@ import internalComponents.WWToken;
 public class TestApp {
     public static void main(String arg[]){
 
-        Dialog a = new Dialog();
-        a.Show();
-
         GraphicalConstructor b = new GraphicalConstructor();
         b.Show();
+/*
+        Dialog a = new Dialog();
+        a.Show();
 /*
         State s1 = new State();
         s1.ChangeName("s1");
