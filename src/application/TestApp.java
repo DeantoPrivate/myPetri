@@ -1,5 +1,6 @@
 package application;
 
+import components.Constructor.GraphicalConstructor;
 import components.TokenManager.Dialog;
 import core.State;
 import core.Token;
@@ -15,6 +16,9 @@ public class TestApp {
 
         Dialog a = new Dialog();
         a.Show();
+
+        GraphicalConstructor b = new GraphicalConstructor();
+        b.Show();
 /*
         State s1 = new State();
         s1.ChangeName("s1");

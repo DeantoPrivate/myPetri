@@ -175,7 +175,9 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
     JFileChooser fileChooser = new JFileChooser();
     fileChooser.setDialogTitle("Выберите папку с базой токенов");
-    fileChooser.showDialog(null, "SelectThisFolder");
+    int t=fileChooser.showDialog(null, "SelectThisFolder");
+
+       if (t==0){
 
     File file = fileChooser.getCurrentDirectory();
     updateStatus("processing directory: "+file.getAbsolutePath());
@@ -183,7 +185,7 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
     TokensBase.GetTokenBase().Clear();
 
     ProcessDirectory(file);
-
+       }
 
 
     //TokensBase.GetTokenBase().ShowTokensInSystem();
