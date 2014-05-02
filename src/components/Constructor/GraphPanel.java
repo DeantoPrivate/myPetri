@@ -1,17 +1,26 @@
 package components.Constructor;
 
+import components.GraphicalElements.AbstractGElement;
+import components.GraphicalElements.GElement;
+import components.GraphicalElements.StateElement;
+
 import javax.swing.*;
+import javax.swing.colorchooser.ColorChooserComponentFactory;
 import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
 
 /**
  * Created by deanto on 20.04.14.
  */
-public class GraphPanel extends JPanel {
+public class GraphPanel extends JPanel implements MouseListener,ActionListener,MouseMotionListener {
     // buttons on top
     private JButton viewIncrease,viewReduce,viewLeft,viewRight,viewUp,viewDown;
 
     // button on bottom
     private JButton newState,newTransaction,deleteState,deleteTransaction;
+
+    private ArrayList<GElement> _gElements;
 
     int buttonSize = 50;
 
@@ -47,6 +56,7 @@ public class GraphPanel extends JPanel {
         newState = new JButton("+O");
             newState.setBounds(b,800-buttonSize,buttonSize,buttonSize);
             add(newState);
+            newState.addActionListener(this);
         newTransaction = new JButton("++");
             newTransaction.setBounds(b+buttonSize,800-buttonSize,buttonSize,buttonSize);
             add(newTransaction);
@@ -59,5 +69,106 @@ public class GraphPanel extends JPanel {
 
         setBackground(Color.WHITE);
         setVisible(true);
+
+        addMouseListener(this);
+        addMouseMotionListener(this);
+
+        _gElements = new ArrayList<GElement>();
+    }
+
+ public class BackGroundElement extends AbstractGElement{
+
+
+     public BackGroundElement(GraphPanel gp) {
+         super(gp);
+     }
+
+     @Override
+     public void Drow() {
+         _gp.getGraphics().setColor(Color.WHITE);
+         _gp.getGraphics().fillRect(0,0,_gp.getWidth(),_gp.getHeight());
+     }
+ }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        for(int i=0;i<_gElements.size();i++)
+            if(_gElements.get(i).isOnElement(e.getPoint())){
+                _gElements.get(i).ProcessMouseEvent(e);
+            }
+    }
+
+    private boolean _mousePressed = false;
+    private GElement elementSelected;
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        for(int i=0;i<_gElements.size();i++)
+            if(_gElements.get(i).isOnElement(e.getPoint())){
+                elementSelected = _gElements.get(i);
+                _mousePressed = true;
+
+                    xPosLast = e.getX();
+                    yPosLast = e.getY();
+
+            }
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        _mousePressed = false;
+        elementSelected = null;
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if (_gElements.size()==0){
+            _gElements.add(new BackGroundElement(this));
+        }
+
+        if (e.getSource()==newState){
+            GElement newGState = new StateElement(this);
+            _gElements.add(newGState);
+            newGState.Drow();
+        }
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        if( elementSelected != null){
+            elementSelected.ChangePos(e.getX()-xPosLast,e.getY()-yPosLast);
+            xPosLast = e.getX();
+            yPosLast = e.getY();
+            repaintAllElements();
+        }
+
+
+    }
+
+    private void repaintAllElements(){
+        validate();
+        repaint();
+
+        _gElements.get(1).Drow();
+           //for (int i=0;i<_gElements.size();i++)
+           //     _gElements.get(i).Drow();
+    }
+
+
+    private int xPosLast,yPosLast;
+    @Override
+    public void mouseMoved(MouseEvent e) {
+
     }
 }

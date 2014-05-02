@@ -15,24 +15,9 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
     private GraphPanel graphPanel;
     private StatusPanel statusPanel;
 
-    Integer a;
-
-    Integer getA(){
-        return a;
-    }
-
-    Integer getB(){
-        return new Integer(2);
-    }
-
     public void Show(){
-        if (getA()==getB())
-        {
-            int t=0;
-        }
-        int e=0;
-        //Init();
-        //setVisible(true);
+        Init();
+        setVisible(true);
     }
 
     private void Init(){
