@@ -14,8 +14,6 @@ import java.awt.image.BufferedImage;
 public class StateElement extends AbstractGElement {
 
     private int radius=50;
-    private BufferedImage img;
-
 
     @Override
     public boolean isOnElement(Point p) {
@@ -49,9 +47,10 @@ public class StateElement extends AbstractGElement {
         gg.setColor(Color.WHITE);
         gg.fillOval(5,5,radius*2-10,radius*2-10);
 
-
-
-
     }
+
+    public int getXcenter(){return xCenterPos;}
+    public int getYcenter(){return yCenterPos;}
+    public int getRadius(){return radius;}
 
 }

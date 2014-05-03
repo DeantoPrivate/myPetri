@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" line="18" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ae006677-c433-4f9d-9bbc-0dc046224dd4" name="Default" comment="" />
     <ignored path="myPetri.iws" />
@@ -65,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GraphPanel.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GraphPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="32" selection-start="4925" selection-end="4925" vertical-scroll-proportion="-66.96" vertical-offset="1029" max-vertical-offset="3196">
+            <state line="175" column="71" selection-start="5362" selection-end="5362" vertical-scroll-proportion="0.42803738" vertical-offset="2576" max-vertical-offset="3774">
               <folding />
             </state>
           </provider>
@@ -83,11 +86,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StateElement.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StateElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="24" selection-start="348" selection-end="348" vertical-scroll-proportion="0.2859813" vertical-offset="0" max-vertical-offset="969">
-              <folding />
+            <state line="53" column="41" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-18.0" vertical-offset="349" max-vertical-offset="952">
+              <folding>
+                <element signature="method#getXcenter#0;class#StateElement#0" expanded="true" />
+                <element signature="method#getYcenter#0;class#StateElement#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionElement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="18" selection-start="439" selection-end="439" vertical-scroll-proportion="-3.04" vertical-offset="230" max-vertical-offset="765">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,7 +112,7 @@
       <file leaf-file-name="AbstractGElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="48" selection-start="301" selection-end="301" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="714">
+            <state line="19" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="-7.12" vertical-offset="60" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -157,15 +174,16 @@
         <option value="$PROJECT_DIR$/src/application/TestApp.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/GElement.java" />
-        <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java" />
+        <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" />
+        <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="195" />
-    <option name="y" value="77" />
+    <option name="x" value="388" />
+    <option name="y" value="13" />
     <option name="width" value="1569" />
     <option name="height" value="1041" />
   </component>
@@ -513,7 +531,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="195" y="77" width="1569" height="1041" extended-state="0" />
+    <frame x="388" y="13" width="1569" height="1041" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -562,11 +580,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="23" selection-start="737" selection-end="737" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2516" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/internalComponents/WWProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="65" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1122" />
@@ -826,23 +839,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="41" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-18.0" vertical-offset="349" max-vertical-offset="952">
+          <folding>
+            <element signature="method#getXcenter#0;class#StateElement#0" expanded="true" />
+            <element signature="method#getYcenter#0;class#StateElement#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="301" selection-end="301" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="714">
+        <state line="19" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="-7.12" vertical-offset="60" max-vertical-offset="731">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="18" selection-start="439" selection-end="439" vertical-scroll-proportion="-3.04" vertical-offset="230" max-vertical-offset="765">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="32" selection-start="4925" selection-end="4925" vertical-scroll-proportion="-66.96" vertical-offset="1029" max-vertical-offset="3196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="24" selection-start="348" selection-end="348" vertical-scroll-proportion="0.2859813" vertical-offset="0" max-vertical-offset="969">
+        <state line="175" column="71" selection-start="5362" selection-end="5362" vertical-scroll-proportion="0.42803738" vertical-offset="2576" max-vertical-offset="3774">
           <folding />
         </state>
       </provider>

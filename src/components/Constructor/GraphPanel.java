@@ -3,6 +3,7 @@ package components.Constructor;
 import components.GraphicalElements.AbstractGElement;
 import components.GraphicalElements.GElement;
 import components.GraphicalElements.StateElement;
+import components.GraphicalElements.TransactionElement;
 
 import javax.swing.*;
 import javax.swing.colorchooser.ColorChooserComponentFactory;
@@ -76,6 +77,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         newTransaction = new JButton("++");
             newTransaction.setBounds(b+buttonSize,800-buttonSize,buttonSize,buttonSize);
             add(newTransaction);
+            newTransaction.addActionListener(this);
         deleteState = new JButton("-O");
             deleteState.setBounds(b+buttonSize*2,800-buttonSize,buttonSize,buttonSize);
             add(deleteState);
@@ -111,9 +113,26 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     @Override
     public void mouseClicked(MouseEvent e) {
+
         for(int i=0;i<_gElements.size();i++)
             if(_gElements.get(i).isOnElement(e.getPoint())){
+                if (TransactionAddingMode == false)
                 _gElements.get(i).ProcessMouseEvent(e);
+                else if ( _gElements.get(i) instanceof StateElement){
+
+                    if (forNewTransaction == null){
+                        forNewTransaction = new ArrayList<StateElement>();
+                        forNewTransaction.add((StateElement)_gElements.get(i));
+                    } else {
+                        if (_gElements.get(i)!=forNewTransaction.get(0)){
+                        forNewTransaction.add((StateElement)_gElements.get(i));
+                        TransactionAddingMode = false;
+                        AddTransaction();
+                        }
+                    }
+
+
+                }
             }
     }
 
@@ -122,7 +141,6 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     @Override
     public void mousePressed(MouseEvent e) {
-
         Point p = new Point(e.getX(),e.getY());
 
         for(int i=0;i<_gElements.size();i++)
@@ -134,6 +152,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
                     yPosLast = e.getY();
 
             }
+
     }
 
     @Override
@@ -154,13 +173,29 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==newState){
+        if (e.getSource()==newState && TransactionAddingMode == false){
             repaintAllElements();
             GElement newGState = new StateElement(panel);
             _gElements.add(newGState);
             newGState.Drow();
         }
+        if (e.getSource() == newTransaction){
+            TransactionAddingMode = true;
+            newTransaction.setEnabled(false);
+        }
     }
+
+    private void AddTransaction(){
+        TransactionElement te = new TransactionElement(panel);
+        te.setStates(forNewTransaction.get(0),forNewTransaction.get(1));
+        _gElements.add(te);
+        newTransaction.setEnabled(true);
+        forNewTransaction = null;
+        repaintAllElements();
+    }
+
+    private boolean TransactionAddingMode = false;
+    private ArrayList<StateElement> forNewTransaction;
 
     @Override
     public void mouseDragged(MouseEvent e) {

@@ -5,12 +5,14 @@ import components.Constructor.GraphPanel;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 /**
  * Created by deanto on 02.05.14.
  */
 public class AbstractGElement implements GElement {
 
+    protected BufferedImage img;
     protected int xCenterPos=100, yCenterPos=100;
     protected JPanel _gp;
     public AbstractGElement(JPanel gp){
