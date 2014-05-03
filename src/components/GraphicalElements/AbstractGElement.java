@@ -2,6 +2,7 @@ package components.GraphicalElements;
 
 import components.Constructor.GraphPanel;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
@@ -10,9 +11,9 @@ import java.awt.event.MouseEvent;
  */
 public class AbstractGElement implements GElement {
 
-    protected int xCenterPos=0, yCenterPos=0;
-    protected GraphPanel _gp;
-    public AbstractGElement(GraphPanel gp){
+    protected int xCenterPos=100, yCenterPos=100;
+    protected JPanel _gp;
+    public AbstractGElement(JPanel gp){
         _gp=gp;
     }
 

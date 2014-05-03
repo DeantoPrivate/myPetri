@@ -8,6 +8,7 @@ import javax.swing.*;
 import javax.swing.colorchooser.ColorChooserComponentFactory;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +20,8 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     // button on bottom
     private JButton newState,newTransaction,deleteState,deleteTransaction;
+    private BufferedImage b2;
+    private JPanel panel;
 
     private ArrayList<GElement> _gElements;
 
@@ -28,6 +31,19 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         setLayout(null);
 
         setBorder(BorderFactory.createLineBorder(Color.RED));
+
+        panel = new JPanel();
+        panel.setBounds(10,buttonSize,800-10*2,800-buttonSize*2);
+        add(panel);
+
+        panel.addMouseListener(this);
+        panel.addMouseMotionListener(this);
+
+        b2 = new BufferedImage(800,800,BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = b2.createGraphics();
+
+        g2.setColor(Color.WHITE);
+        g2.fillRect(0,0,800,800);
 
         int t = 800/2 - 3*buttonSize;
 
@@ -67,11 +83,14 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             deleteTransaction.setBounds(b+buttonSize*3,800-buttonSize,buttonSize,buttonSize);
             add(deleteTransaction);
 
-        setBackground(Color.WHITE);
+
+
+
+        //setBackground(Color.WHITE);
         setVisible(true);
 
-        addMouseListener(this);
-        addMouseMotionListener(this);
+        //addMouseListener(this);
+        //addMouseMotionListener(this);
 
         _gElements = new ArrayList<GElement>();
     }
@@ -83,11 +102,11 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
          super(gp);
      }
 
-     @Override
-     public void Drow() {
-         _gp.getGraphics().setColor(Color.WHITE);
-         _gp.getGraphics().fillRect(0,0,_gp.getWidth(),_gp.getHeight());
-     }
+    // @Override
+    // public void Drow() {
+    ////     panel.getGraphics().setColor(Color.WHITE);
+    //     panel.getGraphics().fillRect(0,0,_gp.getWidth(),_gp.getHeight());
+    // }
  }
 
     @Override
@@ -103,8 +122,11 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     @Override
     public void mousePressed(MouseEvent e) {
+
+        Point p = new Point(e.getX(),e.getY());
+
         for(int i=0;i<_gElements.size();i++)
-            if(_gElements.get(i).isOnElement(e.getPoint())){
+            if(_gElements.get(i).isOnElement(p)){
                 elementSelected = _gElements.get(i);
                 _mousePressed = true;
 
@@ -132,13 +154,9 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        if (_gElements.size()==0){
-            _gElements.add(new BackGroundElement(this));
-        }
-
         if (e.getSource()==newState){
-            GElement newGState = new StateElement(this);
+            repaintAllElements();
+            GElement newGState = new StateElement(panel);
             _gElements.add(newGState);
             newGState.Drow();
         }
@@ -157,12 +175,11 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     }
 
     private void repaintAllElements(){
-        validate();
-        repaint();
 
-        _gElements.get(1).Drow();
-           //for (int i=0;i<_gElements.size();i++)
-           //     _gElements.get(i).Drow();
+        panel.getGraphics().drawImage(b2,0,0,800,800,null);
+
+           for (int i=0;i<_gElements.size();i++)
+               _gElements.get(i).Drow();
     }
 
 
