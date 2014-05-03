@@ -89,7 +89,7 @@
       <file leaf-file-name="StateElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="45" selection-start="1068" selection-end="1068" vertical-scroll-proportion="-10.52" vertical-offset="349" max-vertical-offset="952">
+            <state line="25" column="5" selection-start="370" selection-end="613" vertical-scroll-proportion="-8.84" vertical-offset="102" max-vertical-offset="952">
               <folding>
                 <element signature="method#getXcenter#0;class#StateElement#0" expanded="true" />
                 <element signature="method#getYcenter#0;class#StateElement#0" expanded="true" />
@@ -102,7 +102,7 @@
       <file leaf-file-name="TransactionElement.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="28" selection-start="571" selection-end="571" vertical-scroll-proportion="0.33271027" vertical-offset="247" max-vertical-offset="799">
+            <state line="29" column="9" selection-start="765" selection-end="765" vertical-scroll-proportion="0.5551402" vertical-offset="196" max-vertical-offset="1207">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,8 +183,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="388" />
-    <option name="y" value="13" />
+    <option name="x" value="158" />
+    <option name="y" value="43" />
     <option name="width" value="1569" />
     <option name="height" value="1041" />
   </component>
@@ -532,7 +532,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="388" y="13" width="1569" height="1041" extended-state="0" />
+    <frame x="158" y="43" width="1569" height="1041" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -856,7 +856,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="45" selection-start="1068" selection-end="1068" vertical-scroll-proportion="-10.52" vertical-offset="349" max-vertical-offset="952">
+        <state line="25" column="5" selection-start="370" selection-end="613" vertical-scroll-proportion="-8.84" vertical-offset="102" max-vertical-offset="952">
           <folding>
             <element signature="method#getXcenter#0;class#StateElement#0" expanded="true" />
             <element signature="method#getYcenter#0;class#StateElement#0" expanded="true" />
@@ -867,7 +867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="28" selection-start="571" selection-end="571" vertical-scroll-proportion="0.33271027" vertical-offset="247" max-vertical-offset="799">
+        <state line="29" column="9" selection-start="765" selection-end="765" vertical-scroll-proportion="0.5551402" vertical-offset="196" max-vertical-offset="1207">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
