@@ -2,6 +2,7 @@ package components.GraphicalElements;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Line2D;
 import java.awt.image.BufferedImage;
 
 /**
@@ -33,7 +34,8 @@ public class TransactionElement extends AbstractGElement {
     @Override
     public void Drow() {
         UpdateCoords();
+        ((Graphics2D)_gp.getGraphics()).setStroke(new BasicStroke(5));
         _gp.getGraphics().setColor(Color.GREEN);
-        _gp.getGraphics().drawLine(s1x, s1y, s2x, s2y);
+        ((Graphics2D) _gp.getGraphics()).draw(new Line2D.Float(s1x, s1y, s2x, s2y));
     }
 }
