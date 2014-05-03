@@ -2,6 +2,7 @@ package components.GraphicalElements;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 import java.awt.geom.Line2D;
 import java.awt.image.BufferedImage;
 
@@ -48,6 +49,18 @@ public class TransactionElement extends AbstractGElement {
 
 
 
+    }
+
+    @Override
+    public void ChangePos(int xChange, int yChange) {
+
+    }
+
+    @Override
+    public void ProcessMouseEvent(MouseEvent e) {
+        if (e.equals(MouseEvent.MOUSE_CLICKED)){
+            JOptionPane.showMessageDialog(null,"clicked on transaction");
+        }
     }
 
     @Override

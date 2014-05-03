@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" line="19" />
+    <bookmark url="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" line="20" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae006677-c433-4f9d-9bbc-0dc046224dd4" name="Default" comment="" />
@@ -71,7 +71,7 @@
       <file leaf-file-name="GraphPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="5" selection-start="5226" selection-end="5226" vertical-scroll-proportion="-6.44" vertical-offset="2576" max-vertical-offset="3774">
+            <state line="203" column="0" selection-start="6276" selection-end="6276" vertical-scroll-proportion="-6.56" vertical-offset="3117" max-vertical-offset="3774">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="TransactionElement.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="9" selection-start="765" selection-end="765" vertical-scroll-proportion="0.5551402" vertical-offset="196" max-vertical-offset="1207">
+            <state line="55" column="0" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.41260162" vertical-offset="732" max-vertical-offset="1428">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,7 +113,7 @@
       <file leaf-file-name="AbstractGElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="560" selection-end="560" vertical-scroll-proportion="-11.88" vertical-offset="60" max-vertical-offset="731">
+            <state line="42" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="-15.6" vertical-offset="239" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -183,10 +183,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="158" />
-    <option name="y" value="43" />
+    <option name="x" value="342" />
+    <option name="y" value="212" />
     <option name="width" value="1569" />
-    <option name="height" value="1041" />
+    <option name="height" value="839" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -532,8 +532,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="43" width="1569" height="1041" extended-state="0" />
-    <editor active="true" />
+    <frame x="342" y="212" width="1569" height="839" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -541,7 +541,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35745615" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23521127" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19986764" sideWeight="0.5006435" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -840,20 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="5" selection-start="5226" selection-end="5226" vertical-scroll-proportion="-6.44" vertical-offset="2576" max-vertical-offset="3774">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="560" selection-end="560" vertical-scroll-proportion="-11.88" vertical-offset="60" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="5" selection-start="370" selection-end="613" vertical-scroll-proportion="-8.84" vertical-offset="102" max-vertical-offset="952">
@@ -865,9 +851,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="-15.6" vertical-offset="239" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="0" selection-start="6276" selection-end="6276" vertical-scroll-proportion="-6.56" vertical-offset="3117" max-vertical-offset="3774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="9" selection-start="765" selection-end="765" vertical-scroll-proportion="0.5551402" vertical-offset="196" max-vertical-offset="1207">
+        <state line="55" column="0" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.41260162" vertical-offset="732" max-vertical-offset="1428">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
