@@ -5,6 +5,7 @@ import core.TransitionRule;
 
 import javax.swing.*;
 import javax.swing.colorchooser.ColorChooserComponentFactory;
+import javax.swing.plaf.basic.BasicOptionPaneUI;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by deanto on 20.04.14.
  */
-public class GraphPanel extends JPanel implements MouseListener,ActionListener,MouseMotionListener {
+public class GraphPanel extends JPanel implements MouseListener,ActionListener,MouseMotionListener,KeyListener {
     // buttons on top
     private JButton viewIncrease,viewReduce,viewLeft,viewRight,viewUp,viewDown;
 
@@ -37,6 +38,8 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
         panel.addMouseListener(this);
         panel.addMouseMotionListener(this);
+
+        panel.addKeyListener(this);
 
         b2 = new BufferedImage(800,800,BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = b2.createGraphics();
@@ -95,7 +98,24 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         _gElements = new ArrayList<GElement>();
     }
 
- public class BackGroundElement extends AbstractGElement{
+    @Override
+    public void keyTyped(KeyEvent e) {
+        int t=0;
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.isControlDown())
+            TransactionAddingMode = true;
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        if (!e.isControlDown())
+            TransactionAddingMode = false;
+    }
+
+    public class BackGroundElement extends AbstractGElement{
 
 
      public BackGroundElement(GraphPanel gp) {
@@ -116,16 +136,22 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             if(_gElements.get(i).isOnElement(e.getPoint())){
                 if (TransactionAddingMode == false)
                 _gElements.get(i).ProcessMouseEvent(e);
-                else if ( _gElements.get(i) instanceof StateElement){
+                else {
 
                     if (forNewTransaction == null){
-                        forNewTransaction = new ArrayList<StateElement>();
-                        forNewTransaction.add((StateElement)_gElements.get(i));
+                        forNewTransaction = new ArrayList<GElement>();
+                        forNewTransaction.add(_gElements.get(i));
                     } else {
                         if (_gElements.get(i)!=forNewTransaction.get(0)){
-                        forNewTransaction.add((StateElement)_gElements.get(i));
-                        TransactionAddingMode = false;
-                        AddTransaction();
+
+                            if ((_gElements.get(i) instanceof TransactionElement && forNewTransaction.get(0) instanceof StateElement) ||
+                                    _gElements.get(i) instanceof StateElement && forNewTransaction.get(0) instanceof TransactionElement)
+                            {
+                                forNewTransaction.add(_gElements.get(i));
+                                TransactionAddingMode = false;
+                                AddTransaction();
+                            }
+
                         }
                     }
 
@@ -195,7 +221,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     }
 
     private boolean TransactionAddingMode = false;
-    private ArrayList<StateElement> forNewTransaction;
+    private ArrayList<GElement> forNewTransaction;
 
     @Override
     public void mouseDragged(MouseEvent e) {

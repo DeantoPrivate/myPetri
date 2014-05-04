@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
  * Created by deanto on 20.04.14.
@@ -20,14 +22,16 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
         setVisible(true);
     }
 
+
     private void Init(){
         setTitle(GraphicalConstructorTitle);
 
         setLayout(null);
 
-            graphPanel = new GraphPanel();
-            graphPanel.setBounds(0,0,800,800);
-            graphPanel.Init();
+        graphPanel = new GraphPanel();
+        graphPanel.setBounds(0,0,800,800);
+        graphPanel.Init();
+
             add(graphPanel);
 
             statusPanel = new StatusPanel();
