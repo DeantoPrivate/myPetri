@@ -25,6 +25,11 @@ public class AbstractGElement implements GElement {
     }
 
     @Override
+    public int getYcenter() {
+        return 0;
+    }
+
+    @Override
     public void ProcessMouseEvent(MouseEvent e) {
 
     }
@@ -32,6 +37,11 @@ public class AbstractGElement implements GElement {
     @Override
     public void Drow() {
 
+    }
+
+    @Override
+    public int getXcenter() {
+        return 0;
     }
 
     @Override

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" line="20" />
+    <bookmark url="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionRuleElement.java" line="20" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae006677-c433-4f9d-9bbc-0dc046224dd4" name="Default" comment="" />
@@ -68,10 +68,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="GraphPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="193" column="29" selection-start="6007" selection-end="6007" vertical-scroll-proportion="-7.36" vertical-offset="3097" max-vertical-offset="3944">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/GElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="12" selection-start="219" selection-end="219" vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="374">
+            <state line="15" column="9" selection-start="309" selection-end="309" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
@@ -80,8 +91,12 @@
       <file leaf-file-name="StateElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="370" selection-end="613" vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="952">
-              <folding />
+            <state line="23" column="9" selection-start="585" selection-end="585" vertical-scroll-proportion="-7.36" vertical-offset="105" max-vertical-offset="952">
+              <folding>
+                <element signature="method#getXcenter#0;class#StateElement#0" expanded="true" />
+                <element signature="method#getYcenter#0;class#StateElement#0" expanded="true" />
+                <element signature="method#getRadius#0;class#StateElement#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,10 +104,19 @@
       <file leaf-file-name="TransactionElement.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="9" selection-start="798" selection-end="798" vertical-scroll-proportion="0.52161384" vertical-offset="148" max-vertical-offset="1428">
+            <state line="40" column="5" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.4855908" vertical-offset="343" max-vertical-offset="1139">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractGElement.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="18" selection-start="341" selection-end="341" vertical-scroll-proportion="-4.64" vertical-offset="54" max-vertical-offset="901">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/components/WWFabric.java" />
         <option value="$PROJECT_DIR$/src/components/WWIntegerValue.java" />
         <option value="$PROJECT_DIR$/src/components/WWStringValue.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/ArrayList.java" />
@@ -148,22 +171,23 @@
         <option value="$PROJECT_DIR$/src/components/Constructor/ConstructorStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/application/TestApp.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
-        <option value="$PROJECT_DIR$/src/components/GraphicalElements/GElement.java" />
-        <option value="$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java" />
-        <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
         <option value="$PROJECT_DIR$/src/core/TokenComparer.java" />
         <option value="$PROJECT_DIR$/src/core/TransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/IncomingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/Transition.java" />
+        <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionRuleElement.java" />
+        <option value="$PROJECT_DIR$/src/components/GraphicalElements/GElement.java" />
+        <option value="$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java" />
+        <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="212" />
-    <option name="y" value="31" />
+    <option name="x" value="195" />
+    <option name="y" value="16" />
     <option name="width" value="1520" />
     <option name="height" value="1041" />
   </component>
@@ -493,7 +517,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="212" y="31" width="1520" height="1041" extended-state="0" />
+    <frame x="195" y="16" width="1520" height="1041" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -506,7 +530,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19986764" sideWeight="0.5006435" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32156864" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32127193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -542,11 +566,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWIntegerValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1020" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/IntegerValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="14" selection-start="531" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="629" />
@@ -737,20 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="0" selection-start="4482" selection-end="4482" vertical-scroll-proportion="0.36363637" vertical-offset="1959" max-vertical-offset="3757">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="2" selection-start="2868" selection-end="2868" vertical-scroll-proportion="0.33285302" vertical-offset="1503" max-vertical-offset="2414">
@@ -790,9 +795,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="0.759366" vertical-offset="0" max-vertical-offset="714">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
+            <element signature="e#314#315#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -826,7 +831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="4" selection-start="763" selection-end="763" vertical-scroll-proportion="0.36743516" vertical-offset="272" max-vertical-offset="1462">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -838,23 +843,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionRuleElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="22" selection-start="425" selection-end="425" vertical-scroll-proportion="0.24495678" vertical-offset="102" max-vertical-offset="1428">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/GElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="219" selection-end="219" vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="374">
+        <state line="15" column="9" selection-start="309" selection-end="309" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="29" selection-start="6007" selection-end="6007" vertical-scroll-proportion="-7.36" vertical-offset="3097" max-vertical-offset="3944">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="341" selection-end="341" vertical-scroll-proportion="-4.64" vertical-offset="54" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="370" selection-end="613" vertical-scroll-proportion="-12.92" vertical-offset="0" max-vertical-offset="952">
-          <folding />
+        <state line="23" column="9" selection-start="585" selection-end="585" vertical-scroll-proportion="-7.36" vertical-offset="105" max-vertical-offset="952">
+          <folding>
+            <element signature="method#getXcenter#0;class#StateElement#0" expanded="true" />
+            <element signature="method#getYcenter#0;class#StateElement#0" expanded="true" />
+            <element signature="method#getRadius#0;class#StateElement#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="9" selection-start="798" selection-end="798" vertical-scroll-proportion="0.52161384" vertical-offset="148" max-vertical-offset="1428">
+        <state line="40" column="5" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.4855908" vertical-offset="343" max-vertical-offset="1139">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

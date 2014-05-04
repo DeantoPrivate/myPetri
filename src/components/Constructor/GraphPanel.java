@@ -1,9 +1,7 @@
 package components.Constructor;
 
-import components.GraphicalElements.AbstractGElement;
-import components.GraphicalElements.GElement;
-import components.GraphicalElements.StateElement;
-import components.GraphicalElements.TransactionElement;
+import components.GraphicalElements.*;
+import core.TransitionRule;
 
 import javax.swing.*;
 import javax.swing.colorchooser.ColorChooserComponentFactory;
@@ -144,7 +142,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         Point p = new Point(e.getX(),e.getY());
 
         for(int i=0;i<_gElements.size();i++)
-            if(_gElements.get(i).isOnElement(p) && _gElements.get(i) instanceof StateElement){
+            if(_gElements.get(i).isOnElement(p) && !(_gElements.get(i) instanceof TransactionRuleElement) ){
                 elementSelected = _gElements.get(i);
                 _mousePressed = true;
 
@@ -179,13 +177,16 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             newGState.Drow();
         }
         if (e.getSource() == newTransaction){
-            TransactionAddingMode = true;
-            newTransaction.setEnabled(false);
+
+            repaintAllElements();
+            GElement newTransition = new TransactionElement(panel);
+            _gElements.add(newTransition);
+            newTransition.Drow();
         }
     }
 
     private void AddTransaction(){
-        TransactionElement te = new TransactionElement(panel);
+        TransactionRuleElement te = new TransactionRuleElement(panel);
         te.setStates(forNewTransaction.get(0),forNewTransaction.get(1));
         _gElements.add(te);
         newTransaction.setEnabled(true);

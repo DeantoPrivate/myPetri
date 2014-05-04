@@ -14,4 +14,6 @@ public interface GElement {
     void ProcessMouseEvent(MouseEvent e);
     void Drow();
     void ChangePos(int xChange, int yChange);
+    int getXcenter();
+    int getYcenter();
 }
