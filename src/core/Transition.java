@@ -1,29 +1,48 @@
 package core;
 
+import com.sun.corba.se.spi.activation._ActivatorImplBase;
+
+import java.util.ArrayList;
+
 /**
  * Created by Денис on 17.03.14.
  */
 public class Transition {
-    private State _incomingState,_outgoingState;
-    private TransitionRule _rule;
 
-    public void buildTransition(State incomingState, State outgoingState){
-        _incomingState = incomingState;
-        _outgoingState = outgoingState;
-    }
+    public static String INCOMING_TOKEN_REMOVE = "INCOMING_TOKEN_REMOVE";
+    public static String INCOMING_TOKEN_KEEP = "INCOMING_TOKEN_KEEP";
 
-    public void assignTransitionRule(TransitionRule rule){
-        _rule = rule;
-    }
+    private ArrayList<IncomingTransitionRule> _incomingTransitionRules;
+    private ArrayList<OutgoingTransitionRule> _outgoingTransitionRules;
 
     public boolean canBeActivated(){
 
-        if (_rule.canStart(_incomingState)){
-            return true;
+        for (IncomingTransitionRule a : _incomingTransitionRules){
+            if (!a.canStart())
+                return false;
         }
 
-        return false;
+        return true;
     }
+
+    private String _name;
+    public void SetName(String name){
+        _name = name;
+    }
+
+    public Transition(){
+        _incomingTransitionRules = new ArrayList<IncomingTransitionRule>();
+        _outgoingTransitionRules = new ArrayList<OutgoingTransitionRule>();
+    }
+
+    public void AddIncomingTransitionRule(IncomingTransitionRule rule){
+        _incomingTransitionRules.add(rule);
+    }
+    public void AddOutgoingTransitionRule(OutgoingTransitionRule rule){
+        _outgoingTransitionRules.add(rule);
+    }
+
+
 
     private boolean _active = false;
     public void Activate(){
@@ -49,45 +68,15 @@ public class Transition {
         if (!isActive()) return false;
 
         // process rule(s)
-        if (_rule instanceof TransitionRules){
-            for (int i=0;i<((TransitionRules) _rule)._rules.size();i++)
-                processTransitionRule(((TransitionRules) _rule)._rules.get(i));
+        for (IncomingTransitionRule rule : _incomingTransitionRules)
+            rule.Process();
 
-            // TODO this is potential place for errors. we change states while working with rules... need to check
-        }
-        if (_rule instanceof  TransitionRule){
-            processTransitionRule(_rule);
-        }
+        for (OutgoingTransitionRule rule : _outgoingTransitionRules)
+            rule.Process();
 
+        _active = false;
+        _wasStarted = false;
         return true;
     }
 
-    private void processTransitionRule(TransitionRule rule){
-        // find token related to this rule
-        Token token = rule.specifyToken(_incomingState);
-        boolean delete = false;
-        if (rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_REMOVE) || rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_TRANSFER))
-            delete = true;
-
-        if (delete)
-            _incomingState.TokenGone(token);
-
-        boolean copy = false;
-        if (rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_TRANSFER) || rule._actionIncomingToken.equals(TransitionRule.INCOMING_TOKEN_KEEP_TRANSFER))
-            copy = true;
-
-        if (copy)
-            _outgoingState.LocateToken(token);
-
-        Token outgoing = _rule.get_outgoingToken();
-        if (outgoing!=null)
-            _outgoingState.LocateToken(outgoing);
-    }
-
-    // revert back
-    public boolean Revert(){
-        if (!_wasStarted) return true;
-
-        return false;
-    }
 }

@@ -144,7 +144,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         Point p = new Point(e.getX(),e.getY());
 
         for(int i=0;i<_gElements.size();i++)
-            if(_gElements.get(i).isOnElement(p)){
+            if(_gElements.get(i).isOnElement(p) && _gElements.get(i) instanceof StateElement){
                 elementSelected = _gElements.get(i);
                 _mousePressed = true;
 
@@ -152,7 +152,6 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
                     yPosLast = e.getY();
 
             }
-
     }
 
     @Override

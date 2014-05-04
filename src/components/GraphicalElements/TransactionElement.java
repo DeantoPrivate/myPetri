@@ -22,7 +22,7 @@ public class TransactionElement extends AbstractGElement {
     }
 
     private int s1x,s1y,s2x,s2y;
-    private int pcenterx,pcentery,radius=10;
+    private int pcenterx,pcentery,radius=5;
 
     public boolean isOnElement(Point p) {
         double r = Math.sqrt((p.getX()-pcenterx)*(p.getX()-pcenterx)+(p.getY()-pcentery)*(p.getY()-pcentery));
