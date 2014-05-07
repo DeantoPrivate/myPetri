@@ -19,7 +19,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     private JButton viewIncrease,viewReduce,viewLeft,viewRight,viewUp,viewDown;
 
     // button on bottom
-    private JButton newState,newTransaction,deleteState,deleteTransaction;
+    private JButton newState,newTransaction,addArc,deleteState,deleteTransaction;
     private BufferedImage b2;
     private JPanel panel;
 
@@ -69,7 +69,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             add(viewDown);
 
 
-        int b = 800/2 - 2*buttonSize;
+        int b = 800/2 - 3*buttonSize;
 
         newState = new JButton("+O");
             newState.setBounds(b,800-buttonSize,buttonSize,buttonSize);
@@ -79,11 +79,15 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             newTransaction.setBounds(b+buttonSize,800-buttonSize,buttonSize,buttonSize);
             add(newTransaction);
             newTransaction.addActionListener(this);
+        addArc = new JButton("->");
+            addArc.setBounds(b+buttonSize*2,800-buttonSize,buttonSize,buttonSize);
+            add(addArc);
+            addArc.addActionListener(this);
         deleteState = new JButton("-O");
-            deleteState.setBounds(b+buttonSize*2,800-buttonSize,buttonSize,buttonSize);
+            deleteState.setBounds(b+buttonSize*3,800-buttonSize,buttonSize,buttonSize);
             add(deleteState);
         deleteTransaction = new JButton("-+");
-            deleteTransaction.setBounds(b+buttonSize*3,800-buttonSize,buttonSize,buttonSize);
+            deleteTransaction.setBounds(b+buttonSize*4,800-buttonSize,buttonSize,buttonSize);
             add(deleteTransaction);
 
 
@@ -150,14 +154,26 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
                                 forNewTransaction.add(_gElements.get(i));
                                 TransactionAddingMode = false;
                                 AddTransaction();
+                            } else {
+                                JOptionPane.showMessageDialog(null,"clear adding history!");
+                                forNewTransaction = null;
+                                TransactionAddingMode = false;
+                                addArc.setEnabled(true);
                             }
 
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(null,"clear adding history!");
+                            forNewTransaction = null;
+                            TransactionAddingMode = false;
+                            addArc.setEnabled(true);
                         }
                     }
 
 
                 }
             }
+        repaintAllElements();
     }
 
     private boolean _mousePressed = false;
@@ -202,12 +218,18 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             _gElements.add(newGState);
             newGState.Drow();
         }
-        if (e.getSource() == newTransaction){
+        if (e.getSource() == newTransaction && TransactionAddingMode == false){
 
             repaintAllElements();
             GElement newTransition = new TransactionElement(panel);
             _gElements.add(newTransition);
             newTransition.Drow();
+        }
+
+        if (e.getSource() == addArc)
+        {
+            addArc.setEnabled(false);
+            TransactionAddingMode = true;
         }
     }
 
@@ -217,6 +239,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         _gElements.add(te);
         newTransaction.setEnabled(true);
         forNewTransaction = null;
+        addArc.setEnabled(true);
         repaintAllElements();
     }
 
@@ -231,8 +254,6 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             yPosLast = e.getY();
             repaintAllElements();
         }
-
-
     }
 
     private void repaintAllElements(){

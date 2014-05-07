@@ -40,6 +40,16 @@ public class TransactionElement extends AbstractGElement {
         UpdateCoords();
     }
 
+    @Override
+    public int getYcenter() {
+        return yCenterPos;
+    }
+
+    @Override
+    public int getXcenter() {
+        return xCenterPos;
+    }
+
     private void UpdateCoords(){
         x1=xCenterPos-width/2;
         x2=xCenterPos+width/2;
