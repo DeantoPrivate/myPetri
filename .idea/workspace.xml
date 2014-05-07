@@ -71,7 +71,7 @@
       <file leaf-file-name="GraphPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="0" selection-start="6422" selection-end="6422" vertical-scroll-proportion="-12.72" vertical-offset="2810" max-vertical-offset="5389">
+            <state line="192" column="0" selection-start="6422" selection-end="6422" vertical-scroll-proportion="42.16" vertical-offset="4182" max-vertical-offset="5389">
               <folding />
             </state>
           </provider>
@@ -80,20 +80,65 @@
       <file leaf-file-name="StatusPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="16" selection-start="370" selection-end="370" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="561">
+            <state line="18" column="16" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StateStatusPanel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StateStatusPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.58464223" vertical-offset="56" max-vertical-offset="629">
+            <state line="29" column="5" selection-start="575" selection-end="575" vertical-scroll-proportion="-18.36" vertical-offset="0" max-vertical-offset="595">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WWFabric.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/internalComponents/WWFabric.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="442">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WWProperty.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/internalComponents/WWProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="4.8" vertical-offset="511" max-vertical-offset="1122">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FSRProperty.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="897" selection-end="897" vertical-scroll-proportion="0.83152175" vertical-offset="0" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Token.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/Token.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="-23.12" vertical-offset="0" max-vertical-offset="986">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateWrap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="-14.96" vertical-offset="0" max-vertical-offset="476">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,7 +147,7 @@
       <file leaf-file-name="GraphicalConstructor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="50" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-9.0" vertical-offset="421" max-vertical-offset="1598">
+            <state line="45" column="50" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
@@ -111,7 +156,7 @@
       <file leaf-file-name="TransitionStatusPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="425">
+            <state line="15" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -129,7 +174,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/fileSavers/FSRIntegerValue.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/FSRIValue.java" />
-        <option value="$PROJECT_DIR$/src/fileSavers/FSRProperty.java" />
         <option value="$PROJECT_DIR$/src/components/WWToken.java" />
         <option value="$PROJECT_DIR$/src/application/CreateToken.java" />
         <option value="$PROJECT_DIR$/src/components/WWProperty.java" />
@@ -178,12 +222,13 @@
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java" />
+        <option value="$PROJECT_DIR$/src/fileSavers/FSRProperty.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="13" />
+    <option name="x" value="280" />
+    <option name="y" value="59" />
     <option name="width" value="1454" />
     <option name="height" value="957" />
   </component>
@@ -245,6 +290,82 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="staticNet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="internalComponents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fileSavers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -261,6 +382,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TokenManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GraphicalElements" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,6 +430,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Constructor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myPetri" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,6 +553,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -395,19 +591,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -491,7 +674,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="13" width="1454" height="957" extended-state="0" />
+    <frame x="280" y="59" width="1454" height="957" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -499,7 +682,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1689441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24637681" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
@@ -515,8 +697,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1689441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -550,11 +733,6 @@
         <state line="13" column="62" selection-start="267" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="629" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWFabric.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.23794712" vertical-offset="0" max-vertical-offset="643" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/internalComponents/WWIntegerValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="31" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="935" />
@@ -575,19 +753,9 @@
         <state line="25" column="26" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="612" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="26" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0" vertical-offset="485" max-vertical-offset="1122" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/internalComponents/WWStringValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="0.103869654" vertical-offset="0" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="24" selection-start="890" selection-end="890" vertical-scroll-proportion="-15.04" vertical-offset="49" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Cloneable.java">
@@ -622,11 +790,6 @@
         <state line="30" column="9" selection-start="842" selection-end="842" vertical-scroll-proportion="0.7988722" vertical-offset="0" max-vertical-offset="595" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.34398496" vertical-offset="395" max-vertical-offset="986" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="5" selection-start="812" selection-end="812" vertical-scroll-proportion="0.88778406" vertical-offset="4" max-vertical-offset="1122" />
@@ -634,9 +797,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/JDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="966" column="44" selection-start="38062" selection-end="38062" vertical-scroll-proportion="0.38997215" vertical-offset="15768" max-vertical-offset="20893">
-          <folding />
-        </state>
+        <state line="966" column="44" selection-start="38062" selection-end="38062" vertical-scroll-proportion="0.38997215" vertical-offset="15768" max-vertical-offset="20893" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
@@ -695,19 +856,6 @@
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/plaf/basic/BasicOptionPaneUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1150" column="17" selection-start="40312" selection-end="40312" vertical-scroll-proportion="0.04874652" vertical-offset="18937" max-vertical-offset="23987" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="207" selection-end="508" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="544">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
@@ -811,9 +959,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="376" column="44" selection-start="18551" selection-end="18551" vertical-scroll-proportion="0.6862069" vertical-offset="5909" max-vertical-offset="9129">
-          <folding />
-        </state>
+        <state line="376" column="44" selection-start="18551" selection-end="18551" vertical-scroll-proportion="0.6862069" vertical-offset="5909" max-vertical-offset="9129" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
@@ -827,9 +973,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="965" selection-end="965" vertical-scroll-proportion="0.7637271" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="32" column="16" selection-start="965" selection-end="965" vertical-scroll-proportion="0.7637271" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
@@ -843,40 +987,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="0" selection-start="6422" selection-end="6422" vertical-scroll-proportion="-12.72" vertical-offset="2810" max-vertical-offset="5389">
+        <state line="15" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="370" selection-end="370" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="561">
+        <state line="18" column="16" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="50" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-9.0" vertical-offset="421" max-vertical-offset="1598">
+        <state line="45" column="50" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1751">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.58464223" vertical-offset="56" max-vertical-offset="629">
+        <state line="29" column="5" selection-start="575" selection-end="575" vertical-scroll-proportion="-18.36" vertical-offset="0" max-vertical-offset="595">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWFabric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="0" selection-start="6422" selection-end="6422" vertical-scroll-proportion="42.16" vertical-offset="4182" max-vertical-offset="5389">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="4.8" vertical-offset="511" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="-23.12" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="-14.96" vertical-offset="0" max-vertical-offset="476">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="897" selection-end="897" vertical-scroll-proportion="0.83152175" vertical-offset="0" max-vertical-offset="595">
+          <folding />
         </state>
       </provider>
     </entry>
