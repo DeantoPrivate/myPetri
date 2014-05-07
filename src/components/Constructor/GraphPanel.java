@@ -1,8 +1,7 @@
 package components.Constructor;
 
 import components.GraphicalElements.*;
-import core.State;
-import core.Transition;
+import core.*;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
@@ -258,8 +257,19 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         addArc.setEnabled(true);
         repaintAllElements();
 
-        if (te.isOutGoing())
+        if (te.isOutGoing()){
+            OutgoingTransitionRule newRule = new OutgoingTransitionRule();
+            newRule.setState(_net.getState((StateElement)te.getElement(1)));
+            newRule.constructRule();
 
+            _net.addTransactionRule(newRule,te);
+        }else{
+            IncomingTransitionRule newRule = new IncomingTransitionRule();
+            newRule.setState(_net.getState((StateElement)te.getElement(0)));
+            newRule.constructRule();
+
+            _net.addTransactionRule(newRule,te);
+        }
 
     }
 

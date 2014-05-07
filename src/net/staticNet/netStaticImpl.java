@@ -1,14 +1,12 @@
 package net.staticNet;
 
+import com.sun.corba.se.spi.activation._ActivatorImplBase;
 import com.sun.corba.se.spi.activation._InitialNameServiceImplBase;
 import components.GraphicalElements.GElement;
 import components.GraphicalElements.StateElement;
 import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
-import core.State;
-import core.Token;
-import core.Transition;
-import core.TransitionRule;
+import core.*;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -48,10 +46,29 @@ public class netStaticImpl {
             _tokens.add(state.GetTokens().get(i));
     }
 
-    
+    public State getState(StateElement gState){
+        for (int i=0;i<_states.size();i++)
+            if (_states.get(i).get_element() == gState)
+                return _states.get(i).get_state();
+        return null;
+    }
+
+    public Transition getTransition(TransactionElement gTransaction){
+        for (int i=0;i<_transactions.size();i++)
+            if (_transactions.get(i).get_element() == gTransaction)
+                return _transactions.get(i).get_transaction();
+
+        return null;
+    }
 
     public void addTransactionRule(TransitionRule rule, TransactionRuleElement gTransactionRule){
         _trasactionRules.add(new TransactionRuleWrap(rule,gTransactionRule));
+
+        if (rule instanceof OutgoingTransitionRule){
+            getTransition((TransactionElement)gTransactionRule.getElement(0)).AddOutgoingTransitionRule((OutgoingTransitionRule)rule);
+        } else{
+            getTransition((TransactionElement)gTransactionRule.getElement(1)).AddIncomingTransitionRule((IncomingTransitionRule) rule);
+        }
     }
 
     public void addTransaction(Transition transaction, TransactionElement gTransaction){

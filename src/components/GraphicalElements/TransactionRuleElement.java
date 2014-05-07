@@ -17,6 +17,12 @@ public class TransactionRuleElement extends AbstractGElement {
         s2 = outgoing;
     }
 
+    public GElement getElement(int index){
+        if (index == 0) return s1;
+        if (index == 1) return s2;
+        return null;
+    }
+
     public boolean isOutGoing(){
         if (s1 instanceof TransactionElement) return true;
         return false;
