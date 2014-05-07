@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Created by deanto on 04.05.14.
  */
-public class IncomingTransitionRule{
+public class IncomingTransitionRule extends TransitionRule{
     private State _state;
     private Token _tokenPattern;
     private boolean _completed = false;

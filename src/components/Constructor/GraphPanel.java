@@ -1,11 +1,8 @@
 package components.Constructor;
 
 import components.GraphicalElements.*;
-import core.TransitionRule;
 
 import javax.swing.*;
-import javax.swing.colorchooser.ColorChooserComponentFactory;
-import javax.swing.plaf.basic.BasicOptionPaneUI;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
