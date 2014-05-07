@@ -190,6 +190,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
                 }
             }
+
         if (!statusSet)
             GraphicalConstructor.ChangeStatusPanel(StatusPanel.StatusPanel);
         repaintAllElements();
