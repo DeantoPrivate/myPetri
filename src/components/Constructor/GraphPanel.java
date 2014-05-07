@@ -142,8 +142,13 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
         for(int i=0;i<_gElements.size();i++)
             if(_gElements.get(i).isOnElement(e.getPoint())){
-                if (TransactionAddingMode == false)
-                _gElements.get(i).ProcessMouseEvent(e);
+                if (TransactionAddingMode == false){
+                    _gElements.get(i).ProcessMouseEvent(e);
+
+                    if (_gElements.get(i) instanceof StateElement){
+                        GraphicalConstructor.ChangeStatusPanel(StateStatusPanel.StatusPanel);
+                    }else GraphicalConstructor.ChangeStatusPanel(StatusPanel.StatusPanel);
+                }
                 else {
 
                     if (forNewTransaction == null){

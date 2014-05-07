@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
  */
 public class StatusPanel extends JPanel {
 
+    public static String StatusPanel = "StatusPanel";
+
     JButton openTokenManager;
 
     public void Init(){
@@ -28,8 +30,6 @@ public class StatusPanel extends JPanel {
 
         openTokenManager.setBounds(0,0,480,30);
         add(openTokenManager);
-
-
 
         setBackground(Color.GRAY);
         setVisible(true);

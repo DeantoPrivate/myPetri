@@ -17,13 +17,13 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
     public static String GraphicalConstructorTitle = "Construcror";
 
     private GraphPanel graphPanel;
-    private StatusPanel statusPanel;
+    private static StatusPanel statusPanel;
+    private static StateStatusPanel stateStatusPanel;
 
     public void Show(){
         Init();
         setVisible(true);
     }
-
 
     private void Init(){
         setTitle(GraphicalConstructorTitle);
@@ -41,10 +41,34 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
             statusPanel.Init();
             add(statusPanel);
 
-
+        stateStatusPanel = new StateStatusPanel();
+        add(stateStatusPanel);
 
         setBounds(0, 0, 1286, 828);
         setResizable(false);
+
+        _instance = this;
+
+    }
+
+    private static GraphicalConstructor _instance;
+    public static GraphicalConstructor getGraphicalConstructor(){
+        return _instance;
+    }
+
+    public static void ChangeStatusPanel(String panel){
+        if (panel.equals(StatusPanel.StatusPanel))
+        {
+            stateStatusPanel.setVisible(false);
+            statusPanel.setVisible(true);
+            statusPanel.repaint();
+        }
+        if (panel.equals(StateStatusPanel.StatusPanel))
+        {
+            stateStatusPanel.setVisible(true);
+            statusPanel.setVisible(false);
+            stateStatusPanel.repaint();
+        }
 
     }
 

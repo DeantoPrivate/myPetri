@@ -21,6 +21,9 @@ public class IncomingTransitionRule extends TransitionRule{
     }
 
     public void constructRule(){
+
+        JOptionPane.showMessageDialog(null,"Строим входящее правило транзакции");
+
         while(!_completed){
 
             WWToken Token = new WWToken();
