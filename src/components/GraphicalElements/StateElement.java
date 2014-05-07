@@ -30,7 +30,7 @@ public class StateElement extends AbstractGElement {
 
     @Override
     public void ProcessMouseEvent(MouseEvent e) {
-            JOptionPane.showMessageDialog(null,"!");
+            JOptionPane.showMessageDialog(null,"это состояние " + _name);
     }
 
     @Override
