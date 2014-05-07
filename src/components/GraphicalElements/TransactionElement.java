@@ -9,6 +9,10 @@ import java.awt.image.BufferedImage;
  * Created by deanto on 04.05.14.
  */
 public class TransactionElement extends AbstractGElement {
+
+    private String _name = "Transaction";
+    public String get_name(){return _name;}
+
     public TransactionElement(JPanel gp) {
         super(gp);
 
@@ -19,13 +23,23 @@ public class TransactionElement extends AbstractGElement {
         y2=yCenterPos+heigth/2;
 
 
-        img = new BufferedImage(width,heigth,BufferedImage.TYPE_INT_ARGB);
+        img = new BufferedImage(width+300,heigth,BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg = img.createGraphics();
 
         gg.setColor(Color.BLACK);
         gg.fillRect(0,0,width,heigth);
         gg.setColor(Color.WHITE);
         gg.fillRect(4,4,width-4*2,heigth-4*2);
+
+        String newName = JOptionPane.showInputDialog("Укажите имя для нового перехода.");
+        if (newName!=null && !newName.equals("")){
+            _name=newName;
+        }
+
+        gg.setColor(Color.BLACK);
+        Font font1 = new Font("Arial", Font.PLAIN, 20);
+        gg.setFont(font1);
+        gg.drawString(_name, 20, heigth);
 
     }
 
@@ -36,7 +50,7 @@ public class TransactionElement extends AbstractGElement {
 
     @Override
     public void Drow() {
-        _gp.getGraphics().drawImage(img,xCenterPos-width/2,yCenterPos-heigth/2,width,heigth,null);
+        _gp.getGraphics().drawImage(img,xCenterPos-width/2,yCenterPos-heigth/2,width+300,heigth,null);
         UpdateCoords();
     }
 
@@ -58,7 +72,7 @@ public class TransactionElement extends AbstractGElement {
         y2=yCenterPos+heigth/2;
     }
 
-    private int heigth = 50,width = 20;
+    private int heigth = 70,width = 10;
     private int x1,y1,x2,y2;
 
     @Override

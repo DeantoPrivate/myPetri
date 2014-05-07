@@ -1,5 +1,7 @@
 package components.Constructor;
 
+import net.staticNet.netStaticImpl;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -43,6 +45,7 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
 
         setBounds(0, 0, 1286, 828);
         setResizable(false);
+
     }
 
     @Override

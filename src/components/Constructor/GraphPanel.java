@@ -1,6 +1,9 @@
 package components.Constructor;
 
 import components.GraphicalElements.*;
+import core.State;
+import core.Transition;
+import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +18,8 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     // buttons on top
     private JButton viewIncrease,viewReduce,viewLeft,viewRight,viewUp,viewDown;
 
+    private netStaticImpl _net;
+
     // button on bottom
     private JButton newState,newTransaction,addArc,deleteState,deleteTransaction;
     private BufferedImage b2;
@@ -25,6 +30,9 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     int buttonSize = 50;
 
     public void Init(){
+
+        _net = netStaticImpl.getNet();
+
         setLayout(null);
 
         setBorder(BorderFactory.createLineBorder(Color.RED));
@@ -211,16 +219,27 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==newState && TransactionAddingMode == false){
             repaintAllElements();
-            GElement newGState = new StateElement(panel);
+            StateElement newGState = new StateElement(panel);
             _gElements.add(newGState);
             newGState.Drow();
+
+            State newState = new State();
+            newState.ChangeName(newGState.get_name());
+
+            _net.addState(newState,newGState);
+
         }
         if (e.getSource() == newTransaction && TransactionAddingMode == false){
 
             repaintAllElements();
-            GElement newTransition = new TransactionElement(panel);
+            TransactionElement newTransition = new TransactionElement(panel);
             _gElements.add(newTransition);
             newTransition.Drow();
+
+            Transition t = new Transition();
+            t.SetName(newTransition.get_name());
+
+            _net.addTransaction(t,newTransition);
         }
 
         if (e.getSource() == addArc)
@@ -238,6 +257,10 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         forNewTransaction = null;
         addArc.setEnabled(true);
         repaintAllElements();
+
+        if (te.isOutGoing())
+
+
     }
 
     private boolean TransactionAddingMode = false;
