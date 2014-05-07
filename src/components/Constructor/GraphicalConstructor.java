@@ -43,6 +43,8 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
             add(statusPanel);
 
         stateStatusPanel = new StateStatusPanel();
+        stateStatusPanel.setBounds(800,0,480,800);
+        stateStatusPanel.Init();
         add(stateStatusPanel);
 
         transitionStatusPanel = new TransitionStatusPanel();
