@@ -140,13 +140,20 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     @Override
     public void mouseClicked(MouseEvent e) {
 
+        boolean statusSet = false;
+
         for(int i=0;i<_gElements.size();i++)
             if(_gElements.get(i).isOnElement(e.getPoint())){
                 if (TransactionAddingMode == false){
 
-                    if (_gElements.get(i) instanceof StateElement){
+                    if (_gElements.get(i) instanceof StateElement)
                         GraphicalConstructor.ChangeStatusPanel(StateStatusPanel.StatusPanel);
-                    }else GraphicalConstructor.ChangeStatusPanel(StatusPanel.StatusPanel);
+                    else if (_gElements.get(i) instanceof TransactionElement)
+                        GraphicalConstructor.ChangeStatusPanel(TransitionStatusPanel.StatusPanel);
+                    else
+                        GraphicalConstructor.ChangeStatusPanel(StatusPanel.StatusPanel);
+
+                    statusSet = true;
                     _gElements.get(i).ProcessMouseEvent(e);
 
                 }
@@ -183,6 +190,8 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
                 }
             }
+        if (!statusSet)
+            GraphicalConstructor.ChangeStatusPanel(StatusPanel.StatusPanel);
         repaintAllElements();
     }
 

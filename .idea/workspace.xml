@@ -68,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GraphPanel.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GraphPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="90" selection-start="4527" selection-end="4527" vertical-scroll-proportion="-13.4" vertical-offset="2045" max-vertical-offset="5219">
+            <state line="193" column="12" selection-start="6458" selection-end="6458" vertical-scroll-proportion="0.58464223" vertical-offset="2810" max-vertical-offset="5372">
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
       <file leaf-file-name="StateStatusPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="25" selection-start="173" selection-end="173" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="459">
+            <state line="9" column="0" selection-start="148" selection-end="315" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="459">
               <folding />
             </state>
           </provider>
@@ -89,34 +89,17 @@
       <file leaf-file-name="GraphicalConstructor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="42" selection-start="827" selection-end="827" vertical-scroll-proportion="-17.68" vertical-offset="0" max-vertical-offset="1326">
-              <folding>
-                <element signature="e#1342#1343#0" expanded="true" />
-                <element signature="e#1374#1375#0" expanded="true" />
-              </folding>
+            <state line="85" column="33" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-14.44" vertical-offset="931" max-vertical-offset="1564">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatusPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
+      <file leaf-file-name="TransitionStatusPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="25" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.92" vertical-offset="5" max-vertical-offset="646">
-              <folding>
-                <element signature="e#574#760#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateElement.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="62" selection-start="882" selection-end="882" vertical-scroll-proportion="0.7417103" vertical-offset="0" max-vertical-offset="1156">
-              <folding>
-                <element signature="method#get_name#0;class#StateElement#0" expanded="true" />
-              </folding>
+            <state line="15" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="425">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/views/VToken.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/FSRToken.java" />
         <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/WorkingNetStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/ConstructorStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/core/TokenComparer.java" />
@@ -179,15 +161,16 @@
         <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/StatusPanel.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java" />
-        <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
-        <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java" />
+        <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
+        <option value="$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java" />
+        <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="275" />
-    <option name="y" value="59" />
+    <option name="x" value="223" />
+    <option name="y" value="60" />
     <option name="width" value="1454" />
     <option name="height" value="957" />
   </component>
@@ -265,28 +248,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GraphicalElements" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,7 +478,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="275" y="59" width="1454" height="957" extended-state="0" />
+    <frame x="223" y="60" width="1454" height="957" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -668,13 +629,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="20" selection-start="1271" selection-end="1271" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="4726" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="54" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/WorkingNetStatusPanel.java">
@@ -875,36 +829,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="13" selection-start="769" selection-end="769" vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="1156">
+          <folding>
+            <element signature="method#get_name#0;class#StateElement#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="324" selection-end="324" vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="173" selection-end="173" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="459">
+        <state line="9" column="0" selection-start="148" selection-end="315" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="459">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="42" selection-start="827" selection-end="827" vertical-scroll-proportion="-17.68" vertical-offset="0" max-vertical-offset="1326">
-          <folding>
-            <element signature="e#1342#1343#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
-          </folding>
+        <state line="85" column="33" selection-start="2377" selection-end="2377" vertical-scroll-proportion="-14.44" vertical-offset="931" max-vertical-offset="1564">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="90" selection-start="4527" selection-end="4527" vertical-scroll-proportion="-13.4" vertical-offset="2045" max-vertical-offset="5219">
+        <state line="193" column="12" selection-start="6458" selection-end="6458" vertical-scroll-proportion="0.58464223" vertical-offset="2810" max-vertical-offset="5372">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="62" selection-start="882" selection-end="882" vertical-scroll-proportion="0.7417103" vertical-offset="0" max-vertical-offset="1156">
-          <folding>
-            <element signature="method#get_name#0;class#StateElement#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

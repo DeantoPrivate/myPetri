@@ -19,6 +19,7 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
     private GraphPanel graphPanel;
     private static StatusPanel statusPanel;
     private static StateStatusPanel stateStatusPanel;
+    private static TransitionStatusPanel transitionStatusPanel;
 
     public void Show(){
         Init();
@@ -44,11 +45,20 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
         stateStatusPanel = new StateStatusPanel();
         add(stateStatusPanel);
 
+        transitionStatusPanel = new TransitionStatusPanel();
+        add(transitionStatusPanel);
+
         setBounds(0, 0, 1286, 828);
         setResizable(false);
 
         _instance = this;
 
+    }
+
+    private static void SetStatusPanelsNotVisible(){
+        statusPanel.setVisible(false);
+        stateStatusPanel.setVisible(false);
+        transitionStatusPanel.setVisible(false);
     }
 
     private static GraphicalConstructor _instance;
@@ -59,15 +69,21 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
     public static void ChangeStatusPanel(String panel){
         if (panel.equals(StatusPanel.StatusPanel))
         {
-            stateStatusPanel.setVisible(false);
+            SetStatusPanelsNotVisible();
             statusPanel.setVisible(true);
             statusPanel.repaint();
         }
         if (panel.equals(StateStatusPanel.StatusPanel))
         {
+            SetStatusPanelsNotVisible();
             stateStatusPanel.setVisible(true);
-            statusPanel.setVisible(false);
             stateStatusPanel.repaint();
+        }
+        if (panel.equals(TransitionStatusPanel.StatusPanel))
+        {
+            SetStatusPanelsNotVisible();
+            transitionStatusPanel.setVisible(true);
+            transitionStatusPanel.repaint();
         }
 
     }
