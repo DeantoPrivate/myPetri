@@ -22,6 +22,10 @@ public class StateStatusPanel extends StatusPanel {
     public void Init() {
         super.Init();
 
-        setBackground(Color.GREEN);
+
+        JButton a = new JButton("sd");
+        a.setBounds(100,100,20,20);
+        add(a);
+
     }
 }
