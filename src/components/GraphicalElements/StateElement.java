@@ -40,6 +40,7 @@ public class StateElement extends AbstractGElement {
         Token t = d.selectAndGetToken();
         netStaticImpl.getNet().getState(this).LocateToken(t);
 
+
         StateStatusPanel.ShowState(netStaticImpl.getNet().getState(this));
     }
 

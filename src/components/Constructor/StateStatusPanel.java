@@ -2,6 +2,7 @@ package components.Constructor;
 
 import core.State;
 import net.staticNet.StateWrap;
+import views.BToken;
 import views.VToken;
 
 import javax.swing.*;
@@ -30,19 +31,26 @@ public class StateStatusPanel extends StatusPanel {
     }
 
     private static JLabel _textName;
-    private static ArrayList<JPanel> _tokensList;
+    private static ArrayList<JButton> _tokensList;
 
     private static void Update(){
+
+        _instance.removeAll();
+        _instance.add(_textName);
+
         _textName.setText("Состояние: "+_state.GetName());
 
 
-        _tokensList = new ArrayList<JPanel>();
+        _tokensList = new ArrayList<JButton>();
         for (int i=0;i<_state.GetTokens().size();i++)
-            _tokensList.add(new VToken(_state.GetTokens().get(i)));
+            _tokensList.add(new BToken(_state.GetTokens().get(i)));
+
+        int ii=0;
 
         for (int i=0;i<_tokensList.size();i++){
-            JPanel tmp =    _tokensList.get(i);
-            tmp.setBounds(100,130,300,200);
+            JButton tmp = _tokensList.get(i);
+            tmp.setBounds(100,130+ii,300,20);
+            ii+=20;
             _instance.add(_tokensList.get(i));
         }
 
