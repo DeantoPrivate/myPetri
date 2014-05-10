@@ -91,7 +91,7 @@ public class netStaticImpl {
     //TODO это уберем когда реализуем экшн лисонеров объект - его wrap - графическая часть
     public void RepaintNet(){
         for (StateWrap sw : _states){
-            sw.get_element().Drow();
+            sw.UpdateUI();
         }
 
         for (TransactionWrap tw : _transactions){

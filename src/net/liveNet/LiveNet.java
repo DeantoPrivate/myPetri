@@ -3,6 +3,7 @@ package net.liveNet;
 import components.Constructor.WorkingNetStatusPanel;
 import core.Transition;
 import net.staticNet.netStaticImpl;
+import sun.awt.windows.ThemeReader;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -33,6 +34,7 @@ public class LiveNet {
 
     private WorkingNetStatusPanel _statusPanel;
 
+    ProcessNetThread newThread;
 
     private JDialog ControlPanel;
 
@@ -60,10 +62,28 @@ public class LiveNet {
 
             goForward = new JButton("->");
             goForward.setBounds(80,30,60,20);
+            goForward.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    if (newThread!=null)
+                        newThread.setDaemon(true);
+
+                    newThread = new ProcessNetThread();
+                    newThread.start();
+                }
+            });
             ControlPanel.add(goForward);
 
             stop = new JButton("Stop");
             stop.setBounds(10,60,130,30);
+            stop.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    setProcessing(false);
+
+                }
+            });
             ControlPanel.add(stop);
 
             nextStep = new JButton("step");
@@ -84,6 +104,43 @@ public class LiveNet {
     private JButton nextStep,goForward,stop;
     private JTextArea statusText;
     private JTextArea speed;
+
+    private class ProcessNetThread extends Thread{
+        @Override
+        public void run() {
+            ProcessNet();
+            interrupt();
+        }
+
+        private void ProcessNet(){
+            int step = 100; // miliseconds
+            try{
+            Integer a = new Integer(speed.getText());
+                if (a!=null)
+                    step=a;
+            }catch (Exception e){
+
+            }
+
+            while(isProcessing()){
+                try{
+                    Thread.sleep(step);
+
+                    doNextNetStep();
+
+                } catch (Exception e){
+                    setProcessing(false);
+                    JOptionPane.showMessageDialog(null,"some errors while waiting!");
+                }
+            }
+
+        }
+    }
+
+    private boolean processing = true;
+    private synchronized boolean isProcessing(){return processing;}
+    private synchronized void setProcessing(boolean flag){processing = flag;}
+
 
 
     private void doNextNetStep(){

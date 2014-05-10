@@ -34,6 +34,6 @@ public class OutgoingTransitionRule extends TransitionRule{
     }
 
     public void Process(){
-        _state.LocateToken(_token);
+        _state.LocateToken(_token.Clone());
     }
 }
