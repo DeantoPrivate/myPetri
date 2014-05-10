@@ -98,19 +98,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionElement.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TransactionElement.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="120" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.5996473" vertical-offset="765" max-vertical-offset="1785">
+            <state line="40" column="38" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-13.6" vertical-offset="255" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LiveNet.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LiveNet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="38" selection-start="2179" selection-end="2179" vertical-scroll-proportion="15.64" vertical-offset="1445" max-vertical-offset="2686">
+            <state line="158" column="126" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.3633157" vertical-offset="2106" max-vertical-offset="2703">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GetInstance#0;class#LiveNet#0" expanded="false" />
@@ -125,7 +125,7 @@
       <file leaf-file-name="netStaticImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="19" selection-start="3142" selection-end="3142" vertical-scroll-proportion="-17.56" vertical-offset="530" max-vertical-offset="1173">
+            <state line="100" column="0" selection-start="3161" selection-end="3161" vertical-scroll-proportion="-24.72" vertical-offset="402" max-vertical-offset="1190">
               <folding>
                 <element signature="method#getNet#0;class#netStaticImpl#0" expanded="false" />
                 <element signature="method#netStaticImpl#0;class#netStaticImpl#0" expanded="false" />
@@ -216,11 +216,11 @@
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/StateElementInfo.java" />
         <option value="$PROJECT_DIR$/src/net/staticNet/StateWrap.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java" />
-        <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
         <option value="$PROJECT_DIR$/src/net/staticNet/TransactionWrap.java" />
-        <option value="$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionElementInfo.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" />
+        <option value="$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java" />
+        <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
       </list>
     </option>
   </component>
@@ -947,39 +947,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="38" selection-start="2179" selection-end="2179" vertical-scroll-proportion="15.64" vertical-offset="1445" max-vertical-offset="2686">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#GetInstance#0;class#LiveNet#0" expanded="false" />
-            <element signature="method#LiveNet#0;class#LiveNet#0" expanded="false" />
-            <element signature="method#isProcessing#0;class#LiveNet#0" expanded="true" />
-            <element signature="method#setProcessing#0;class#LiveNet#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="16" selection-start="760" selection-end="760" vertical-scroll-proportion="-15.2" vertical-offset="11" max-vertical-offset="578">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="19" selection-start="3142" selection-end="3142" vertical-scroll-proportion="-17.56" vertical-offset="530" max-vertical-offset="1173">
-          <folding>
-            <element signature="method#getNet#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="method#netStaticImpl#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="method#addState#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="method#getState#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="method#getTransition#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="method#addTransactionRule#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="method#addTransaction#0;class#netStaticImpl#0" expanded="false" />
-            <element signature="e#2639#2651#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,8 +980,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="120" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.5996473" vertical-offset="765" max-vertical-offset="1785">
+        <state line="40" column="38" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-13.6" vertical-offset="255" max-vertical-offset="1785">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="0" selection-start="3161" selection-end="3161" vertical-scroll-proportion="-24.72" vertical-offset="402" max-vertical-offset="1190">
+          <folding>
+            <element signature="method#getNet#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="method#netStaticImpl#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="method#addState#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="method#getState#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="method#getTransition#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="method#addTransactionRule#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="method#addTransaction#0;class#netStaticImpl#0" expanded="false" />
+            <element signature="e#2639#2651#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="126" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.3633157" vertical-offset="2106" max-vertical-offset="2703">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#GetInstance#0;class#LiveNet#0" expanded="false" />
+            <element signature="method#LiveNet#0;class#LiveNet#0" expanded="false" />
+            <element signature="method#isProcessing#0;class#LiveNet#0" expanded="true" />
+            <element signature="method#setProcessing#0;class#LiveNet#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

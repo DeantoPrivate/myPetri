@@ -156,6 +156,7 @@ public class LiveNet {
         for (Transition t : _transitions){
             t.Activate();
             t.Exec();
+            //TODO сейчас нет учета текущего шага. токены берутся из состояний как есть. а не те что были доступны перед шагом
             t.Deactivate();
         }
         // обновляем статусы и прочее
