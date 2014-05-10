@@ -101,7 +101,7 @@
       <file leaf-file-name="TransactionElement.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="34" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.5996473" vertical-offset="765" max-vertical-offset="1785">
+            <state line="70" column="120" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.5996473" vertical-offset="765" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
@@ -225,8 +225,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="94" />
-    <option name="y" value="35" />
+    <option name="x" value="79" />
+    <option name="y" value="29" />
     <option name="width" value="1666" />
     <option name="height" value="891" />
   </component>
@@ -600,7 +600,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="35" width="1666" height="891" extended-state="0" />
+    <frame x="79" y="29" width="1666" height="891" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1009,7 +1009,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="34" selection-start="1970" selection-end="1970" vertical-scroll-proportion="0.5996473" vertical-offset="765" max-vertical-offset="1785">
+        <state line="70" column="120" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.5996473" vertical-offset="765" max-vertical-offset="1785">
           <folding />
         </state>
       </provider>
