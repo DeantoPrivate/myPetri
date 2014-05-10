@@ -1,9 +1,7 @@
 package components.Constructor;
 
 import core.State;
-import net.staticNet.StateWrap;
 import views.BToken;
-import views.VToken;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,11 +13,6 @@ import java.util.ArrayList;
 public class StateStatusPanel extends StatusPanel {
 
     public static String StatusPanel = "StateStatusPanel";
-
-    public static StateWrap _stateWrap;
-    public static void setState(StateWrap stateWrap){
-        _stateWrap = stateWrap;
-    }
 
     private static State _state;
 

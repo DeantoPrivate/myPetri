@@ -1,13 +1,8 @@
 package components.Constructor;
 
-import net.staticNet.netStaticImpl;
-
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 /**
  * Created by deanto on 20.04.14.

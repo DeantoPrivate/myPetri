@@ -10,6 +10,7 @@ public class TransitionStatusPanel extends StatusPanel {
     public static String StatusPanel = "TransitionStatusPanel";
 
 
+
     public TransitionStatusPanel(){
 
         setBounds(800,0,480,800);

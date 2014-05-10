@@ -1,14 +1,10 @@
 package net.staticNet;
 
-import com.sun.corba.se.spi.activation._ActivatorImplBase;
-import com.sun.corba.se.spi.activation._InitialNameServiceImplBase;
-import components.GraphicalElements.GElement;
 import components.GraphicalElements.StateElement;
 import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
 import core.*;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 /**

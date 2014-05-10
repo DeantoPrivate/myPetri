@@ -1,6 +1,7 @@
 package components.Constructor;
 
 import components.TokenManager.*;
+import net.liveNet.LiveNet;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +15,7 @@ public class StatusPanel extends JPanel {
 
     public static String StatusPanel = "StatusPanel";
 
-    JButton openTokenManager;
+    JButton openTokenManager,openNetControlPanel;
 
     public void Init(){
         setBorder(BorderFactory.createLineBorder(Color.ORANGE));
@@ -31,7 +32,24 @@ public class StatusPanel extends JPanel {
         openTokenManager.setBounds(0,0,480,30);
         add(openTokenManager);
 
+        openNetControlPanel = new JButton("Open Net Control Pane");
+        openNetControlPanel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LiveNet.GetInstance().ActivatePanel();
+            }
+        });
+        openNetControlPanel.setBounds(0,30,480,30);
+        add(openNetControlPanel);
+
         setBackground(Color.GRAY);
         setVisible(true);
+    }
+
+    @Override
+    public void removeAll() {
+        super.removeAll();
+        add(openTokenManager);
+        add(openNetControlPanel);
     }
 }
