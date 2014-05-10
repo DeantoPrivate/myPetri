@@ -72,4 +72,32 @@ public class netStaticImpl {
     }
 
 
+    // далее часть для работы с динамической частью
+
+    public ArrayList<Transition> getTransitionsWhichCanBeActivated(){
+
+        ArrayList<Transition> answer = new ArrayList<Transition>();
+
+        for (TransactionWrap a : _transactions){
+            Transition t = a.get_transaction();
+            if (t.canBeActivated()){
+                answer.add(t);
+            }
+        }
+
+        return answer;
+    }
+
+    //TODO это уберем когда реализуем экшн лисонеров объект - его wrap - графическая часть
+    public void RepaintNet(){
+        for (StateWrap sw : _states){
+            sw.get_element().Drow();
+        }
+
+        for (TransactionWrap tw : _transactions){
+            tw.get_element().Drow();
+        }
+
+    }
+
 }

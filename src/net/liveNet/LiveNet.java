@@ -1,11 +1,15 @@
 package net.liveNet;
 
 import components.Constructor.WorkingNetStatusPanel;
+import core.Transition;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * Created by deanto on 10.05.14.
@@ -64,6 +68,12 @@ public class LiveNet {
 
             nextStep = new JButton("step");
             nextStep.setBounds(140,30,60,60);
+            nextStep.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    doNextNetStep();
+                }
+            });
             ControlPanel.add(nextStep);
 
         }
@@ -76,6 +86,32 @@ public class LiveNet {
     private JTextArea speed;
 
 
+    private void doNextNetStep(){
+        // алгоритм
+        // сначала надо определиться какие переходы сейчас смогут сработать.
+
+        statusText.setText("step start");
+        nextStep.setEnabled(false);
+
+        ArrayList<Transition> _transitions;
+        _transitions = _staticNet.getTransitionsWhichCanBeActivated();
+        // активируем эти переходы
+        for (Transition t : _transitions){
+            t.Activate();
+            t.Exec();
+            t.Deactivate();
+        }
+        // обновляем статусы и прочее
+
+        _staticNet.RepaintNet();
+
+        //TODO wrap должен быть лисонером у объекта. объект когда меняется сообщает wrap  - а тот сообщает графической части что надо перерисоваться
+
+        statusText.setText("step done");
+        nextStep.setEnabled(true);
+
+
+    }
 
 
 }
