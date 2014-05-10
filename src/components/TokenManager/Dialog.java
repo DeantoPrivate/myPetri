@@ -123,6 +123,8 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
         add(Panel);
 
+        setAlwaysOnTop(true);
+
         updateStatus("initialized");
 
         setBounds(1000, 300, 605, 645);
