@@ -13,6 +13,13 @@ public class TransactionElement extends AbstractGElement {
     private String _name = "Transaction";
     public String get_name(){return _name;}
 
+    private TransactionElementInfo _info;
+    public void setInfo(TransactionElementInfo info){
+        _info = info;
+    }
+
+    BufferedImage activated;
+
     public TransactionElement(JPanel gp) {
         super(gp);
 
@@ -22,6 +29,10 @@ public class TransactionElement extends AbstractGElement {
         y1=yCenterPos-heigth/2;
         y2=yCenterPos+heigth/2;
 
+        activated = new BufferedImage(width,heigth,BufferedImage.TYPE_INT_ARGB);
+        Graphics2D gg2 = activated.createGraphics();
+        gg2.setColor(Color.RED);
+        gg2.fillRect(0,0,width,heigth);
 
         img = new BufferedImage(width+300,heigth,BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg = img.createGraphics();
@@ -41,6 +52,8 @@ public class TransactionElement extends AbstractGElement {
         gg.setFont(font1);
         gg.drawString(_name, 20, heigth);
 
+        _info = new TransactionElementInfo();
+
     }
 
     @Override
@@ -50,6 +63,16 @@ public class TransactionElement extends AbstractGElement {
 
     @Override
     public void Drow() {
+
+        if (_info.isChanged()){
+            _info.ChangesConsidered();
+            _gp.getGraphics().drawImage(activated,xCenterPos-width/2,yCenterPos-heigth/2,width,heigth,null);
+            try{
+                //TODO sleep is a bad way
+            Thread.sleep(200);
+            }catch (Exception e){}
+        }
+
         _gp.getGraphics().drawImage(img,xCenterPos-width/2,yCenterPos-heigth/2,width+300,heigth,null);
         UpdateCoords();
     }

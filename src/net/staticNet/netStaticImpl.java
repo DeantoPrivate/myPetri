@@ -95,7 +95,7 @@ public class netStaticImpl {
         }
 
         for (TransactionWrap tw : _transactions){
-            tw.get_element().Drow();
+            tw.UpdateUI();
         }
 
     }
