@@ -41,6 +41,10 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
         _instance = this;
     }
 
+    public static Dialog getInstanse(){
+        return _instance;
+    }
+
     private static Dialog _instance;
     private static void makeInstance(){
         if (_instance == null)
@@ -253,9 +257,14 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
     }
 
+    public Token selectAndGetToken(){
+        int pos = token_list.getSelectedIndex();
+        return TokensBase.GetTokenBase().GetTokens().get(pos);
+    }
 
     @Override
     public void valueChanged(ListSelectionEvent e) {
+
 
         updatePanelToken_view();
 

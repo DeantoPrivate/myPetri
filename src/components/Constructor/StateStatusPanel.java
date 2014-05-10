@@ -2,9 +2,11 @@ package components.Constructor;
 
 import core.State;
 import net.staticNet.StateWrap;
+import views.VToken;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by deanto on 20.04.14.
@@ -18,14 +20,45 @@ public class StateStatusPanel extends StatusPanel {
         _stateWrap = stateWrap;
     }
 
+    private static State _state;
+
+    private static StateStatusPanel _instance;
+
+    public static void ShowState(State state){
+        _state = state;
+        Update();
+    }
+
+    private static JLabel _textName;
+    private static ArrayList<JPanel> _tokensList;
+
+    private static void Update(){
+        _textName.setText("Состояние: "+_state.GetName());
+
+
+        _tokensList = new ArrayList<JPanel>();
+        for (int i=0;i<_state.GetTokens().size();i++)
+            _tokensList.add(new VToken(_state.GetTokens().get(i)));
+
+        for (int i=0;i<_tokensList.size();i++){
+            JPanel tmp =    _tokensList.get(i);
+            tmp.setBounds(100,130,300,200);
+            _instance.add(_tokensList.get(i));
+        }
+
+    }
+
     @Override
     public void Init() {
         super.Init();
 
+        setBackground(Color.WHITE);
 
-        JButton a = new JButton("sd");
-        a.setBounds(100,100,20,20);
-        add(a);
+        _textName = new JLabel("Состояние: ");
+        _textName.setBounds(100,100,300,20);
+
+        add(_textName);
+        _instance = this;
 
     }
 }

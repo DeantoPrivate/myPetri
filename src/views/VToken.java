@@ -27,7 +27,6 @@ public class VToken extends JPanel{
         for (int i=0;i<_VTokenProperties.size();i++)
         add(_VTokenProperties.get(i));
 
-
         }
 
 

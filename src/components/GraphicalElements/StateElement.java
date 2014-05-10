@@ -2,6 +2,11 @@ package components.GraphicalElements;
 
 import com.sun.org.apache.xerces.internal.impl.dv.xs.YearDV;
 import components.Constructor.GraphPanel;
+import components.Constructor.StateStatusPanel;
+import components.TokenManager.*;
+import components.TokenManager.Dialog;
+import core.Token;
+import net.staticNet.netStaticImpl;
 import org.w3c.dom.css.RGBColor;
 
 import javax.swing.*;
@@ -30,7 +35,12 @@ public class StateElement extends AbstractGElement {
 
     @Override
     public void ProcessMouseEvent(MouseEvent e) {
-            JOptionPane.showMessageDialog(null,"это состояние " + _name);
+
+        components.TokenManager.Dialog d = Dialog.getInstanse();
+        Token t = d.selectAndGetToken();
+        netStaticImpl.getNet().getState(this).LocateToken(t);
+
+        StateStatusPanel.ShowState(netStaticImpl.getNet().getState(this));
     }
 
     @Override
