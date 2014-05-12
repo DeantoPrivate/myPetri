@@ -5,6 +5,10 @@ import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
 import core.*;
 
+import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
@@ -92,6 +96,46 @@ public class netStaticImpl {
     public void addTransaction(Transition transaction, TransactionElement gTransaction){
         _transactions.add(new TransactionWrap(transaction,gTransaction));
     }
+
+
+    // сохранение - загрузка состояния сети.
+
+    public void save(){
+
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Сохранить сеть.");
+        fileChooser.showSaveDialog(null);
+        File file = fileChooser.getSelectedFile();
+        String filename = file.getAbsolutePath();
+
+        if (filename!=null)
+            SaveNetToFile(filename);
+
+    }
+
+    String n = System.getProperty("line.separator");
+
+    private void SaveNetToFile(String filename){
+
+        try{
+
+            FileWriter fw = new FileWriter(filename);
+            BufferedWriter bw = new BufferedWriter(fw);
+            StringBuilder sb = new StringBuilder();
+
+            sb.append("net" + n);
+
+
+
+
+        }catch (Exception e){JOptionPane.showMessageDialog(null,e.getMessage());}
+
+    }
+
+    public void read(){
+
+    }
+
 
 
     // далее часть для работы с динамической частью

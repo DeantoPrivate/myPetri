@@ -59,8 +59,6 @@ public class IncomingTransitionRule extends TransitionRule{
 
     public void Process(){
         if (_actionIncomingToken.equals(Transition.INCOMING_TOKEN_REMOVE))
-
-
                 for (int i=0;i<_state.GetTokens().size();i++){
                     if (TokenComparer.Equals(_state.GetTokens().get(i),_tokenPattern))
                     {
@@ -69,7 +67,6 @@ public class IncomingTransitionRule extends TransitionRule{
                         i--;
                     }
                 }
-
     }
 
     public boolean canStart(){

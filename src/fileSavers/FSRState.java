@@ -22,9 +22,9 @@ public class FSRState {
     // save information about state and "links" to tokens(name and id)
     static void SaveStateToFile(State state,String filename){
         try{
+
             FileWriter fw = new FileWriter(filename);
             BufferedWriter bw = new BufferedWriter(fw);
-
             StringBuilder sb = new StringBuilder();
             sb.append(FileState+System.getProperty("line.separator"));
             //TODO во всех функциях сохранения в файл использовать такую конструкцию
