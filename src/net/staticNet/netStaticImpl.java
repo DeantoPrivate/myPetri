@@ -16,6 +16,28 @@ import java.util.ArrayList;
  */
 public class netStaticImpl {
 
+    // current step
+    private static int step = 0;
+    // indicated we are between two steps - processing transactions
+    private static boolean processing = false;
+
+    public static int CurrentStep(){return step;}
+    public static boolean isProcessing(){return processing;}
+
+    public static void startProcessing(){
+        processing = true;
+        for (StateWrap sw : _instance._states){
+            sw.get_state().setProcessing(true);
+        }
+    }
+    public static void stopProcessing(){
+        processing = false;
+        step++;
+        for (StateWrap sw : _instance._states){
+            sw.get_state().setProcessing(false);
+        }
+    }
+
     private ArrayList<StateWrap> _states;
     private ArrayList<TransactionRuleWrap> _trasactionRules;
     private ArrayList<TransactionWrap> _transactions;

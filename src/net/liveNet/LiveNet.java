@@ -122,6 +122,8 @@ public class LiveNet {
 
             }
 
+            netStaticImpl.startProcessing();
+
             while(isProcessing()){
                 try{
                     Thread.sleep(step);
@@ -130,9 +132,12 @@ public class LiveNet {
 
                 } catch (Exception e){
                     setProcessing(false);
+                    netStaticImpl.stopProcessing();
                     JOptionPane.showMessageDialog(null,"some errors while waiting!");
                 }
             }
+
+            netStaticImpl.stopProcessing();
 
         }
     }
@@ -144,6 +149,10 @@ public class LiveNet {
 
 
     private void doNextNetStep(){
+
+        if (!processing)
+            netStaticImpl.startProcessing();
+
         // алгоритм
         // сначала надо определиться какие переходы сейчас смогут сработать.
 
@@ -168,6 +177,8 @@ public class LiveNet {
         statusText.setText("step done");
         nextStep.setEnabled(true);
 
+        if (!processing)
+            netStaticImpl.stopProcessing();
 
     }
 

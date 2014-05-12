@@ -11,6 +11,16 @@ public class State {
     private Integer _id;
     private static Integer ids = 0;
 
+    private boolean processing = false;
+    public void setProcessing(boolean flag){
+        processing = flag;
+        if (processing == false){
+            for (Token t : _processingTokens)
+            if (!_tokens.contains(t))
+                _tokens.add(t);
+        }
+    }
+
     // TODO сделать интерфейс отдающий имена и id
     public Integer GetID(){
         return _id;
@@ -30,6 +40,7 @@ public class State {
         _id = getNextId();
         _name = DefaultStateName;
         _tokens = new ArrayList<Token>();
+        _processingTokens = new ArrayList<Token>();
     }
 
     public void ChangeName(String name){
@@ -37,9 +48,18 @@ public class State {
     }
 
     private ArrayList<Token> _tokens;
+    private ArrayList<Token> _processingTokens;
+
     public void LocateToken(Token token){
-      if (!_tokens.contains(token))
-          _tokens.add(token);
+
+      if (!processing){
+        if (!_tokens.contains(token))
+            _tokens.add(token);
+      }else
+      {
+          if (!_processingTokens.contains(token))
+              _processingTokens.add(token);
+      }
     }
 
     public void TokenGone(Token token){
