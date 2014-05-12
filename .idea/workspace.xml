@@ -71,10 +71,71 @@
       <file leaf-file-name="netStaticImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="9" selection-start="848" selection-end="848" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="2159">
-              <folding>
-                <element signature="method#isProcessing#0;class#netStaticImpl#0" expanded="true" />
-              </folding>
+            <state line="119" column="17" selection-start="3764" selection-end="3764" vertical-scroll-proportion="-10.84" vertical-offset="1667" max-vertical-offset="2159">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateWrap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="14" selection-start="275" selection-end="275" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="578">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transition.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/Transition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="0" selection-start="2029" selection-end="2029" vertical-scroll-proportion="-12.88" vertical-offset="936" max-vertical-offset="1428">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncomingTransitionRule.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/core/IncomingTransitionRule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="17" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.5803758" vertical-offset="844" max-vertical-offset="1564">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutgoingTransitionRule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/OutgoingTransitionRule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="19" selection-start="790" selection-end="790" vertical-scroll-proportion="-13.56" vertical-offset="205" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Token.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/Token.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="39" selection-start="1050" selection-end="1061" vertical-scroll-proportion="-17.64" vertical-offset="341" max-vertical-offset="986">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WWToken.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="113" column="0" selection-start="3132" selection-end="3132" vertical-scroll-proportion="0.0" vertical-offset="1921" max-vertical-offset="2533">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransitionRule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/TransitionRule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,16 +143,16 @@
       <file leaf-file-name="State.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="-12.24" vertical-offset="68" max-vertical-offset="1445">
+            <state line="21" column="38" selection-start="503" selection-end="503" vertical-scroll-proportion="-10.2" vertical-offset="102" max-vertical-offset="1479">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LiveNet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LiveNet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="0" selection-start="3961" selection-end="3961" vertical-scroll-proportion="-0.15181932" vertical-offset="2093" max-vertical-offset="2890">
+            <state line="175" column="0" selection-start="5011" selection-end="5011" vertical-scroll-proportion="-7.44" vertical-offset="2415" max-vertical-offset="2907">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GetInstance#0;class#LiveNet#0" expanded="false" />
@@ -113,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/base/TokensBase.java" />
         <option value="$PROJECT_DIR$/src/internalComponents/WWStringValue.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/FSRState.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/NetConstructorButtons.java" />
@@ -141,7 +201,6 @@
         <option value="$PROJECT_DIR$/src/core/TransitionRule.java" />
         <option value="$PROJECT_DIR$/src/net/staticNet/TransactionRuleWrap.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionRuleElement.java" />
-        <option value="$PROJECT_DIR$/src/core/IncomingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java" />
         <option value="$PROJECT_DIR$/src/fileSavers/FSRProperty.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/GraphPanel.java" />
@@ -153,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/components/Constructor/WorkingNetStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/StatusPanel.java" />
         <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/GEInfo.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/StateElementInfo.java" />
         <option value="$PROJECT_DIR$/src/net/staticNet/StateWrap.java" />
@@ -161,15 +219,18 @@
         <option value="$PROJECT_DIR$/src/net/staticNet/TransactionWrap.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionElementInfo.java" />
         <option value="$PROJECT_DIR$/src/components/GraphicalElements/TransactionElement.java" />
-        <option value="$PROJECT_DIR$/src/core/State.java" />
         <option value="$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java" />
+        <option value="$PROJECT_DIR$/src/internalComponents/WWToken.java" />
+        <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
+        <option value="$PROJECT_DIR$/src/core/IncomingTransitionRule.java" />
+        <option value="$PROJECT_DIR$/src/core/State.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
-    <option name="y" value="28" />
+    <option name="x" value="450" />
+    <option name="y" value="54" />
     <option name="width" value="1518" />
     <option name="height" value="977" />
   </component>
@@ -199,6 +260,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,7 +353,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -374,19 +435,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -412,6 +460,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -495,7 +556,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="28" width="1518" height="977" extended-state="0" />
+    <frame x="450" y="54" width="1518" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -504,10 +565,11 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18897638" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33490565" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19986764" sideWeight="0.5006435" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31839624" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -518,9 +580,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1689441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31889763" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -576,19 +637,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/ConstructorStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221">
-          <folding />
-        </state>
+        <state line="7" column="0" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/awt/event/MouseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="17" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.7099644" vertical-offset="179" max-vertical-offset="1156" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="2" selection-start="2868" selection-end="2868" vertical-scroll-proportion="0.33285302" vertical-offset="1503" max-vertical-offset="2414" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRToken.java">
@@ -615,16 +669,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="44" selection-start="281" selection-end="281" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="901">
-          <folding />
-        </state>
+        <state line="12" column="44" selection-start="281" selection-end="281" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/GElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="196" selection-end="196" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
+        <state line="11" column="17" selection-start="196" selection-end="196" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/IntegerValue.java">
@@ -648,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/TransitionRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="70" selection-end="84" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="376" column="44" selection-start="18551" selection-end="18551" vertical-scroll-proportion="0.6862069" vertical-offset="5909" max-vertical-offset="9129" />
@@ -670,18 +713,9 @@
         <state line="27" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1190" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="52" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="595">
-          <folding />
-        </state>
+        <state line="20" column="52" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/JPanel.java">
@@ -706,23 +740,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="222" selection-end="222" vertical-scroll-proportion="0.40215054" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
+        <state line="11" column="4" selection-start="222" selection-end="222" vertical-scroll-proportion="0.40215054" vertical-offset="0" max-vertical-offset="465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/WorkingNetStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="71" selection-start="276" selection-end="276" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="10" column="71" selection-start="276" selection-end="276" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphicalConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="35" selection-start="1248" selection-end="1248" vertical-scroll-proportion="-10.88" vertical-offset="459" max-vertical-offset="1598">
-          <folding />
-        </state>
+        <state line="45" column="35" selection-start="1248" selection-end="1248" vertical-scroll-proportion="-10.88" vertical-offset="459" max-vertical-offset="1598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java">
@@ -736,8 +764,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="62" selection-start="444" selection-end="488" vertical-scroll-proportion="-4.32" vertical-offset="130" max-vertical-offset="850">
           <folding>
-            <element signature="e#1006#1186#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1006#1186#0" expanded="false" />
+            <element signature="e#1175#1176#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -747,41 +775,14 @@
         <state line="120" column="29" selection-start="3833" selection-end="3833" vertical-scroll-proportion="-40.32" vertical-offset="726" max-vertical-offset="4607" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/IncomingTransitionRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="352" selection-end="352" vertical-scroll-proportion="-9.52" vertical-offset="0" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/staticNet/TransactionRuleWrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.19318181" vertical-offset="0" max-vertical-offset="792">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Transition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="-9.4" vertical-offset="258" max-vertical-offset="1428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/OutgoingTransitionRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="744" selection-end="744" vertical-scroll-proportion="-20.4" vertical-offset="0" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="9" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.19318181" vertical-offset="0" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/GEInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="23" selection-start="130" selection-end="130" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
+        <state line="6" column="23" selection-start="130" selection-end="130" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="238" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
@@ -803,30 +804,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElementInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="16" selection-start="760" selection-end="760" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="20" column="0" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="544" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/staticNet/TransactionWrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="697">
-          <folding />
-        </state>
+        <state line="32" column="18" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="697" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionElementInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476">
-          <folding />
-        </state>
+        <state line="19" column="23" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="476" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
@@ -843,25 +831,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/State.java">
+    <entry file="file://$PROJECT_DIR$/src/core/TransitionRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="-12.24" vertical-offset="68" max-vertical-offset="1445">
+        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="238">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/internalComponents/WWToken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="9" selection-start="848" selection-end="848" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="2159">
-          <folding>
-            <element signature="method#isProcessing#0;class#netStaticImpl#0" expanded="true" />
-          </folding>
+        <state line="113" column="0" selection-start="3132" selection-end="3132" vertical-scroll-proportion="0.0" vertical-offset="1921" max-vertical-offset="2533">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="39" selection-start="1050" selection-end="1061" vertical-scroll-proportion="-17.64" vertical-offset="341" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/OutgoingTransitionRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="19" selection-start="790" selection-end="790" vertical-scroll-proportion="-13.56" vertical-offset="205" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Transition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="2029" selection-end="2029" vertical-scroll-proportion="-12.88" vertical-offset="936" max-vertical-offset="1428">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="0" selection-start="3961" selection-end="3961" vertical-scroll-proportion="-0.15181932" vertical-offset="2093" max-vertical-offset="2890">
+        <state line="175" column="0" selection-start="5011" selection-end="5011" vertical-scroll-proportion="-7.44" vertical-offset="2415" max-vertical-offset="2907">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#GetInstance#0;class#LiveNet#0" expanded="false" />
@@ -869,6 +876,34 @@
             <element signature="method#isProcessing#0;class#LiveNet#0" expanded="true" />
             <element signature="method#setProcessing#0;class#LiveNet#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="17" selection-start="3764" selection-end="3764" vertical-scroll-proportion="-10.84" vertical-offset="1667" max-vertical-offset="2159">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/staticNet/StateWrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="14" selection-start="275" selection-end="275" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="38" selection-start="503" selection-end="503" vertical-scroll-proportion="-10.2" vertical-offset="102" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/IncomingTransitionRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="17" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.5803758" vertical-offset="844" max-vertical-offset="1564">
+          <folding />
         </state>
       </provider>
     </entry>

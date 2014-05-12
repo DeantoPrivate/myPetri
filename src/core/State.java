@@ -18,6 +18,8 @@ public class State {
             for (Token t : _processingTokens)
             if (!_tokens.contains(t))
                 _tokens.add(t);
+
+            _processingTokens.clear();
         }
     }
 

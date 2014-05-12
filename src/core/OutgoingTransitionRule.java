@@ -18,7 +18,7 @@ public class OutgoingTransitionRule extends TransitionRule{
 
     public void constructRule(){
 
-        JOptionPane.showMessageDialog(null,"Строим висходящее правило транзакции");
+        JOptionPane.showMessageDialog(null,"Строим исходящее правило транзакции");
 
         while(!_completed){
 

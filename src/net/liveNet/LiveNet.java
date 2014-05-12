@@ -142,7 +142,7 @@ public class LiveNet {
         }
     }
 
-    private boolean processing = true;
+    private boolean processing = false;
     private synchronized boolean isProcessing(){return processing;}
     private synchronized void setProcessing(boolean flag){processing = flag;}
 
@@ -170,6 +170,9 @@ public class LiveNet {
         }
         // обновляем статусы и прочее
 
+        if (!processing)
+            netStaticImpl.stopProcessing();
+
         _staticNet.RepaintNet();
 
         //TODO wrap должен быть лисонером у объекта. объект когда меняется сообщает wrap  - а тот сообщает графической части что надо перерисоваться
@@ -177,8 +180,6 @@ public class LiveNet {
         statusText.setText("step done");
         nextStep.setEnabled(true);
 
-        if (!processing)
-            netStaticImpl.stopProcessing();
 
     }
 
