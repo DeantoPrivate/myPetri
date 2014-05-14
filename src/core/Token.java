@@ -1,5 +1,8 @@
 package core;
 
+import base.TokensBase;
+import components.TokenManager.Dialog;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +30,19 @@ public class Token {
         _id = getNextID();
         _name = _defaultName;
         _properties = new ArrayList<Property>();
+
+
     }
 
     public void ChangeName(String newname){
+
+        if (_name.equals(_defaultName)) {
+            _name = newname;
+            TokensBase.GetTokenBase().AddToken(this);
+
+        }
         _name = newname;
+        Dialog.getInstanse().UpdateGUI();
     }
     public String GetName(){
         return _name;

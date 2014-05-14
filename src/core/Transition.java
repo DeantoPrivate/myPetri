@@ -25,6 +25,11 @@ public class Transition {
         return true;
     }
 
+
+    public ArrayList<IncomingTransitionRule> get_incomingTransitionRules() {return  _incomingTransitionRules;}
+    public ArrayList<OutgoingTransitionRule> get_outgoingTransitionRules() {return _outgoingTransitionRules;}
+
+
     private String _name;
     public void SetName(String name){
         _name = name;

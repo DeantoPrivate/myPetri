@@ -1,5 +1,8 @@
 package internalComponents;
 
+import base.TokensBase;
+import components.TokenManager.*;
+import components.TokenManager.Dialog;
 import core.Property;
 import core.Token;
 
@@ -107,15 +110,30 @@ public class WWToken extends JDialog implements ActionListener {
         _currentProperties = new ArrayList<Property>();
 
         this.setModal(true);
+
+        try {
+
+            if (JOptionPane.showOptionDialog(null, "взять из базы?", "выбор токена", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, 0) == 0) {
+                // берем токен из базы
+
+                _token = Dialog.getInstanse().selectAndGetToken();
+            }
+
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null,"не удалось...");
+        }
+        if (_token == null){
+
 //TODO make constants for all questions
-        String name = JOptionPane.showInputDialog(this,"Enter a name for new Token.");
-        while (name==null)
-            name = JOptionPane.showInputDialog(this,"Empty name is not allowed!\nEnter a name for new Token.");
+            String name = JOptionPane.showInputDialog(this, "Enter a name for new Token.");
+            while (name == null)
+                name = JOptionPane.showInputDialog(this, "Empty name is not allowed!\nEnter a name for new Token.");
 
-        _token=new Token();
-        _token.ChangeName(name);
+            _token = new Token();
+            _token.ChangeName(name);
 
-        ShowToken();
+            ShowToken();
+        }
     }
 
     @Override

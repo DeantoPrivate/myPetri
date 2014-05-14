@@ -42,6 +42,10 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
     }
 
     public static Dialog getInstanse(){
+        if (_instance == null) {
+            _instance = new Dialog();
+            _instance.Init();
+        }
         return _instance;
     }
 
@@ -130,6 +134,10 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
         setBounds(1000, 300, 605, 645);
         setResizable(false);
 
+    }
+
+    public void UpdateGUI(){
+        updatePanelToken_base();
     }
 
     @Override
@@ -273,6 +281,7 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
     }
 
     void updatePanelToken_view(){
+
         int pos = token_list.getSelectedIndex();
         VToken vToken = new VToken(TokensBase.GetTokenBase().GetTokens().get(pos));
 

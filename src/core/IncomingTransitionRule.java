@@ -17,6 +17,18 @@ public class IncomingTransitionRule extends TransitionRule{
 
     public String _actionIncomingToken = Transition.INCOMING_TOKEN_REMOVE;
 
+    @Override
+    public String toString() {
+
+        String str = "";
+        str += "Из _" + _state.GetName() + "_ берем " + _tokenCount + " токен(ов) _" + _tokenPattern.GetName();
+
+        if (_actionIncomingToken.equals(Transition.INCOMING_TOKEN_KEEP)){
+            str += " и оставляем его на месте";
+        }
+
+        return str;
+    }
 
     public void setState(State state){
         _state = state;

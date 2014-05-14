@@ -1,5 +1,8 @@
 package components.GraphicalElements;
 
+import components.Constructor.TransitionStatusPanel;
+import net.staticNet.netStaticImpl;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -58,7 +61,7 @@ public class TransactionElement extends AbstractGElement {
 
     @Override
     public void ProcessMouseEvent(MouseEvent e) {
-        JOptionPane.showMessageDialog(null,"Transition!");
+        TransitionStatusPanel.ShowTransaction(netStaticImpl.getNet().getTransition(this));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package base;
 
+import components.TokenManager.Dialog;
 import core.Token;
 import views.VToken;
 
@@ -28,9 +29,19 @@ public class TokensBase {
     }
 
     private ArrayList<Token> _loadTokens;
+
     public void AddToken(Token token){
+
+        for (Token t : _loadTokens)
+            if (t.GetName().equals(token.GetName())) {
+                JOptionPane.showMessageDialog(null, "Токен с таким именем существует. Не добавляем в базу!");
+                return;
+            }
+
         if (!_loadTokens.contains(token))
             _loadTokens.add(token);
+
+        Dialog.getInstanse().UpdateGUI();
     }
 
     public ArrayList<Token> GetTokens(){
