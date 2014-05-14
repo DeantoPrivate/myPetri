@@ -32,11 +32,27 @@ public class TokensBase {
 
     public void AddToken(Token token){
 
-        for (Token t : _loadTokens)
-            if (t.GetName().equals(token.GetName())) {
-                JOptionPane.showMessageDialog(null, "Токен с таким именем существует. Не добавляем в базу!");
+        try {
+
+            boolean ok = false;
+
+            for (Token t : _loadTokens)
+                if (t.GetName().equals(token.GetName())) {
+                    //JOptionPane.showMessageDialog(null, "Токен с таким именем существует. Не добавляем в базу!");
+                    for (int i = 0; i < t.get_properties().size(); i++)
+                        if (t.get_properties().get(i).getName().equals(token.get_properties().get(i).getName()))
+                            if (t.get_properties().get(i).getValue().getStringValue().equals(token.get_properties().get(i).getValue().getStringValue())) {
+
+                                ok = true;
+                            }
+                }
+
+            if (ok){
+                JOptionPane.showMessageDialog(null, "Такой токен уже существует. Не добавляем в базу!");
                 return;
             }
+
+        } catch (Exception r){}
 
         if (!_loadTokens.contains(token))
             _loadTokens.add(token);

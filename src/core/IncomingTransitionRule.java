@@ -1,5 +1,6 @@
 package core;
 
+import base.TokensBase;
 import internalComponents.WWToken;
 
 import javax.swing.*;
@@ -47,6 +48,8 @@ public class IncomingTransitionRule extends TransitionRule{
             if (pattern!=null){
                 _tokenPattern = pattern;
                 _completed = true;
+
+                TokensBase.GetTokenBase().AddToken(_tokenPattern);
 
                 String count = JOptionPane.showInputDialog(this,"Сколько таких токенов должно быть?");
                 int col = 1;

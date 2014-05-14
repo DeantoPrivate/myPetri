@@ -35,14 +35,7 @@ public class Token {
     }
 
     public void ChangeName(String newname){
-
-        if (_name.equals(_defaultName)) {
-            _name = newname;
-            TokensBase.GetTokenBase().AddToken(this);
-
-        }
         _name = newname;
-        Dialog.getInstanse().UpdateGUI();
     }
     public String GetName(){
         return _name;
