@@ -66,11 +66,21 @@ public class LiveNet {
                 @Override
                 public void actionPerformed(ActionEvent e) {
 
-                    if (newThread!=null)
-                        newThread.setDaemon(true);
 
-                    newThread = new ProcessNetThread();
-                    newThread.start();
+                setProcessing(true);
+
+                if (newThread!=null){
+                    newThread.interrupt();
+                    newThread.setDaemon(true);
+                }
+                newThread = new ProcessNetThread();
+                newThread.start();
+
+
+
+                goForward.setEnabled(false);
+                nextStep.setEnabled(false);
+
                 }
             });
             ControlPanel.add(goForward);
@@ -81,7 +91,8 @@ public class LiveNet {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     setProcessing(false);
-
+                    goForward.setEnabled(true);
+                    nextStep.setEnabled(true);
                 }
             });
             ControlPanel.add(stop);
@@ -106,13 +117,15 @@ public class LiveNet {
     private JTextArea speed;
 
     private class ProcessNetThread extends Thread{
+
         @Override
         public void run() {
+            super.run();
             ProcessNet();
-            interrupt();
         }
 
         private void ProcessNet(){
+
             int step = 100; // miliseconds
             try{
             Integer a = new Integer(speed.getText());
@@ -122,7 +135,7 @@ public class LiveNet {
 
             }
 
-            netStaticImpl.startProcessing();
+           // netStaticImpl.startProcessing();
 
             while(isProcessing()){
                 try{
@@ -137,7 +150,7 @@ public class LiveNet {
                 }
             }
 
-            netStaticImpl.stopProcessing();
+            //netStaticImpl.stopProcessing();
 
         }
     }
@@ -150,8 +163,7 @@ public class LiveNet {
 
     private void doNextNetStep(){
 
-        if (!processing)
-            netStaticImpl.startProcessing();
+        netStaticImpl.startProcessing();
 
         // алгоритм
         // сначала надо определиться какие переходы сейчас смогут сработать.
@@ -170,12 +182,13 @@ public class LiveNet {
         }
         // обновляем статусы и прочее
 
-        if (!processing)
-            netStaticImpl.stopProcessing();
+
+        netStaticImpl.stopProcessing();
 
         //TODO wrap должен быть лисонером у объекта. объект когда меняется сообщает wrap  - а тот сообщает графической части что надо перерисоваться
 
         statusText.setText("step done");
+        if (!isProcessing())
         nextStep.setEnabled(true);
 
 

@@ -76,9 +76,10 @@ public class State {
 
     public void TokenGone(Token token){
         _tokens.remove(token);
-        if (_listener!=null){
-            _listener.FireUIChangedEvent();
-        }
+        if (!processing)
+            if (_listener!=null){
+                _listener.FireUIChangedEvent();
+            }
     }
 
     public ArrayList<Token> GetTokens(){
