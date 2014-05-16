@@ -1,5 +1,6 @@
 package components.GraphicalElements;
 
+import com.sun.org.apache.regexp.internal.recompile;
 import components.Constructor.StateStatusPanel;
 import net.staticNet.netStaticImpl;
 
@@ -20,6 +21,13 @@ public class StateElement extends AbstractGElement {
     private StateElementInfo _lastInfo;
     public void SetInfo(StateElementInfo newInfo){
         _lastInfo = newInfo;
+    }
+
+    public void setValues(String name,int r,int xC,int yC){
+        _name = name;
+        radius = r;
+        xCenterPos = xC;
+        yCenterPos = yC;
     }
 
     @Override

@@ -43,6 +43,8 @@ public class netStaticImpl {
     }
 
     private ArrayList<StateWrap> _states;
+    public ArrayList<StateWrap> getStates(){return _states;}
+
     private ArrayList<TransactionRuleWrap> _trasactionRules;
     private ArrayList<TransactionWrap> _transactions;
     private ArrayList<Token> _tokens;

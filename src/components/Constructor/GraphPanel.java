@@ -22,7 +22,9 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     // button on bottom
     private JButton newState,newTransaction,addArc,deleteState,deleteTransaction;
     private BufferedImage b2;
-    private JPanel panel;
+    private static JPanel panel;
+
+    public static JPanel getJPanelForElements(){return panel;}
 
     private ArrayList<GElement> _gElements;
 

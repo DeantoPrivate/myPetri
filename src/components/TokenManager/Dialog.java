@@ -165,6 +165,11 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
         }
 
     }
+
+    public static void Save(){
+        _instance.SaveBase();
+    }
+
     void SaveBase(){
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Выберите папку, куда сохранить базу");
