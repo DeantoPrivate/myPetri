@@ -31,7 +31,12 @@ public class TokensBase {
 
     private ArrayList<Token> _loadTokens;
 
+    private boolean second = false;
+
     public void AddToken(Token token){
+
+        // имена одинаковые
+        boolean names =false;
 
         try {
 
@@ -40,15 +45,20 @@ public class TokensBase {
             for (Token t : _loadTokens){
 
                 String a = t.GetName();
-                String b = t.GetName();
+                String b = token.GetName();
+
+                boolean wasProcess = false;
 
                 if (a.equals(b)){
+                    names = true;
                     boolean allEquals = true;
-                    boolean wasProcess = false;
+
                     for (Property ap : t.get_properties()){
                         for (Property bp : token.get_properties()){
 
+
                             wasProcess = true;
+
                             if (ap.getName().equals(bp.getName()) && ap!=null && bp != null){
                                 if (!ap.equals(bp)){
                                     allEquals = false;
@@ -61,13 +71,14 @@ public class TokensBase {
                         }
                     }
 
-                    if (allEquals && wasProcess)
+                    if (allEquals && wasProcess && names || names&&t.get_properties().size()==0&&token.get_properties().size()==0)
                         exist = true;
+
                 }
 
 
             }
-            if (exist){
+            if (exist && !second){
                 JOptionPane.showMessageDialog(null, "Такой токен уже существует. Не добавляем в базу!");
                 return;
             }
@@ -75,9 +86,22 @@ public class TokensBase {
         } catch (Exception r){}
 
         if (!_loadTokens.contains(token))
-            _loadTokens.add(token);
+        {
+            // если имена одинаковые то приписать к новому имени чтонить
+            if (names){
 
-        Dialog.getInstanse().UpdateGUI();
+
+                token.ChangeName(token.GetName()+"*");
+                second = true;
+                AddToken(token);
+
+            }
+            if (!_loadTokens.contains(token)){
+                _loadTokens.add(token);
+                Dialog.getInstanse().UpdateGUI();
+            }
+        }
+
     }
 
     public ArrayList<Token> GetTokens(){
