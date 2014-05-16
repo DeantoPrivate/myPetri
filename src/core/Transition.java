@@ -17,6 +17,9 @@ public class Transition {
 
     public boolean canBeActivated(){
 
+        // workaround
+        if (stepswait!=-1) return true;
+
         for (IncomingTransitionRule a : _incomingTransitionRules){
             if (!a.canStart())
                 return false;
@@ -36,6 +39,7 @@ public class Transition {
     }
 
     public Transition(){
+
         _incomingTransitionRules = new ArrayList<IncomingTransitionRule>();
         _outgoingTransitionRules = new ArrayList<OutgoingTransitionRule>();
     }
@@ -48,6 +52,13 @@ public class Transition {
     }
 
 
+    // задержка. 0 - нет задержки.
+    private int sleepSteps = 0;
+    public void SetSleepSteps(int sleep){
+        sleepSteps = sleep;
+        stepswait = -1;
+    }
+    public int getSleepSteps(){return sleepSteps;}
 
     private boolean _active = false;
     public void Activate(){
@@ -62,8 +73,16 @@ public class Transition {
 
     // indicates transaction was started
     private boolean _wasStarted = false;
+
+    private int stepswait = -1;
+
     // process transaction
     public boolean Exec(){
+
+        if (stepswait>0){
+            stepswait -- ;
+            return true;
+        }
         _wasStarted = true;
 
         // additional make sure we can start
@@ -73,14 +92,25 @@ public class Transition {
         if (!isActive()) return false;
 
         // process rule(s)
+        if (stepswait==-1)
         for (IncomingTransitionRule rule : _incomingTransitionRules)
             rule.Process();
+
+        // вот тут нужно подождать еще несколько шагов...
+        if (stepswait == -1 && sleepSteps!=0){
+            // задерживаем выполнение.
+            stepswait = sleepSteps-1;
+        }
+        else{
 
         for (OutgoingTransitionRule rule : _outgoingTransitionRules)
             rule.Process();
 
         _active = false;
         _wasStarted = false;
+        stepswait = -1;
+
+        }
         return true;
     }
 

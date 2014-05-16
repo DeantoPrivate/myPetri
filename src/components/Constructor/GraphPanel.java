@@ -254,6 +254,8 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
             Transition t = new Transition();
             t.SetName(newTransition.get_name());
 
+
+
             _net.addTransaction(t,newTransition);
         }
 

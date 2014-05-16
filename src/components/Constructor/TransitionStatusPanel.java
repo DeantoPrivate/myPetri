@@ -5,7 +5,10 @@ import core.OutgoingTransitionRule;
 import core.Transition;
 
 import javax.swing.*;
+import javax.swing.text.html.ObjectView;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
@@ -53,6 +56,37 @@ public class TransitionStatusPanel extends StatusPanel {
 
         for (int i=0;i<_instance.textAreas.size();i++)
             _instance.add(_instance.textAreas.get(i));
+
+        JTextArea sleep = new JTextArea("задержка = "+_transaction.getSleepSteps());
+        sleep.setBounds(10,100+r,390,20);
+        r+=20;
+        _instance.add(sleep);
+
+        JButton changeTransactionSleep  = new JButton("sleep change");
+        changeTransactionSleep.setBounds(10, 100 + r, 390, 20);
+        changeTransactionSleep.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String count = JOptionPane.showInputDialog("Укажите задержку","0");
+                int col = 0;
+                if (count!=null)
+                    try{
+                        Integer a = new Integer(count.toString());
+                        if (a!=null)
+                            col=a;
+                    }catch (Exception r){
+
+                    }
+
+                if (col<0) col = 0;
+
+                _transaction.SetSleepSteps(col);
+                UpdateGUI();
+                _instance.repaint();
+            }
+        });
+
+        _instance.add(changeTransactionSleep);
 
     }
 
