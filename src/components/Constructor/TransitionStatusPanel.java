@@ -27,6 +27,8 @@ public class TransitionStatusPanel extends StatusPanel {
     }
 
     private static void UpdateGUI(){
+
+        _instance.removeAll();
         _instance.textAreas = new ArrayList<JTextArea>();
 
         JTextArea tmp;
@@ -63,4 +65,5 @@ public class TransitionStatusPanel extends StatusPanel {
 
         _instance = this;
     }
+
 }

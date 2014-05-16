@@ -1,6 +1,7 @@
 package base;
 
 import components.TokenManager.Dialog;
+import core.Property;
 import core.Token;
 import views.VToken;
 
@@ -34,20 +35,39 @@ public class TokensBase {
 
         try {
 
-            boolean ok = false;
+            boolean exist = false; // в базе нет такого токена
 
-            for (Token t : _loadTokens)
-                if (t.GetName().equals(token.GetName())) {
-                    //JOptionPane.showMessageDialog(null, "Токен с таким именем существует. Не добавляем в базу!");
-                    for (int i = 0; i < t.get_properties().size(); i++)
-                        if (t.get_properties().get(i).getName().equals(token.get_properties().get(i).getName()))
-                            if (t.get_properties().get(i).getValue().getStringValue().equals(token.get_properties().get(i).getValue().getStringValue())) {
+            for (Token t : _loadTokens){
 
-                                ok = true;
+                String a = t.GetName();
+                String b = t.GetName();
+
+                if (a.equals(b)){
+                    boolean allEquals = true;
+                    boolean wasProcess = false;
+                    for (Property ap : t.get_properties()){
+                        for (Property bp : token.get_properties()){
+
+                            wasProcess = true;
+                            if (ap.getName().equals(bp.getName()) && ap!=null && bp != null){
+                                if (!ap.equals(bp)){
+                                    allEquals = false;
+                                    break;
+                                }
                             }
+
+                            if (!allEquals) break;
+
+                        }
+                    }
+
+                    if (allEquals && wasProcess)
+                        exist = true;
                 }
 
-            if (ok){
+
+            }
+            if (exist){
                 JOptionPane.showMessageDialog(null, "Такой токен уже существует. Не добавляем в базу!");
                 return;
             }

@@ -22,7 +22,7 @@ public class OutgoingTransitionRule extends TransitionRule{
     public String toString() {
 
         String str = "";
-        str += "в состояние _" + _state.GetName() + "_ помещаем " + _tokenCount + " токен(ов) _" + _token.GetName();
+        str += "в состояние [" + _state.GetName() + "] помещаем " + _tokenCount + " токен(ов) #" + _token.GetName() + "#";
 
         return str;
     }
@@ -60,6 +60,7 @@ public class OutgoingTransitionRule extends TransitionRule{
     }
 
     public void Process(){
+        for (int i=0;i<_tokenCount;i++)
         _state.LocateToken(_token.Clone());
     }
 }

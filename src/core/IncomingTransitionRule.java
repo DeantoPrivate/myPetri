@@ -22,10 +22,10 @@ public class IncomingTransitionRule extends TransitionRule{
     public String toString() {
 
         String str = "";
-        str += "Из _" + _state.GetName() + "_ берем " + _tokenCount + " токен(ов) _" + _tokenPattern.GetName();
+        str += "Из [" + _state.GetName() + "] берем " + _tokenCount + " токен(ов) #" + _tokenPattern.GetName() +"#";
 
         if (_actionIncomingToken.equals(Transition.INCOMING_TOKEN_KEEP)){
-            str += " и оставляем его на месте";
+            str += " и оставляем на месте";
         }
 
         return str;

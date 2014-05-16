@@ -35,4 +35,14 @@ public class Property{
         clone._value=this._value.Clone();
         return clone;
     }
+
+    public boolean equals(Property property){
+        if (_name.equals(property.getName())){
+            if (_value.getStringValue().equals(property._value.getStringValue()))
+                return true;
+        }
+
+        return false;
+    }
+
 }
