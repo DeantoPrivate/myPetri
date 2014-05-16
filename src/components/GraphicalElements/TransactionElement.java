@@ -99,6 +99,8 @@ public class TransactionElement extends AbstractGElement {
     }
 
     private int heigth = 70,width = 10;
+    public int getHeigth(){return heigth;}
+    public int getWidth(){return width;}
     private int x1,y1,x2,y2;
 
     @Override

@@ -37,7 +37,8 @@ public class NetSaver {
                     sb.append(FSRStateWrap.Save(sw));
                 }
 
-                
+                sb.append("Переходы:"+n);
+                for ()
 
             bw.write(sb.toString());
             bw.close();
