@@ -8,7 +8,7 @@ import core.Transition;
 /**
  * Created by deanto on 07.05.14.
  */
-public class TransactionWrap {
+public class TransactionWrap implements UIActionListener{
     private Transition _transaction;
     private TransactionElement _element;
     private TransactionElementInfo _info;
@@ -17,6 +17,7 @@ public class TransactionWrap {
         _transaction = transaction;
         _element = gTransaction;
         _info = new TransactionElementInfo();
+        _transaction.addUIChangeActionListener(this);
     }
 
     public Transition get_transaction(){
@@ -31,5 +32,10 @@ public class TransactionWrap {
         _info.SetActivated();
         _element.setInfo(_info);
         _element.Drow();
+    }
+
+    @Override
+    public void FireUIChangedEvent() {
+        UpdateUI();
     }
 }

@@ -173,8 +173,6 @@ public class LiveNet {
         if (!processing)
             netStaticImpl.stopProcessing();
 
-        _staticNet.RepaintNet();
-
         //TODO wrap должен быть лисонером у объекта. объект когда меняется сообщает wrap  - а тот сообщает графической части что надо перерисоваться
 
         statusText.setText("step done");

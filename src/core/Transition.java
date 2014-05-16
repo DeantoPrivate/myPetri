@@ -1,6 +1,7 @@
 package core;
 
 import com.sun.corba.se.spi.activation._ActivatorImplBase;
+import net.staticNet.UIActionListener;
 
 import java.util.ArrayList;
 
@@ -51,6 +52,10 @@ public class Transition {
         _outgoingTransitionRules.add(rule);
     }
 
+    private UIActionListener _listener;
+    public void addUIChangeActionListener(UIActionListener listener){
+        _listener = listener;
+    }
 
     // задержка. 0 - нет задержки.
     private int sleepSteps = 0;
@@ -92,10 +97,14 @@ public class Transition {
         if (!isActive()) return false;
 
         // process rule(s)
-        if (stepswait==-1)
+        if (stepswait==-1){
+
         for (IncomingTransitionRule rule : _incomingTransitionRules)
             rule.Process();
-
+            if (_listener!=null){
+                _listener.FireUIChangedEvent();
+            }
+        }
         // вот тут нужно подождать еще несколько шагов...
         if (stepswait == -1 && sleepSteps!=0){
             // задерживаем выполнение.
@@ -105,6 +114,10 @@ public class Transition {
 
         for (OutgoingTransitionRule rule : _outgoingTransitionRules)
             rule.Process();
+
+        if (_listener!=null){
+            _listener.FireUIChangedEvent();
+        }
 
         _active = false;
         _wasStarted = false;

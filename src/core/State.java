@@ -1,5 +1,7 @@
 package core;
 
+import net.staticNet.UIActionListener;
+
 import java.util.ArrayList;
 
 /**
@@ -19,9 +21,14 @@ public class State {
             if (!_tokens.contains(t))
                 _tokens.add(t);
 
+            if (_listener!=null){
+                _listener.FireUIChangedEvent();
+            }
             _processingTokens.clear();
         }
     }
+
+
 
     // TODO сделать интерфейс отдающий имена и id
     public Integer GetID(){
@@ -57,6 +64,9 @@ public class State {
       if (!processing){
         if (!_tokens.contains(token))
             _tokens.add(token);
+          if (_listener!=null){
+              _listener.FireUIChangedEvent();
+          }
       }else
       {
           if (!_processingTokens.contains(token))
@@ -66,6 +76,9 @@ public class State {
 
     public void TokenGone(Token token){
         _tokens.remove(token);
+        if (_listener!=null){
+            _listener.FireUIChangedEvent();
+        }
     }
 
     public ArrayList<Token> GetTokens(){
@@ -76,6 +89,11 @@ public class State {
         return copy;
     }
 
+
+    private UIActionListener _listener;
+    public void addUIChangeActionListener(UIActionListener listener){
+        _listener = listener;
+    }
 
 }
 

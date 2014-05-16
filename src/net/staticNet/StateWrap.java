@@ -8,7 +8,7 @@ import core.State;
 /**
  * Created by deanto on 07.05.14.
  */
-public class StateWrap {
+public class StateWrap implements UIActionListener{
     private State _state;
     private StateElement _element;
     private StateElementInfo _stateInfo;
@@ -18,6 +18,7 @@ public class StateWrap {
         _stateInfo = new StateElementInfo();
         _stateInfo.SetTokens(_state.GetTokens().size());
         _element.SetInfo(_stateInfo);
+        _state.addUIChangeActionListener(this);
     }
 
     public State get_state(){
@@ -31,5 +32,10 @@ public class StateWrap {
     public void UpdateUI(){
         _stateInfo.SetTokens(_state.GetTokens().size());
         _element.Drow();
+    }
+
+    @Override
+    public void FireUIChangedEvent() {
+        UpdateUI();
     }
 }
