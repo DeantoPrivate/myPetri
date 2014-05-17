@@ -14,6 +14,16 @@ public class OutgoingTransitionRule extends TransitionRule{
     private boolean _completed = false;
     private int _tokenCount;
 
+    public String getState(){return _state.GetName();}
+    public String getToken(){return _token.GetName();}
+    public int getTokenCount(){return _tokenCount;}
+
+    public void constructRule(State state, Token token, int count){
+        _state = state;
+        _tokenCount = count;
+        _token = token;
+    }
+
     public void setState(State state){
         _state = state;
     }

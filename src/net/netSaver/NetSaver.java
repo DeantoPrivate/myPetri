@@ -3,19 +3,34 @@ package net.netSaver;
 import base.TokensBase;
 import components.TokenManager.Dialog;
 import core.State;
+import core.Token;
 import fileSavers.FSRStateWrap;
+import fileSavers.FSRTransactionWrap;
 import net.staticNet.StateWrap;
+import net.staticNet.TransactionWrap;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Hashtable;
 
 /**
  * Created by deanto on 16.05.14.
  */
 public class NetSaver {
+
+    public static State getState(String stateName){
+        return _states.get(stateName);
+    }
+
+    public static Token getToken(String tokenName){
+        return (_tokens.get(tokenName)).Clone();
+    }
+
+    private static Hashtable<String,Token> _tokens;
+    private static Hashtable<String,State> _states;
 
     public static void SaveNet(netStaticImpl net){
         try{
@@ -38,7 +53,9 @@ public class NetSaver {
                 }
 
                 sb.append("Переходы:"+n);
-                for ()
+                for (TransactionWrap tw : net.getTransactions()){
+                    sb.append(FSRTransactionWrap.Save(tw));
+                }
 
             bw.write(sb.toString());
             bw.close();
@@ -64,4 +81,5 @@ public class NetSaver {
 
         return filename;
     }
+    
 }

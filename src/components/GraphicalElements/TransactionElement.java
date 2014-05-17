@@ -59,6 +59,8 @@ public class TransactionElement extends AbstractGElement {
 
     }
 
+
+
     @Override
     public void ProcessMouseEvent(MouseEvent e) {
         TransitionStatusPanel.ShowTransaction(netStaticImpl.getNet().getTransition(this));
@@ -102,6 +104,14 @@ public class TransactionElement extends AbstractGElement {
     public int getHeigth(){return heigth;}
     public int getWidth(){return width;}
     private int x1,y1,x2,y2;
+
+    public void setValues(String name,int h,int w,int xC, int yC){
+        _name = name;
+        heigth = h;
+        width = w;
+        xCenterPos = xC;
+        yCenterPos = yC;
+    }
 
     @Override
     public boolean isOnElement(Point p) {

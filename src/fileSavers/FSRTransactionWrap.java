@@ -1,7 +1,9 @@
 package fileSavers;
 
+import components.Constructor.GraphPanel;
 import components.GraphicalElements.TransactionElement;
 import core.IncomingTransitionRule;
+import core.OutgoingTransitionRule;
 import core.Transition;
 import net.staticNet.StateWrap;
 import net.staticNet.TransactionWrap;
@@ -30,12 +32,11 @@ public class FSRTransactionWrap {
             answer.append(FSRIncomingTransitionRule.Save(itr));
         }
 
+        answer.append(tw.get_transaction().get_outgoingTransitionRules().size());
 
-
-
-
-
-
+        for (OutgoingTransitionRule otr : tw.get_transaction().get_outgoingTransitionRules()){
+            answer.append(FSROutgoingTransitionRule.Save(otr));
+        }
 
         return answer;
     }
@@ -50,7 +51,7 @@ public class FSRTransactionWrap {
 
         int itrSize = new Integer(strings.get(5));
 
-        for (int i=0;i<5;i++)
+        for (int i=0;i<6;i++)
             strings.remove(0);
 
         ArrayList<IncomingTransitionRule> itrs= new ArrayList<IncomingTransitionRule>();
@@ -58,16 +59,29 @@ public class FSRTransactionWrap {
             itrs.add(FSRIncomingTransitionRule.Read(strings));
 
 
+        int otrSize = new Integer(strings.get(0));
+        strings.remove(0);
 
 
+        ArrayList<OutgoingTransitionRule> otrs= new ArrayList<OutgoingTransitionRule>();
+        for (int i=0;i<otrSize;i++)
+            otrs.add(FSROutgoingTransitionRule.Read(strings));
 
 
         Transition newTransaction = new Transition();
         newTransaction.SetName(tName);
 
         for (IncomingTransitionRule itr:itrs)
-        newTransaction.AddIncomingTransitionRule(itr);
+            newTransaction.AddIncomingTransitionRule(itr);
+
+        for (OutgoingTransitionRule otr:otrs)
+            newTransaction.AddOutgoingTransitionRule(otr);
 
 
+        TransactionElement transactionElement = new TransactionElement(GraphPanel.getJPanelForElements());
+        transactionElement.setValues(tName,height,width,xCenter,yCenter);
+        TransactionWrap transactionWrap = new TransactionWrap(newTransaction,transactionElement);
+
+        return transactionWrap;
     }
 }

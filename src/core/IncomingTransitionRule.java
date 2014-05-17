@@ -15,6 +15,17 @@ public class IncomingTransitionRule extends TransitionRule{
     private Token _tokenPattern;
     private boolean _completed = false;
 
+    public String getState(){return _state.GetName();}
+    public String getToken(){return _tokenPattern.GetName();}
+    public int getTokenCount(){return _tokenCount;}
+    public String getAction(){return _actionIncomingToken;}
+
+    public void constructRule(State state, Token token, int count, String action){
+        _state = state;
+        _tokenCount = count;
+        _tokenPattern = token;
+        _actionIncomingToken = action;
+    }
 
     public String _actionIncomingToken = Transition.INCOMING_TOKEN_REMOVE;
 
