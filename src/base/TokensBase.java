@@ -91,7 +91,7 @@ public class TokensBase {
             if (names){
 
 
-                token.ChangeName(token.GetName()+"*");
+                token.ChangeName(token.GetName()+"#");
                 second = true;
                 AddToken(token);
 

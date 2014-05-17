@@ -139,7 +139,8 @@ public class LiveNet {
 
             while(isProcessing()){
                 try{
-                    Thread.sleep(step);
+                    if (step!=0)
+                        Thread.sleep(step);
 
                     doNextNetStep();
 
@@ -161,6 +162,8 @@ public class LiveNet {
 
 
 
+
+    private int currentStep = 0;
     private void doNextNetStep(){
 
         netStaticImpl.startProcessing();
@@ -187,7 +190,8 @@ public class LiveNet {
 
         //TODO wrap должен быть лисонером у объекта. объект когда меняется сообщает wrap  - а тот сообщает графической части что надо перерисоваться
 
-        statusText.setText("step done");
+        currentStep ++;
+        statusText.setText("step done : " +currentStep);
         if (!isProcessing())
         nextStep.setEnabled(true);
 
