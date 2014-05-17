@@ -1,19 +1,24 @@
 package net.netSaver;
 
 import base.TokensBase;
+import components.Constructor.GraphPanel;
+import components.GraphicalElements.StateElement;
+import components.GraphicalElements.TransactionRuleElement;
 import components.TokenManager.Dialog;
+import core.IncomingTransitionRule;
+import core.OutgoingTransitionRule;
 import core.State;
 import core.Token;
 import fileSavers.FSRStateWrap;
 import fileSavers.FSRTransactionWrap;
 import net.staticNet.StateWrap;
+import net.staticNet.TransactionRuleWrap;
 import net.staticNet.TransactionWrap;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 /**
@@ -47,7 +52,10 @@ public class NetSaver {
                 Dialog.Save();
 
                 // сохраним список всех состояний
+
+
                 sb.append("Состояния:"+n);
+                sb.append(net.getStates().size());
                 for (StateWrap sw : net.getStates()){
                     sb.append(FSRStateWrap.Save(sw));
                 }
@@ -81,5 +89,120 @@ public class NetSaver {
 
         return filename;
     }
-    
+
+    public static netStaticImpl ReadNet(){
+
+        netStaticImpl newNet = netStaticImpl.newNet();
+
+        try{
+
+            // сначала загрузим базу.
+            Dialog.Load();
+
+            // загрузим табличку с токенами
+            for (Token token : TokensBase.GetTokenBase().GetTokens()){
+                _tokens.put(token.GetName(),token);
+            }
+
+        JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setDialogTitle("Открыть файл с сетью");
+            fileChooser.showOpenDialog(null);
+            File file = fileChooser.getSelectedFile();
+
+            String filename = file.getAbsolutePath();
+
+            StringBuffer fileBuffer = new StringBuffer();
+            BufferedReader reader = new BufferedReader(new FileReader(filename));
+
+
+            ArrayList<String> strings = new ArrayList<String>();
+            String nextString = "";
+            while((nextString = (reader.readLine())) != null){
+                strings.add(nextString);
+            }
+
+        // читаем состояния
+            strings.remove(0);
+            int statesCount = new Integer(strings.get(0));
+            strings.remove(0);
+
+            ArrayList<StateWrap> states = new ArrayList<StateWrap>();
+
+            for (int i=0;i<statesCount;i++){
+                StateWrap sw = FSRStateWrap.Read(strings);
+                states.add(sw);
+                _states.put(sw.get_state().GetName(),sw.get_state());
+            }
+
+        // читаем переходы
+            strings.remove(0);
+            int transactionCount = new Integer(strings.get(0));
+            strings.remove(0);
+
+            ArrayList<TransactionWrap> transactions = new ArrayList<TransactionWrap>();
+
+            for (int i=0;i<transactionCount;i++)
+                transactions.add(FSRTransactionWrap.Read(strings));
+
+
+        // теперь все нужно положить в сеть
+
+
+            newNet.AddStates(states);
+            newNet.AddTransactions(transactions);
+
+
+            ArrayList<TransactionRuleWrap> transactionRuleWraps = new ArrayList<TransactionRuleWrap>();
+
+            for (TransactionWrap tw : transactions){
+
+                for (IncomingTransitionRule itr : tw.get_transaction().get_incomingTransitionRules()){
+
+                    TransactionRuleElement tre = new TransactionRuleElement(GraphPanel.getJPanelForElements());
+
+                    StateElement se = null;
+
+                    for (StateWrap sw : states){
+                        if (sw.get_state().GetName().equals(itr.getState()))
+                            se = (StateElement)sw.get_element();
+                    }
+
+                    tre.setStates(se,tw.get_element());
+
+                    TransactionRuleWrap trw = new TransactionRuleWrap(itr,tre);
+                    transactionRuleWraps.add(trw);
+                }
+
+
+                for (OutgoingTransitionRule otr : tw.get_transaction().get_outgoingTransitionRules()){
+
+                    TransactionRuleElement tre = new TransactionRuleElement(GraphPanel.getJPanelForElements());
+
+                    StateElement se = null;
+
+                    for (StateWrap sw : states){
+                        if (sw.get_state().GetName().equals(otr.getState()))
+                            se = (StateElement)sw.get_element();
+                    }
+
+                    tre.setStates(tw.get_element(),se);
+
+                    TransactionRuleWrap trw = new TransactionRuleWrap(otr,tre);
+                    transactionRuleWraps.add(trw);
+                }
+
+            }
+
+            newNet.AddTransactionRules(transactionRuleWraps);
+
+            return newNet;
+
+
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null,"Чтение сети не удалось!");
+            return null;
+        }
+
+
+    }
 }

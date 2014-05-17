@@ -1,5 +1,6 @@
 package net.staticNet;
 
+import components.Constructor.GraphPanel;
 import components.GraphicalElements.StateElement;
 import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
@@ -44,13 +45,31 @@ public class netStaticImpl {
 
     private ArrayList<StateWrap> _states;
     public ArrayList<StateWrap> getStates(){return _states;}
-
+    public void AddStates(ArrayList<StateWrap> states){
+        _states = states;
+    }
 
     private ArrayList<TransactionRuleWrap> _trasactionRules;
+    public void AddTransactionRules(ArrayList<TransactionRuleWrap> trasactionRules){
+        _trasactionRules = trasactionRules;
+    }
     private ArrayList<TransactionWrap> _transactions;
+
     private ArrayList<Token> _tokens;
 
     public ArrayList<TransactionWrap> getTransactions(){return _transactions;}
+    public void AddTransactions(ArrayList<TransactionWrap> transactions){
+        _transactions = transactions;
+    }
+
+    public static netStaticImpl newNet(){
+        if (_instance!=null)
+            JOptionPane.showMessageDialog(null,"Внимание. предыдущая сеть будет перезаписана!");
+
+        _instance = new netStaticImpl();
+
+        return _instance;
+    }
 
     private static netStaticImpl _instance;
     public static netStaticImpl getNet(){
@@ -101,46 +120,6 @@ public class netStaticImpl {
     public void addTransaction(Transition transaction, TransactionElement gTransaction){
         _transactions.add(new TransactionWrap(transaction,gTransaction));
     }
-
-
-    // сохранение - загрузка состояния сети.
-
-    public void save(){
-
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Сохранить сеть.");
-        fileChooser.showSaveDialog(null);
-        File file = fileChooser.getSelectedFile();
-        String filename = file.getAbsolutePath();
-
-        if (filename!=null)
-            SaveNetToFile(filename);
-
-    }
-
-    String n = System.getProperty("line.separator");
-
-    private void SaveNetToFile(String filename){
-
-        try{
-
-            FileWriter fw = new FileWriter(filename);
-            BufferedWriter bw = new BufferedWriter(fw);
-            StringBuilder sb = new StringBuilder();
-
-            sb.append("net" + n);
-
-
-
-
-        }catch (Exception e){JOptionPane.showMessageDialog(null,e.getMessage());}
-
-    }
-
-    public void read(){
-
-    }
-
 
 
     // далее часть для работы с динамической частью

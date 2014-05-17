@@ -170,6 +170,10 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
         _instance.SaveBase();
     }
 
+    public static void Load(){
+        _instance.LoadBase();
+    }
+
     void SaveBase(){
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setDialogTitle("Выберите папку, куда сохранить базу");
