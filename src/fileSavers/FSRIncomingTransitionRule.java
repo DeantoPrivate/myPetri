@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class FSRIncomingTransitionRule {
     public static StringBuilder Save(IncomingTransitionRule itr){
-        
+
     }
 
     public static IncomingTransitionRule Read(ArrayList<String> strings){
