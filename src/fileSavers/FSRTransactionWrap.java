@@ -26,6 +26,7 @@ public class FSRTransactionWrap {
         answer.append(te.getHeigth()+n);
         answer.append(te.getWidth()+n);
 
+        answer.append(tw.get_transaction().getSleepSteps()+n);
         answer.append(tw.get_transaction().get_incomingTransitionRules().size()+n);
 
         for (IncomingTransitionRule itr : tw.get_transaction().get_incomingTransitionRules()){
@@ -49,9 +50,11 @@ public class FSRTransactionWrap {
         int height = new Integer(strings.get(3));
         int width = new Integer(strings.get(4));
 
-        int itrSize = new Integer(strings.get(5));
+        int sleepSteps = new Integer(strings.get(5));
 
-        for (int i=0;i<6;i++)
+        int itrSize = new Integer(strings.get(6));
+
+        for (int i=0;i<7;i++)
             strings.remove(0);
 
         ArrayList<IncomingTransitionRule> itrs= new ArrayList<IncomingTransitionRule>();
@@ -70,6 +73,7 @@ public class FSRTransactionWrap {
 
         Transition newTransaction = new Transition();
         newTransaction.SetName(tName);
+        newTransaction.SetSleepSteps(sleepSteps);
 
         for (IncomingTransitionRule itr:itrs)
             newTransaction.AddIncomingTransitionRule(itr);

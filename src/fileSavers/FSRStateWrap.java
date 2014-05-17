@@ -3,6 +3,8 @@ package fileSavers;
 import components.Constructor.GraphPanel;
 import components.GraphicalElements.StateElement;
 import core.State;
+import core.Token;
+import net.netSaver.NetSaver;
 import net.staticNet.StateWrap;
 
 import java.util.ArrayList;
@@ -21,6 +23,12 @@ public class FSRStateWrap {
         answer.append(sw.get_element().getYcenter()+n);
         answer.append(((StateElement)sw.get_element()).getRadius()+n);
 
+        // сохраним токены в состоянии
+
+        answer.append(sw.get_state().GetTokens().size()+n);
+        for (Token t : sw.get_state().GetTokens())
+            answer.append(t.GetName()+n);
+
         return answer;
     }
 
@@ -35,6 +43,19 @@ public class FSRStateWrap {
 
         State newState = new State();
         newState.ChangeName(stateName);
+
+        // положим в состояние токены
+        int tokenCount = new Integer(strings.get(0));
+        strings.remove(0);
+        for (int i=0;i<tokenCount;i++){
+
+            String tokenName = strings.get(i);
+            Token newToken = NetSaver.getToken(tokenName);
+            newState.LocateToken(newToken);
+        }
+
+        for (int i=0;i<tokenCount;i++)
+            strings.remove(0);
 
         StateElement stateElement = new StateElement(GraphPanel.getJPanelForElements(),true);
         stateElement.setValues(stateName,radius,xCenter,yCenter);
