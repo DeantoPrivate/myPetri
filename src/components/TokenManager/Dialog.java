@@ -167,11 +167,13 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
     }
 
     public static void Save(){
-        _instance.SaveBase();
+        if (_instance!=null)
+            _instance.SaveBase();
     }
 
     public static void Load(){
-        _instance.LoadBase();
+        if (_instance!=null)
+            _instance.LoadBase();
     }
 
     void SaveBase(){

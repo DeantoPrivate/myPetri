@@ -30,13 +30,13 @@ public class FSRStateWrap {
         int yCenter = new Integer(strings.get(2));
         int radius = new Integer(strings.get(3));
 
-        for (int i=0;i<3;i++)
+        for (int i=0;i<4;i++)
             strings.remove(0);
 
         State newState = new State();
         newState.ChangeName(stateName);
 
-        StateElement stateElement = new StateElement(GraphPanel.getJPanelForElements());
+        StateElement stateElement = new StateElement(GraphPanel.getJPanelForElements(),true);
         stateElement.setValues(stateName,radius,xCenter,yCenter);
 
         StateWrap newStateWrap = new StateWrap(newState,stateElement);

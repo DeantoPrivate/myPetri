@@ -26,13 +26,13 @@ public class FSRTransactionWrap {
         answer.append(te.getHeigth()+n);
         answer.append(te.getWidth()+n);
 
-        answer.append(tw.get_transaction().get_incomingTransitionRules().size());
+        answer.append(tw.get_transaction().get_incomingTransitionRules().size()+n);
 
         for (IncomingTransitionRule itr : tw.get_transaction().get_incomingTransitionRules()){
             answer.append(FSRIncomingTransitionRule.Save(itr));
         }
 
-        answer.append(tw.get_transaction().get_outgoingTransitionRules().size());
+        answer.append(tw.get_transaction().get_outgoingTransitionRules().size()+n);
 
         for (OutgoingTransitionRule otr : tw.get_transaction().get_outgoingTransitionRules()){
             answer.append(FSROutgoingTransitionRule.Save(otr));
@@ -78,8 +78,8 @@ public class FSRTransactionWrap {
             newTransaction.AddOutgoingTransitionRule(otr);
 
 
-        TransactionElement transactionElement = new TransactionElement(GraphPanel.getJPanelForElements());
-        transactionElement.setValues(tName,height,width,xCenter,yCenter);
+        TransactionElement transactionElement = new TransactionElement(GraphPanel.getJPanelForElements(),true);
+        transactionElement.setValues(tName,height,width,yCenter,xCenter);
         TransactionWrap transactionWrap = new TransactionWrap(newTransaction,transactionElement);
 
         return transactionWrap;

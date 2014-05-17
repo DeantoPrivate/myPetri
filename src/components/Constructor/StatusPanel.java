@@ -2,6 +2,8 @@ package components.Constructor;
 
 import components.TokenManager.*;
 import net.liveNet.LiveNet;
+import net.netSaver.NetSaver;
+import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +17,7 @@ public class StatusPanel extends JPanel {
 
     public static String StatusPanel = "StatusPanel";
 
-    JButton openTokenManager,openNetControlPanel;
+    JButton openTokenManager,openNetControlPanel, saveNet, readNet;
 
     public void Init(){
         setBorder(BorderFactory.createLineBorder(Color.ORANGE));
@@ -42,6 +44,26 @@ public class StatusPanel extends JPanel {
         openNetControlPanel.setBounds(0,30,480,30);
         add(openNetControlPanel);
 
+        saveNet = new JButton("Save Net");
+        saveNet.setBounds(0,60,240,30);
+        saveNet.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                NetSaver.SaveNet(netStaticImpl.getNet());
+            }
+        });
+        add(saveNet);
+
+        readNet = new JButton("Read Net");
+        readNet.setBounds(240,60,240,30);
+        readNet.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                netStaticImpl.changeInstance(NetSaver.ReadNet());
+            }
+        });
+        add(readNet);
+
         setBackground(Color.GRAY);
         setVisible(true);
     }
@@ -51,5 +73,8 @@ public class StatusPanel extends JPanel {
         super.removeAll();
         add(openTokenManager);
         add(openNetControlPanel);
+        add(saveNet);
+        add(readNet);
+
     }
 }

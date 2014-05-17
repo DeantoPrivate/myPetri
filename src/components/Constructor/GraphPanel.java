@@ -26,12 +26,20 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     public static JPanel getJPanelForElements(){return panel;}
 
-    private ArrayList<GElement> _gElements;
+    private static ArrayList<GElement> _gElements;
+
+    private static GraphPanel _instance;
+
+    public static void SetElements(ArrayList<GElement> _newGElements){
+        _gElements = _newGElements;
+        _instance.repaintAllElements();
+        _instance._net = netStaticImpl.getNet();
+    }
 
     int buttonSize = 50;
 
     public void Init(){
-
+        _instance = this;
         _net = netStaticImpl.getNet();
 
         setLayout(null);
@@ -236,7 +244,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==newState && TransactionAddingMode == false){
             repaintAllElements();
-            StateElement newGState = new StateElement(panel);
+            StateElement newGState = new StateElement(panel,false);
             _gElements.add(newGState);
             newGState.Drow();
 
@@ -249,7 +257,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         if (e.getSource() == newTransaction && TransactionAddingMode == false){
 
             repaintAllElements();
-            TransactionElement newTransition = new TransactionElement(panel);
+            TransactionElement newTransition = new TransactionElement(panel,false);
             _gElements.add(newTransition);
             newTransition.Drow();
 

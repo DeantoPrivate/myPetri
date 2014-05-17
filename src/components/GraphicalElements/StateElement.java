@@ -85,7 +85,7 @@ public class StateElement extends AbstractGElement {
         gg.drawString(tmpName,radius/5, radius);
     }
 
-    public StateElement(JPanel gp){
+    public StateElement(JPanel gp, boolean read){
 
         super(gp);
 
@@ -97,9 +97,11 @@ public class StateElement extends AbstractGElement {
         gg.setColor(Color.WHITE);
         gg.fillOval(5,5,radius*2-10,radius*2-10);
 
-        String newName = JOptionPane.showInputDialog("Укажите имя для нового состояния.");
-        if (newName!=null && !newName.equals("")){
-            _name=newName;
+        if (!read){
+            String newName = JOptionPane.showInputDialog("Укажите имя для нового состояния.");
+            if (newName!=null && !newName.equals("")){
+                _name=newName;
+            }
         }
 
         gg.setColor(Color.BLACK);

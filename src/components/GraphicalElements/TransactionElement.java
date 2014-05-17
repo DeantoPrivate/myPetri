@@ -23,7 +23,7 @@ public class TransactionElement extends AbstractGElement {
 
     BufferedImage activated;
 
-    public TransactionElement(JPanel gp) {
+    public TransactionElement(JPanel gp,boolean read) {
         super(gp);
 
         x1=xCenterPos-width/2;
@@ -45,9 +45,11 @@ public class TransactionElement extends AbstractGElement {
         gg.setColor(Color.WHITE);
         gg.fillRect(4,4,width-4*2,heigth-4*2);
 
-        String newName = JOptionPane.showInputDialog("Укажите имя для нового перехода.");
-        if (newName!=null && !newName.equals("")){
-            _name=newName;
+        if (!read){
+            String newName = JOptionPane.showInputDialog("Укажите имя для нового перехода.");
+            if (newName!=null && !newName.equals("")){
+                _name=newName;
+            }
         }
 
         gg.setColor(Color.BLACK);

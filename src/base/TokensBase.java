@@ -79,7 +79,7 @@ public class TokensBase {
 
             }
             if (exist && !second){
-                JOptionPane.showMessageDialog(null, "Такой токен уже существует. Не добавляем в базу!");
+                //JOptionPane.showMessageDialog(null, "Такой токен уже существует. Не добавляем в базу!");
                 return;
             }
 

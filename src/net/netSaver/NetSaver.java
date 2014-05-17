@@ -55,18 +55,20 @@ public class NetSaver {
 
 
                 sb.append("Состояния:"+n);
-                sb.append(net.getStates().size());
+                sb.append(net.getStates().size()+n);
                 for (StateWrap sw : net.getStates()){
                     sb.append(FSRStateWrap.Save(sw));
                 }
 
                 sb.append("Переходы:"+n);
+                sb.append(net.getTransactions().size()+n);
                 for (TransactionWrap tw : net.getTransactions()){
                     sb.append(FSRTransactionWrap.Save(tw));
                 }
 
             bw.write(sb.toString());
             bw.close();
+            fw.close();
 
         }catch (Exception e){
             JOptionPane.showMessageDialog(null,"Сохранение сети не удалось!");
@@ -98,6 +100,9 @@ public class NetSaver {
 
             // сначала загрузим базу.
             Dialog.Load();
+
+            _states = new Hashtable<String, State>();
+            _tokens = new Hashtable<String, Token>();
 
             // загрузим табличку с токенами
             for (Token token : TokensBase.GetTokenBase().GetTokens()){
@@ -194,7 +199,8 @@ public class NetSaver {
             }
 
             newNet.AddTransactionRules(transactionRuleWraps);
-
+            reader.close();
+            newNet.SyncGElements();
             return newNet;
 
 

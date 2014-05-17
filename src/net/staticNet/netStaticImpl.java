@@ -1,6 +1,7 @@
 package net.staticNet;
 
 import components.Constructor.GraphPanel;
+import components.GraphicalElements.GElement;
 import components.GraphicalElements.StateElement;
 import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
@@ -69,6 +70,10 @@ public class netStaticImpl {
         _instance = new netStaticImpl();
 
         return _instance;
+    }
+
+    public static void changeInstance(netStaticImpl newNet){
+        _instance = newNet;
     }
 
     private static netStaticImpl _instance;
@@ -149,6 +154,21 @@ public class netStaticImpl {
             sw.UpdateUI();
         }
 
+    }
+
+    public void SyncGElements(){
+        ArrayList<GElement> allElements = new ArrayList<GElement>();
+
+        for (TransactionWrap tw : _transactions)
+            allElements.add(tw.get_element());
+
+        for (StateWrap sw : _states)
+            allElements.add(sw.get_element());
+
+        for (TransactionRuleWrap trw : _trasactionRules)
+            allElements.add(trw.get_element());
+
+        GraphPanel.SetElements(allElements);
     }
 
 }
