@@ -1,6 +1,8 @@
 package core;
 
 import com.sun.corba.se.spi.activation._ActivatorImplBase;
+import net.dynamic.statistic.CountActionListener;
+import net.dynamic.statistic.transactionStat;
 import net.staticNet.UIActionListener;
 
 import java.util.ArrayList;
@@ -30,6 +32,11 @@ public class Transition {
         return true;
     }
 
+    private CountActionListener _statElement;
+    public void AssignTransactionStat(CountActionListener statElement){
+        _statElement = statElement;
+    }
+
 
     public ArrayList<IncomingTransitionRule> get_incomingTransitionRules() {return  _incomingTransitionRules;}
     public ArrayList<OutgoingTransitionRule> get_outgoingTransitionRules() {return _outgoingTransitionRules;}
@@ -39,6 +46,7 @@ public class Transition {
     public void SetName(String name){
         _name = name;
     }
+    public String getName(){return _name;}
 
     public Transition(){
 
@@ -119,6 +127,8 @@ public class Transition {
         if (_listener!=null){
             _listener.FireUIChangedEvent();
         }
+        if (_statElement!=null)
+            _statElement.FireCountEventFromElement();
 
         _active = false;
         _wasStarted = false;

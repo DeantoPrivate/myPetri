@@ -1,5 +1,6 @@
 package core;
 
+import net.dynamic.statistic.Context;
 import net.staticNet.UIActionListener;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
  *
  * state is a place for tokens
  */
-public class State {
+public class State implements Context {
     private Integer _id;
     private static Integer ids = 0;
 
