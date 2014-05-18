@@ -180,7 +180,6 @@ public class LiveNet {
         for (Transition t : _transitions){
             t.Activate();
             t.Exec();
-            //TODO сейчас нет учета текущего шага. токены берутся из состояний как есть. а не те что были доступны перед шагом
             t.Deactivate();
         }
         // обновляем статусы и прочее
@@ -188,7 +187,6 @@ public class LiveNet {
 
         netStaticImpl.stopProcessing();
 
-        //TODO wrap должен быть лисонером у объекта. объект когда меняется сообщает wrap  - а тот сообщает графической части что надо перерисоваться
 
         currentStep ++;
         statusText.setText("step done : " +currentStep);
