@@ -29,6 +29,11 @@ public class TransitionStatusPanel extends StatusPanel {
         UpdateGUI();
     }
 
+    public static void UpdateUI(){
+        if (_transaction!=null)
+            UpdateGUI();
+    }
+
     private static void UpdateGUI(){
 
         _instance.removeAll();

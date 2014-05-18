@@ -1,10 +1,13 @@
 package components.Constructor;
 
 import core.State;
+import org.omg.DynamicAny._DynUnionStub;
 import views.BToken;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
@@ -26,13 +29,20 @@ public class StateStatusPanel extends StatusPanel {
     private static JLabel _textName;
     private static ArrayList<JButton> _tokensList;
 
+    public static void UpdateUI(){
+        if (_state!=null){
+            Update();
+
+            _instance.repaint();
+        }
+    }
+
     private static void Update(){
 
         _instance.removeAll();
         _instance.add(_textName);
 
         _textName.setText("Состояние: "+_state.GetName());
-
 
         _tokensList = new ArrayList<JButton>();
         for (int i=0;i<_state.GetTokens().size();i++)
@@ -42,7 +52,7 @@ public class StateStatusPanel extends StatusPanel {
 
         for (int i=0;i<_tokensList.size();i++){
             JButton tmp = _tokensList.get(i);
-            tmp.setBounds(100,130+ii,300,20);
+            tmp.setBounds(100,230+ii,300,20);
             ii+=20;
             _instance.add(_tokensList.get(i));
         }
@@ -56,7 +66,7 @@ public class StateStatusPanel extends StatusPanel {
         setBackground(Color.WHITE);
 
         _textName = new JLabel("Состояние: ");
-        _textName.setBounds(100,100,300,20);
+        _textName.setBounds(100,200,300,20);
 
         add(_textName);
         _instance = this;

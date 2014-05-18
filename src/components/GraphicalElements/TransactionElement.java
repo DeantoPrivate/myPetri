@@ -76,7 +76,7 @@ public class TransactionElement extends AbstractGElement {
             _gp.getGraphics().drawImage(activated,xCenterPos-width/2,yCenterPos-heigth/2,width,heigth,null);
             try{
                 //TODO sleep is a bad way. it should be several threads for working with difference parts of the program
-            Thread.sleep(100);
+           // Thread.sleep(100);
             }catch (Exception e){}
         }
 

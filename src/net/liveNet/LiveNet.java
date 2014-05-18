@@ -1,5 +1,7 @@
 package net.liveNet;
 
+import components.Constructor.StateStatusPanel;
+import components.Constructor.TransitionStatusPanel;
 import components.Constructor.WorkingNetStatusPanel;
 import core.Transition;
 import net.staticNet.netStaticImpl;
@@ -186,7 +188,8 @@ public class LiveNet {
 
 
         netStaticImpl.stopProcessing();
-
+        StateStatusPanel.UpdateUI();
+        TransitionStatusPanel.UpdateUI();
 
         currentStep ++;
         statusText.setText("step done : " +currentStep);
