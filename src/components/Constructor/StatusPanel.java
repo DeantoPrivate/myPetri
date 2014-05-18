@@ -1,6 +1,7 @@
 package components.Constructor;
 
 import components.TokenManager.*;
+import net.dynamic.statistic.statPanel;
 import net.liveNet.LiveNet;
 import net.netSaver.NetSaver;
 import net.staticNet.netStaticImpl;
@@ -17,7 +18,7 @@ public class StatusPanel extends JPanel {
 
     public static String StatusPanel = "StatusPanel";
 
-    JButton openTokenManager,openNetControlPanel, saveNet, readNet;
+    JButton openTokenManager,openNetControlPanel, saveNet, readNet, statisticPanel;
 
     public void Init(){
         setBorder(BorderFactory.createLineBorder(Color.ORANGE));
@@ -63,6 +64,17 @@ public class StatusPanel extends JPanel {
             }
         });
         add(readNet);
+
+
+        statisticPanel = new JButton("Stat Panel");
+        statisticPanel.setBounds(380,90,100,30);
+        statisticPanel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                statPanel.ShowPanel();
+            }
+        });
+        add(statisticPanel);
 
         setBackground(Color.GRAY);
         setVisible(true);
