@@ -56,6 +56,15 @@ public class netStaticImpl {
     }
     private ArrayList<TransactionWrap> _transactions;
 
+    public Transition getTransition(String name){
+        for (TransactionWrap tw:_transactions){
+            if (tw.get_transaction().getName().equals(name))
+                return tw.get_transaction();
+        }
+
+        return null;
+    }
+
     private ArrayList<Token> _tokens;
 
     public ArrayList<TransactionWrap> getTransactions(){return _transactions;}

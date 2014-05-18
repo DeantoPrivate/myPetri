@@ -5,6 +5,9 @@ import sun.security.krb5.internal.PAData;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * Created by deanto on 18.05.14.
@@ -30,6 +33,10 @@ public class statPanel extends JDialog {
         _instance.setVisible(true);
     }
 
+    private ArrayList<JPanel> _transactionStats;
+
+    private int tPos = 30;
+
     private void Init(){
         setTitle("Панель сбора статистики");
         setBounds(10, 10, 1000, 800);
@@ -41,25 +48,40 @@ public class statPanel extends JDialog {
             TransactionSectionTitle.setBounds(0,0,100,20);
             Panel.add(TransactionSectionTitle);
 
-            JButton AddTransaction = new JButton("добавить");
+            JButton AddTransaction = new JButton("+");
             AddTransaction.setBounds(100,0,50,20);
+            AddTransaction.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    transactionStat ts = transactionStat.create();
+                    if (ts.Consctuct()){
+                        ts.setBounds(0,tPos,1000,60);
+                        tPos+=50;
+                        _transactionStats.add(ts);
+                        add(ts);
+                        ts.repaint();
+                    }
+                }
+            });
             Panel.add(AddTransaction);
 
-            CurrentStepLable = new JLabel(CurrentStep.toString());
-            CurrentStepLable.setBounds(200,10,100,20);
+            CurrentStepLable = new JLabel("Текущий шаг в сети: "+CurrentStep.toString());
+            CurrentStepLable.setBounds(700,10,300,20);
             Panel.add(CurrentStepLable);
 
             JLabel StatesSectionTitle = new JLabel("Состояния:");
             StatesSectionTitle.setBounds(0,400,100,20);
             Panel.add(StatesSectionTitle);
 
-            JButton AddState = new JButton("добавить");
+            JButton AddState = new JButton("+");
             AddState.setBounds(100,400,50,20);
             Panel.add(AddState);
 
+        _transactionStats = new ArrayList<JPanel>();
 
         add(Panel);
 
     }
+
 
 }

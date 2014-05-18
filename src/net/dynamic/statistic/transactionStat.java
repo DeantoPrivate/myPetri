@@ -1,6 +1,7 @@
 package net.dynamic.statistic;
 
 import core.Transition;
+import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,7 +11,7 @@ import java.awt.*;
  */
 public class transactionStat extends JPanel implements CountActionListener {
 
-    private Transition _transaction;
+    private Transition _transaction = null;
     public void SetAssociatedTransaction(Transition transition){
         _transaction = transition;
     }
@@ -21,7 +22,24 @@ public class transactionStat extends JPanel implements CountActionListener {
     public int getWorkCount(){return WorkCount;}
     public void FireCountEventFromElement(){
         WorkCount ++;
+        text.setText(toString());
     }
+
+    public boolean Consctuct(){
+        String tName = "";
+        while (tName.equals(""))
+            tName = JOptionPane.showInputDialog("Введите имя транзакции","");
+
+        _transaction = netStaticImpl.getNet().getTransition(tName);
+        if (_transaction == null){
+            JOptionPane.showMessageDialog(null,"нет такого!");
+        return false;
+        }
+        text.setText(toString());
+        _transaction.AssignTransactionStat(this);
+        return true;
+    }
+
 
     @Override
     public String toString() {
@@ -33,16 +51,27 @@ public class transactionStat extends JPanel implements CountActionListener {
 
         return answer;
     }
+
+    public static transactionStat create(){
+        return new transactionStat();
+    }
+
     private JLabel text;
     private transactionStat(){
         super();
+
+        setLayout(null);
         text = new JLabel(toString());
-        add(text);
+        text.setBackground(Color.RED);
+        text.setBounds(0,0,1000,30);
+        add(text, BorderLayout.NORTH);
+
     }
 
-    @Override
-    public void paint(Graphics g) {
-        text.setText(toString());
+    //@Override
+    public void paiffnt(Graphics g) {
         super.paint(g);
+
+        text.setText(toString());
     }
 }
