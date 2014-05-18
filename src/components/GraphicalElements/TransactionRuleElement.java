@@ -80,7 +80,7 @@ public class TransactionRuleElement extends AbstractGElement {
 
         Graphics2D g = (Graphics2D)_gp.getGraphics();
         g.setColor(Color.LIGHT_GRAY);
-        g.setStroke(new BasicStroke(4));
+        g.setStroke(new BasicStroke(2));
         g.drawLine(s1x, s1y, s2x, s2y);
 
         g.fillOval(pcenterx-radius,pcentery-radius,radius*2,radius*2);

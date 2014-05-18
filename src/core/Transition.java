@@ -20,6 +20,7 @@ public class Transition {
 
         // workaround
         if (stepswait!=-1) return true;
+        if (sleepSteps == -10) return false;
 
         for (IncomingTransitionRule a : _incomingTransitionRules){
             if (!a.canStart())
@@ -57,7 +58,7 @@ public class Transition {
         _listener = listener;
     }
 
-    // задержка. 0 - нет задержки.
+    // задержка. 0 - нет задержки. -9 : сработать только один раз
     private int sleepSteps = 0;
     public void SetSleepSteps(int sleep){
         sleepSteps = sleep;
@@ -106,7 +107,7 @@ public class Transition {
             }
         }
         // вот тут нужно подождать еще несколько шагов...
-        if (stepswait == -1 && sleepSteps!=0){
+        if (stepswait == -1 && sleepSteps!=0 && sleepSteps!=-9){
             // задерживаем выполнение.
             stepswait = sleepSteps-1;
         }
@@ -122,6 +123,9 @@ public class Transition {
         _active = false;
         _wasStarted = false;
         stepswait = -1;
+            if (sleepSteps==-9){
+                sleepSteps = -10;
+            }
 
         }
         return true;

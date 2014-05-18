@@ -1,5 +1,6 @@
 package components.Constructor;
 
+import com.sun.jndi.url.corbaname.corbanameURLContextFactory;
 import core.IncomingTransitionRule;
 import core.OutgoingTransitionRule;
 import core.Transition;
@@ -72,10 +73,14 @@ public class TransitionStatusPanel extends StatusPanel {
         changeTransactionSleep.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String count = JOptionPane.showInputDialog("Укажите задержку","0");
+                String count = JOptionPane.showInputDialog("Укажите задержку","0,1 ...  или \"работает один раз\"");
                 int col = 0;
                 if (count!=null)
                     try{
+                        if (count.equals("работает один раз")){
+                            col = -9;
+                        }
+
                         Integer a = new Integer(count.toString());
                         if (a!=null)
                             col=a;
@@ -83,7 +88,7 @@ public class TransitionStatusPanel extends StatusPanel {
 
                     }
 
-                if (col<0) col = 0;
+                if (col<0 && col!=-9) col = 0;
 
                 _transaction.SetSleepSteps(col);
                 UpdateGUI();

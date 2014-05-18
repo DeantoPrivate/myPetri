@@ -60,11 +60,11 @@ public class StateElement extends AbstractGElement {
             UpdateImg();
         }
 
-        _gp.getGraphics().drawImage(img,xCenterPos-radius,yCenterPos-radius,radius*2,radius*2,null);
+        _gp.getGraphics().drawImage(img,xCenterPos-radius,yCenterPos-radius,radius*2+100,radius*2,null);
     }
 
     private void UpdateImg(){
-        img = new BufferedImage(radius*2,radius*2,BufferedImage.TYPE_INT_ARGB);
+        img = new BufferedImage(radius*2+100,radius*2,BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg = img.createGraphics();
 
         gg.setColor(Color.BLACK);
@@ -80,7 +80,7 @@ public class StateElement extends AbstractGElement {
         }
 
         gg.setColor(Color.BLACK);
-        Font font1 = new Font("Arial", Font.PLAIN, 20);
+        Font font1 = new Font("Arial", Font.PLAIN, 15);
         gg.setFont(font1);
         gg.drawString(tmpName,radius/5, radius);
     }
@@ -89,7 +89,7 @@ public class StateElement extends AbstractGElement {
 
         super(gp);
 
-        img = new BufferedImage(radius*2,radius*2,BufferedImage.TYPE_INT_ARGB);
+        img = new BufferedImage(radius*2+100,radius*2,BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg = img.createGraphics();
 
         gg.setColor(Color.BLACK);
@@ -105,7 +105,7 @@ public class StateElement extends AbstractGElement {
         }
 
         gg.setColor(Color.BLACK);
-        Font font1 = new Font("Arial", Font.PLAIN, 20);
+        Font font1 = new Font("Arial", Font.PLAIN, 15);
         gg.setFont(font1);
         gg.drawString(_name,radius/5, radius);
 

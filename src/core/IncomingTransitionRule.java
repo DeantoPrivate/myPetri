@@ -84,6 +84,9 @@ public class IncomingTransitionRule extends TransitionRule{
     }
 
     public void Process(){
+
+        int deleted = 0;
+
         if (_actionIncomingToken.equals(Transition.INCOMING_TOKEN_REMOVE))
                 for (int i=0;i<_state.GetTokens().size();i++){
                     if (TokenComparer.Equals(_state.GetTokens().get(i),_tokenPattern))
@@ -91,6 +94,9 @@ public class IncomingTransitionRule extends TransitionRule{
                         Token tmp = _state.GetTokens().get(i);
                         _state.TokenGone(tmp);
                         i--;
+                        deleted ++;
+                        if (deleted==_tokenCount)
+                            return;
                     }
                 }
     }
