@@ -23,6 +23,21 @@ public class TransactionElement extends AbstractGElement {
 
     BufferedImage activated;
 
+    private void UpdateImg(){
+        img = new BufferedImage(width+300,heigth,BufferedImage.TYPE_INT_ARGB);
+        Graphics2D gg = img.createGraphics();
+
+        gg.setColor(Color.BLACK);
+        gg.fillRect(0,0,width,heigth);
+        gg.setColor(Color.WHITE);
+        gg.fillRect(4,4,width-4*2,heigth-4*2);
+
+        gg.setColor(Color.BLACK);
+        Font font1 = new Font("Arial", Font.PLAIN, 20);
+        gg.setFont(font1);
+        gg.drawString(_name, 20, heigth);
+    }
+
     public TransactionElement(JPanel gp,boolean read) {
         super(gp);
 
@@ -109,10 +124,13 @@ public class TransactionElement extends AbstractGElement {
 
     public void setValues(String name,int h,int w,int xC, int yC){
         _name = name;
+
         heigth = h;
         width = w;
         xCenterPos = xC;
         yCenterPos = yC;
+
+        UpdateImg();
     }
 
     @Override
