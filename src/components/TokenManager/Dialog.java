@@ -127,7 +127,7 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
         add(Panel);
 
-        setAlwaysOnTop(true);
+        //setAlwaysOnTop(true);
 
         updateStatus("initialized");
 

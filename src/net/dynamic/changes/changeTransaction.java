@@ -1,6 +1,9 @@
 package net.dynamic.changes;
 
+import core.IncomingTransitionRule;
+import core.OutgoingTransitionRule;
 import core.Transition;
+import core.TransitionRule;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
@@ -30,13 +33,21 @@ public class changeTransaction extends JPanel {
     private JLabel text;
     private JButton newTransactionRule;
 
-    private ArrayList<JPanel> transactionPanels;
+    private ArrayList<JLabel> transactionRulePanels;
     private ArrayList<Transition> _transactions;
     private TransactionChanges _transactionChanges;
 
-    private int tPos = 100;
+    private int tPos = 20;
 
 
+    private ArrayList<TransitionRule> _rules;
+    private ArrayList<TransitionRuleChanges> _rulesChanges;
+
+    private class TransitionRuleChanges{
+        public int tokenCountNow = 0;
+        public int tokenCountL = 0;
+        public int getTokenCountR = 0;
+    }
 
     private void InputChangeInfoTransition(){
 
@@ -123,6 +134,112 @@ public class changeTransaction extends JPanel {
         text.setText(s.toString());
     }
 
+    private JLabel constructRuleChanges(){
+
+        // выберем правила из транзакции для которых мы можем конфигурить изменения
+        ArrayList<TransitionRule> rules = new ArrayList<TransitionRule>();
+        for (IncomingTransitionRule itr : _transition.get_incomingTransitionRules()){
+            if(!_rules.contains(itr))
+                rules.add(itr);
+        }
+
+        for (OutgoingTransitionRule otr : _transition.get_outgoingTransitionRules()){
+            if(!_rules.contains(otr))
+                rules.add(otr);
+        }
+
+        if (rules.size()!=0){
+
+            String n = System.getProperty("line.separator");
+
+            StringBuilder s = new StringBuilder();
+            s.append("Доступные правила:" + n);
+            int i = 1;
+            for (TransitionRule tr : rules)
+                s.append(i++ + ": " + tr.toString() + n);
+
+
+            if (rules.size() == 0)
+                return null;
+
+            i=0;
+
+            while (!(i>0 && i<=rules.size())){
+            String choice = JOptionPane.showInputDialog(s.toString()+"Укажите номер");
+            i = 0;
+            if (choice!=null)
+                try{
+                    Integer a = new Integer(choice.toString());
+                    if (a!=null)
+                        i=a;
+                }catch (Exception e){
+                }
+            }
+
+            // выбрано i правило. его редактируем
+
+            TransitionRule selectedRule = rules.get(i - 1);
+            _rules.add(selectedRule);
+            TransitionRuleChanges trc = new TransitionRuleChanges();
+            _rulesChanges.add(trc);
+
+            int currentTokenIssue = -1;
+            if(selectedRule instanceof IncomingTransitionRule)
+                currentTokenIssue = ((IncomingTransitionRule) selectedRule).getTokenCount();
+            else
+                currentTokenIssue = ((OutgoingTransitionRule) selectedRule).getTokenCount();
+
+            trc.tokenCountNow = currentTokenIssue;
+
+            String count = JOptionPane.showInputDialog(this,"Текущее количество токенов - "+currentTokenIssue+". Введите нижнюю границу изменения");
+            int col = 0;
+            if (count!=null)
+                try{
+                    Integer a = new Integer(count.toString());
+                    if (a!=null)
+                        col=a;
+                }catch (Exception e){
+                }
+            if (col <=0 )col=0;
+
+            trc.tokenCountL = col;
+
+
+
+            count = JOptionPane.showInputDialog("Введите верхнюю границу изменения");
+            if (count!=null)
+                try{
+                    Integer a = new Integer(count.toString());
+                    if (a!=null)
+                        col=a;
+                }catch (Exception e){
+                }
+            if (col <0)
+                col = 0;
+
+            trc.getTokenCountR = col;
+
+
+
+            // инфа собрана.строим панельку.
+
+
+            JLabel answer = new JLabel();
+            answer.setLayout(null);
+            answer.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+            answer.setBackground(Color.BLACK);
+
+            String ss = "[" + selectedRule + "] => диапазон изменения количества токенов: ["+ trc.tokenCountL +" , " +trc.getTokenCountR + "]";
+
+            answer.setText(ss);
+
+            return answer;
+
+        }
+
+        return null;
+    }
+
     public changeTransaction(){
         super();
         setLayout(null);
@@ -144,13 +261,15 @@ public class changeTransaction extends JPanel {
 
                 if (transaction == null) return;
 
-                if (transactionPanels!=null)
-                    for (JPanel p : transactionPanels)
+                if (transactionRulePanels!=null)
+                    for (JLabel p : transactionRulePanels)
                         remove(p);
+
+                repaint();
 
                 _transactions = new ArrayList<Transition>();
                 _transactionChanges = new TransactionChanges();
-                transactionPanels = new ArrayList<JPanel>();
+                transactionRulePanels = new ArrayList<JLabel>();
 
                 SetAssociatedState(transaction);
 
@@ -168,14 +287,13 @@ public class changeTransaction extends JPanel {
         newTransactionRule.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // тут добавляем настройки для правила в переходе
-                JPanel tokenPanel = null;
-                if (tokenPanel!=null){
-                    tokenPanel.setBounds(50,tPos,800,20);
-                    tokenPanel.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+                // тут добавляем настройки для правил в переходе
+                JLabel transactionRulePanel = constructRuleChanges();
+                if (transactionRulePanel!=null){
+                    transactionRulePanel.setBounds(50,tPos,800,20);
                     tPos+=20;
-                    transactionPanels.add(tokenPanel);
-                    add(tokenPanel);
+                    transactionRulePanels.add(transactionRulePanel);
+                    add(transactionRulePanel);
                     repaint();
                 }
             }
@@ -183,7 +301,8 @@ public class changeTransaction extends JPanel {
         add(newTransactionRule);
 
         newTransactionRule.setEnabled(false);
-
+        _rules = new ArrayList<TransitionRule>();
+        _rulesChanges = new ArrayList<TransitionRuleChanges>();
 
     }
 

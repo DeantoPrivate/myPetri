@@ -51,6 +51,7 @@ public class changePanel extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 changeTransaction cT = new changeTransaction();
                 cT.setBounds(100,tPos,860,100);
+                tPos +=100;
                 cT.setBorder(BorderFactory.createLineBorder(Color.BLUE));
                 Panel.add(cT);
                 Panel.repaint();

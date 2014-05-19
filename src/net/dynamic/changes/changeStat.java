@@ -160,6 +160,8 @@ public class changeStat extends JPanel {
                     for (JPanel p : tokenPanels)
                         remove(p);
 
+                repaint();
+
                 _tokens = new ArrayList<Token>();
                 _tokenChanges = new ArrayList<TokenChanges>();
                 tokenPanels = new ArrayList<JPanel>();

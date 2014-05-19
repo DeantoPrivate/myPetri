@@ -8,7 +8,7 @@ import javax.swing.*;
 /**
  * Created by deanto on 04.05.14.
  */
-public class OutgoingTransitionRule extends TransitionRule{
+public class OutgoingTransitionRule implements TransitionRule{
     private State _state;
     private Token _token;
     private boolean _completed = false;
@@ -28,7 +28,6 @@ public class OutgoingTransitionRule extends TransitionRule{
         _state = state;
     }
 
-    @Override
     public String toString() {
 
         String str = "";

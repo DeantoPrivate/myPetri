@@ -8,7 +8,7 @@ import javax.swing.*;
 /**
  * Created by deanto on 04.05.14.
  */
-public class IncomingTransitionRule extends TransitionRule{
+public class IncomingTransitionRule implements TransitionRule{
 
     private State _state;
     private int _tokenCount;
@@ -29,7 +29,6 @@ public class IncomingTransitionRule extends TransitionRule{
 
     public String _actionIncomingToken = Transition.INCOMING_TOKEN_REMOVE;
 
-    @Override
     public String toString() {
 
         String str = "";
