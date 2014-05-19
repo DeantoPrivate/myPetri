@@ -62,9 +62,8 @@ public class transactionStat extends JPanel implements CountActionListener {
 
         setLayout(null);
         text = new JLabel(toString());
-        text.setBackground(Color.RED);
-        text.setBounds(0,0,1000,30);
-        add(text, BorderLayout.NORTH);
+        text.setBounds(0,0,1000,20);
+        add(text);
 
     }
 

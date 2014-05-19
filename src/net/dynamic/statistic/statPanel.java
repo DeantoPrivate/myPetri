@@ -58,8 +58,8 @@ public class statPanel extends JDialog implements CountActionListener {
                 public void actionPerformed(ActionEvent e) {
                     transactionStat ts = transactionStat.create();
                     if (ts.Consctuct()){
-                        ts.setBounds(0,tPos,1000,60);
-                        tPos+=50;
+                        ts.setBounds(0,tPos,1000,20);
+                        tPos+=20;
                         _transactionStats.add(ts);
                         Panel.add(ts);
                         Panel.repaint();
