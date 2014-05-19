@@ -1,6 +1,8 @@
 package components.Constructor;
 
 import components.TokenManager.*;
+import net.dynamic.changes.changePanel;
+import net.dynamic.changes.changeStat;
 import net.dynamic.statistic.statPanel;
 import net.liveNet.LiveNet;
 import net.netSaver.NetSaver;
@@ -18,7 +20,7 @@ public class StatusPanel extends JPanel {
 
     public static String StatusPanel = "StatusPanel";
 
-    JButton openTokenManager,openNetControlPanel, saveNet, readNet, statisticPanel;
+    JButton openTokenManager,openNetControlPanel, saveNet, readNet, statisticPanel, changesPanel;
 
     public void Init(){
         setBorder(BorderFactory.createLineBorder(Color.ORANGE));
@@ -76,6 +78,17 @@ public class StatusPanel extends JPanel {
         });
         add(statisticPanel);
 
+
+        changesPanel = new JButton("Changes Panel");
+        changesPanel.setBounds(200,90,180,30);
+        changesPanel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                changePanel.ShowPanel();
+            }
+        });
+        add(changesPanel);
+
         setBackground(Color.GRAY);
         setVisible(true);
     }
@@ -87,6 +100,8 @@ public class StatusPanel extends JPanel {
         add(openNetControlPanel);
         add(saveNet);
         add(readNet);
+        add(statisticPanel);
+        add(changesPanel);
 
     }
 }
