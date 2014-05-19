@@ -4,6 +4,7 @@ import components.Constructor.StateStatusPanel;
 import components.Constructor.TransitionStatusPanel;
 import components.Constructor.WorkingNetStatusPanel;
 import core.Transition;
+import net.dynamic.statistic.CountActionListener;
 import net.staticNet.netStaticImpl;
 import sun.awt.windows.ThemeReader;
 
@@ -25,6 +26,11 @@ public class LiveNet {
             _instance = new LiveNet(netStaticImpl.getNet());
         }
         return _instance;
+    }
+
+    CountActionListener cl;
+    public void AssignCountChangeListener(CountActionListener listener){
+        cl = listener;
     }
 
     private netStaticImpl _staticNet;
@@ -190,6 +196,8 @@ public class LiveNet {
         netStaticImpl.stopProcessing();
         StateStatusPanel.UpdateUI();
         TransitionStatusPanel.UpdateUI();
+        if (cl!=null)
+            cl.FireCountEventFromElement();
 
         currentStep ++;
         statusText.setText("step done : " +currentStep);

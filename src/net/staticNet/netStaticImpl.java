@@ -6,6 +6,7 @@ import components.GraphicalElements.StateElement;
 import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
 import core.*;
+import net.dynamic.statistic.CountActionListener;
 
 import javax.swing.*;
 import java.io.BufferedWriter;

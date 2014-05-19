@@ -1,6 +1,8 @@
 package net.dynamic.statistic;
 
 import com.sun.corba.se.spi.activation._InitialNameServiceImplBase;
+import net.liveNet.LiveNet;
+import net.staticNet.netStaticImpl;
 import sun.security.krb5.internal.PAData;
 
 import javax.swing.*;
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by deanto on 18.05.14.
  */
-public class statPanel extends JDialog {
+public class statPanel extends JDialog implements CountActionListener {
 
     private JPanel Panel;
     private Integer CurrentStep = 0;
@@ -41,6 +43,7 @@ public class statPanel extends JDialog {
         setTitle("Панель сбора статистики");
         setBounds(10, 10, 1000, 800);
 
+
         Panel = new JPanel();
         Panel.setLayout(null);
 
@@ -58,8 +61,8 @@ public class statPanel extends JDialog {
                         ts.setBounds(0,tPos,1000,60);
                         tPos+=50;
                         _transactionStats.add(ts);
-                        add(ts);
-                        ts.repaint();
+                        Panel.add(ts);
+                        Panel.repaint();
                     }
                 }
             });
@@ -81,7 +84,16 @@ public class statPanel extends JDialog {
 
         add(Panel);
 
+        LiveNet.GetInstance().AssignCountChangeListener(this);
+
     }
 
 
+    @Override
+    public void FireCountEventFromElement() {
+        //  у нас такое событие посылает сеть когда произошел следующий шаг
+        _instance.CurrentStep ++;
+        CurrentStepLable.setText("Текущий шаг в сети: "+CurrentStep.toString());
+        _instance.Panel.repaint();
+    }
 }
