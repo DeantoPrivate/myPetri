@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  * Created by deanto on 19.05.14.
@@ -27,6 +28,10 @@ public class changePanel extends JDialog {
     }
 
     private int sPos = 430;
+    private int tPos = 100;
+
+    private ArrayList<changeStat> _statesChanges;
+    private ArrayList<changeTransaction> _transitionsChanges;
 
     private void Init(){
         setTitle("Панель изменений сети.");
@@ -41,6 +46,18 @@ public class changePanel extends JDialog {
 
         JButton AddTransaction = new JButton("+");
         AddTransaction.setBounds(100,0,50,20);
+        AddTransaction.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                changeTransaction cT = new changeTransaction();
+                cT.setBounds(100,tPos,860,100);
+                cT.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+                Panel.add(cT);
+                Panel.repaint();
+                _transitionsChanges.add(cT);
+
+            }
+        });
         Panel.add(AddTransaction);
 
 
@@ -54,17 +71,18 @@ public class changePanel extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 changeStat cS = new changeStat();
-                cS.setBounds(100,sPos,800,100);
+                cS.setBounds(100,sPos,860,100);
                 sPos += 100;
                 cS.setBorder(BorderFactory.createLineBorder(Color.RED));
                 Panel.add(cS);
                 Panel.repaint();
+                _statesChanges.add(cS);
             }
         });
         Panel.add(AddState);
 
         add(Panel);
+        _statesChanges = new ArrayList<changeStat>();
+        _transitionsChanges = new ArrayList<changeTransaction>();
     }
-
-
 }

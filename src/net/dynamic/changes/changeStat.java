@@ -58,16 +58,17 @@ public class changeStat extends JPanel {
             tokenChanges.appearance = true;
 
         var = "";
+        int col= 0;
         while (var.equals("")){
             String count = JOptionPane.showInputDialog(this,"количество?");
-            int col = -1;
+            col = -1;
             if (count!=null)
                 try{
                     Integer a = new Integer(count.toString());
                     if (a!=null)
                         col=a;
                 }catch (Exception e){
-                    return null;
+                    var = "";
                 }
             if (col == -1)
                 return null;
@@ -107,8 +108,8 @@ public class changeStat extends JPanel {
             text.setBounds(0,0,1000,20);
             answer.add(text);
             return answer;
-        }
 
+        }
         return null;
     }
 
