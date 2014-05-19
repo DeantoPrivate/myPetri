@@ -92,34 +92,55 @@ public class NetSaver {
         return filename;
     }
 
-    public static netStaticImpl ReadNet(){
+    public static String lastRead;
+
+    public static netStaticImpl GetNetCopy(){
+        netStaticImpl intialCopy = ReadNet(false);
+        return intialCopy;
+    }
+
+    private static String readFiles(){
+        // сначала загрузим базу.
+        Dialog.Load();
+
+        _states = new Hashtable<String, State>();
+        _tokens = new Hashtable<String, Token>();
+
+        // загрузим табличку с токенами
+        for (Token token : TokensBase.GetTokenBase().GetTokens()){
+            _tokens.put(token.GetName(),token);
+        }
+
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Открыть файл с сетью");
+        fileChooser.showOpenDialog(null);
+        File file = fileChooser.getSelectedFile();
+
+        String filename = file.getAbsolutePath();
+        lastRead = filename;
+
+        return filename;
+    }
+
+    public static netStaticImpl ReadNet(boolean initial){
 
         netStaticImpl newNet = netStaticImpl.newNet();
-        Dialog.ShowDialog();
+        if(initial)
+            Dialog.ShowDialog();
 
         try{
 
-            // сначала загрузим базу.
-            Dialog.Load();
+            String filename;
 
-            _states = new Hashtable<String, State>();
-            _tokens = new Hashtable<String, Token>();
-
-            // загрузим табличку с токенами
-            for (Token token : TokensBase.GetTokenBase().GetTokens()){
-                _tokens.put(token.GetName(),token);
-            }
-
-        JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setDialogTitle("Открыть файл с сетью");
-            fileChooser.showOpenDialog(null);
-            File file = fileChooser.getSelectedFile();
-
-            String filename = file.getAbsolutePath();
+            if (initial)
+                filename = readFiles();
+            else
+                filename = lastRead;
 
             StringBuffer fileBuffer = new StringBuffer();
             BufferedReader reader = new BufferedReader(new FileReader(filename));
 
+            lastRead = filename;
 
             ArrayList<String> strings = new ArrayList<String>();
             String nextString = "";

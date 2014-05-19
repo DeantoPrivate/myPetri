@@ -1,5 +1,6 @@
 package net.liveNet;
 
+import com.sun.jndi.url.corbaname.corbanameURLContextFactory;
 import components.Constructor.StateStatusPanel;
 import components.Constructor.TransitionStatusPanel;
 import components.Constructor.WorkingNetStatusPanel;
@@ -46,6 +47,8 @@ public class LiveNet {
 
     private JDialog ControlPanel;
 
+    private static JLabel analyzeStatus;
+
     public void ActivatePanel(){
         if (ControlPanel==null){
 
@@ -53,18 +56,18 @@ public class LiveNet {
             ControlPanel.setAlwaysOnTop(true);
             ControlPanel.setTitle("Управления сетью.");
             ControlPanel.setLayout(null);
-            ControlPanel.setBounds(600,400,225,150);
+            ControlPanel.setBounds(600,400,225,300);
 
             statusText = new JTextArea();
             statusText.setBounds(10,5,190,20);
             statusText.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
-            statusText.setText("Status:> just opened.");
+            statusText.setText("Статус:> начало работы");
             ControlPanel.add(statusText);
 
             speed = new JTextArea();
             speed.setBounds(10,30,70,20);
             speed.setBorder(BorderFactory.createLineBorder(Color.ORANGE));
-            speed.setText("speed");
+            speed.setText("100");
             ControlPanel.add(speed);
 
 
@@ -93,7 +96,7 @@ public class LiveNet {
             });
             ControlPanel.add(goForward);
 
-            stop = new JButton("Stop");
+            stop = new JButton("Стоп");
             stop.setBounds(10,60,130,30);
             stop.addActionListener(new ActionListener() {
                 @Override
@@ -105,7 +108,7 @@ public class LiveNet {
             });
             ControlPanel.add(stop);
 
-            nextStep = new JButton("step");
+            nextStep = new JButton("шаг");
             nextStep.setBounds(140,30,60,60);
             nextStep.addActionListener(new ActionListener() {
                 @Override
@@ -115,12 +118,29 @@ public class LiveNet {
             });
             ControlPanel.add(nextStep);
 
+
+            analyze = new JButton("Анализ");
+            analyze.setBounds(10,150,190,20);
+
+            ControlPanel.add(analyze);
+
+            analyzeStatus = new JLabel();
+            analyzeStatus.setBounds(10, 170, 190, 40);
+            analyzeStatus.setText("статус выполнения : ");
+            ControlPanel.add(analyzeStatus);
+
         }
 
         ControlPanel.setVisible(true);
     }
 
-    private JButton nextStep,goForward,stop;
+
+    private static int currentAnalyzeStep = 0;
+    public static void setNextAnalyzeStep(){
+        analyzeStatus.setText("статус выполнения: шаг "+ currentAnalyzeStep++);
+    }
+
+    private JButton nextStep,goForward,stop, analyze;
     private JTextArea statusText;
     private JTextArea speed;
 

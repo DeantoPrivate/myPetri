@@ -25,7 +25,7 @@ public class statPanel extends JDialog implements CountActionListener {
         _instance = this;
     }
 
-    public statPanel getPanel (){return _instance;}
+    public static statPanel getPanel (){return _instance;}
     public static void ShowPanel(){
         if (_instance == null){
             _instance = new statPanel();
@@ -35,8 +35,18 @@ public class statPanel extends JDialog implements CountActionListener {
         _instance.setVisible(true);
     }
 
-    private ArrayList<JPanel> _transactionStats;
-    private ArrayList<JPanel> _stateStats;
+    private ArrayList<transactionStat> _transactionStats;
+    private ArrayList<stateStat> _stateStats;
+
+    public void Clear(){
+        for (stateStat sS : _stateStats)
+            sS.Clear();
+
+        for (transactionStat tS : _transactionStats)
+            tS.Clear();
+
+        repaint();
+    }
 
     private int tPos = 30;
     private int sPos = 430;
@@ -94,8 +104,8 @@ public class statPanel extends JDialog implements CountActionListener {
             });
             Panel.add(AddState);
 
-        _transactionStats = new ArrayList<JPanel>();
-        _stateStats = new ArrayList<JPanel>();
+        _transactionStats = new ArrayList<transactionStat>();
+        _stateStats = new ArrayList<stateStat>();
 
         add(Panel);
 

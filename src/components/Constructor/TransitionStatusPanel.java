@@ -42,7 +42,7 @@ public class TransitionStatusPanel extends StatusPanel {
 
         JTextArea tmp;
 
-        int r = 0;
+        int r = 50;
 
         for (IncomingTransitionRule itr : _transaction.get_incomingTransitionRules()){
             tmp = new JTextArea(itr.toString());

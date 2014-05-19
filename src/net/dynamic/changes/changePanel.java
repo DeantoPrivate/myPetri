@@ -17,7 +17,7 @@ public class changePanel extends JDialog {
 
     private static changePanel _instance;
 
-    public changePanel getPanel (){return _instance;}
+    public static changePanel getPanel (){return _instance;}
     public static void ShowPanel(){
         if (_instance == null){
             _instance = new changePanel();

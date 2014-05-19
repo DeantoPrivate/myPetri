@@ -11,6 +11,11 @@ import java.awt.*;
  */
 public class transactionStat extends JPanel implements CountActionListener {
 
+    public void Clear(){
+        WorkCount = 0;
+        repaint();
+    }
+
     private Transition _transaction = null;
     public void SetAssociatedTransaction(Transition transition){
         _transaction = transition;

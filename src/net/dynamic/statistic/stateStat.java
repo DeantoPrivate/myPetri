@@ -15,6 +15,15 @@ import java.util.ArrayList;
  */
 public class stateStat extends JPanel implements ContextChangeListener{
 
+    public void Clear(){
+        for(tokenStat tS : _tokenStats){
+            tS.countMax = 0;
+            tS.countNow = 0;
+        }
+
+        repaint();
+    }
+
     private State _state;
     public void SetAssociatedState(State state){
         _state = state;
