@@ -66,6 +66,15 @@ public class netStaticImpl {
         return null;
     }
 
+    public State getState(String name){
+        for (StateWrap sw:_states){
+            if (sw.get_state().GetName().equals(name))
+                return sw.get_state();
+        }
+
+        return null;
+    }
+
     private ArrayList<Token> _tokens;
 
     public ArrayList<TransactionWrap> getTransactions(){return _transactions;}

@@ -67,10 +67,4 @@ public class transactionStat extends JPanel implements CountActionListener {
 
     }
 
-    //@Override
-    public void paiffnt(Graphics g) {
-        super.paint(g);
-
-        text.setText(toString());
-    }
 }

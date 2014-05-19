@@ -108,6 +108,15 @@ public class TokensBase {
         return _loadTokens;
     }
 
+    public Token getToken(String name){
+        for (Token token : _loadTokens){
+            if (token.GetName().equals(name)){
+                return token.Clone();
+            }
+        }
+        return null;
+    }
+
     private ArrayList<JPanel> _tokensList;
     public void ShowTokensInSystem(){
 

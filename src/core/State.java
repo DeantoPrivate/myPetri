@@ -1,6 +1,6 @@
 package core;
 
-import net.dynamic.statistic.Context;
+import net.dynamic.statistic.ContextChangeListener;
 import net.staticNet.UIActionListener;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * state is a place for tokens
  */
-public class State implements Context {
+public class State {
     private Integer _id;
     private static Integer ids = 0;
 
@@ -25,11 +25,17 @@ public class State implements Context {
             if (_listener!=null){
                 _listener.FireUIChangedEvent();
             }
+            if (_statElement!=null)
+                _statElement.FireContextChangeEvent();
+
             _processingTokens.clear();
         }
     }
 
-
+    private ContextChangeListener _statElement;
+    public void AssignTransactionStat(ContextChangeListener statElement){
+        _statElement = statElement;
+    }
 
     // TODO сделать интерфейс отдающий имена и id
     public Integer GetID(){
@@ -68,6 +74,8 @@ public class State implements Context {
           if (_listener!=null){
               _listener.FireUIChangedEvent();
           }
+          if (_statElement!=null)
+              _statElement.FireContextChangeEvent();
       }else
       {
           if (!_processingTokens.contains(token))
@@ -77,10 +85,13 @@ public class State implements Context {
 
     public void TokenGone(Token token){
         _tokens.remove(token);
-        if (!processing)
+        if (!processing){
             if (_listener!=null){
                 _listener.FireUIChangedEvent();
             }
+            if (_statElement!=null)
+                _statElement.FireContextChangeEvent();
+        }
     }
 
     public ArrayList<Token> GetTokens(){

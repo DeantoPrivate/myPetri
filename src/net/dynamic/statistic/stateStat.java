@@ -1,8 +1,10 @@
 package net.dynamic.statistic;
 
+import base.TokensBase;
 import core.State;
 import core.Token;
 import core.TokenComparer;
+import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import java.awt.*;
@@ -35,6 +37,38 @@ public class stateStat extends JPanel implements ContextChangeListener{
         }
     }
 
+    public boolean Consctuct(){
+        String sName = "";
+        while (sName.equals(""))
+            sName = JOptionPane.showInputDialog("Введите имя состояния","");
+
+        _state = netStaticImpl.getNet().getState(sName);
+        if (_state == null){
+            JOptionPane.showMessageDialog(null,"нет такого!");
+            return false;
+        }
+
+        String tName = "";
+        while(tName.equals("")){
+
+                tName = JOptionPane.showInputDialog("Введите имя токена. Для завершения введите \"СТОП\"","");
+                Token token = TokensBase.GetTokenBase().getToken(tName);
+                if (token == null){
+                    JOptionPane.showMessageDialog(null,"нет такого токена!");
+                } else
+                    AddTokenTemplate(token);
+
+
+            if (!tName.equals("СТОП"))
+                tName = "";
+
+
+        }
+
+        _state.AssignTransactionStat(this);
+        return true;
+    }
+
     public void AddTokenTemplate(Token template){
         _tokens.add(template);
         _tokenStats.add(new tokenStat());
@@ -59,7 +93,7 @@ public class stateStat extends JPanel implements ContextChangeListener{
 
 
     @Override
-    public void FireContextChangeEvent(Context context) {
+    public void FireContextChangeEvent() {
         // состояние изменилось. нужно пробежаться и собрать всю интересующую информацию
 
         for(int i=0;i<_tokens.size();i++){
@@ -77,21 +111,23 @@ public class stateStat extends JPanel implements ContextChangeListener{
             if (_tokenStats.get(i).countMax<now)
                 _tokenStats.get(i).countMax = now;
 
+
+
         }
+
+        text.setText(toString());
 
     }
 
     private JLabel text;
     public stateStat(){
         super();
-        setLayout(new BorderLayout());
+        setLayout(null);
         text = new JLabel(toString());
-        add(text,BorderLayout.NORTH);
+        text.setBounds(0,0,1000,20);
+        add(text);
+        _tokens = new ArrayList<Token>();
+        _tokenStats = new ArrayList<tokenStat>();
     }
 
-    @Override
-    public void paint(Graphics g) {
-        text.setText(toString());
-        super.paint(g);
-    }
 }

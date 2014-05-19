@@ -95,6 +95,7 @@ public class NetSaver {
     public static netStaticImpl ReadNet(){
 
         netStaticImpl newNet = netStaticImpl.newNet();
+        Dialog.ShowDialog();
 
         try{
 

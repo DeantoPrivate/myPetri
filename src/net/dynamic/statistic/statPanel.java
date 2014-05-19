@@ -36,9 +36,10 @@ public class statPanel extends JDialog implements CountActionListener {
     }
 
     private ArrayList<JPanel> _transactionStats;
+    private ArrayList<JPanel> _stateStats;
 
     private int tPos = 30;
-
+    private int sPos = 430;
     private void Init(){
         setTitle("Панель сбора статистики");
         setBounds(10, 10, 1000, 800);
@@ -78,9 +79,23 @@ public class statPanel extends JDialog implements CountActionListener {
 
             JButton AddState = new JButton("+");
             AddState.setBounds(100,400,50,20);
+            AddState.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    stateStat sS = new stateStat();
+                    if (sS.Consctuct()){
+                        sS.setBounds(0,sPos,1000,20);
+                        sPos+=20;
+                        _stateStats.add(sS);
+                        Panel.add(sS);
+                        Panel.repaint();
+                    }
+                }
+            });
             Panel.add(AddState);
 
         _transactionStats = new ArrayList<JPanel>();
+        _stateStats = new ArrayList<JPanel>();
 
         add(Panel);
 
