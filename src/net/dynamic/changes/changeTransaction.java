@@ -37,11 +37,16 @@ public class changeTransaction extends JPanel {
     private ArrayList<Transition> _transactions;
     private TransactionChanges _transactionChanges;
 
+    public TransactionChanges get_transactionChanges(){return _transactionChanges;}
+
     private int tPos = 20;
 
 
     private ArrayList<TransitionRule> _rules;
     private ArrayList<TransitionRuleChanges> _rulesChanges;
+
+    public ArrayList<TransitionRule> get_rules(){return _rules;}
+    public ArrayList<TransitionRuleChanges> get_rulesChanges(){return _rulesChanges;}
 
     private class TransitionRuleChanges{
         public int tokenCountNow = 0;
@@ -306,7 +311,7 @@ public class changeTransaction extends JPanel {
 
     }
 
-    private class TransactionChanges{
+    public class TransactionChanges{
 
         // задержка выполнения
         public int sleep = 0;

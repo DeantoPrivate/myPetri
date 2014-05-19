@@ -33,6 +33,9 @@ public class changePanel extends JDialog {
     private ArrayList<changeStat> _statesChanges;
     private ArrayList<changeTransaction> _transitionsChanges;
 
+    public ArrayList<changeStat> get_statesChanges(){return  _statesChanges;}
+    public ArrayList<changeTransaction> get_transitionsChanges(){return _transitionsChanges;}
+
     private void Init(){
         setTitle("Панель изменений сети.");
         setBounds(10, 10, 1000, 800);

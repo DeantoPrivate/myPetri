@@ -1,11 +1,19 @@
 package net.dynamic.analyze;
 
+import core.State;
+import core.Token;
+import core.Transition;
 import net.dynamic.changes.changePanel;
+import net.dynamic.changes.changeStat;
+import net.dynamic.changes.changeTransaction;
 import net.dynamic.statistic.statPanel;
 import net.dynamic.statistic.stateStat;
+import net.dynamic.statistic.transactionStat;
 import net.liveNet.LiveNet;
 import net.netSaver.NetSaver;
 import net.staticNet.netStaticImpl;
+
+import java.util.ArrayList;
 
 /**
  * Created by deanto on 19.05.14.
@@ -53,7 +61,19 @@ public class Analyzer {
         changePanel = net.dynamic.changes.changePanel.getPanel();
 
 
+        // загрузим возможные изменения параметров
+
+        _statesChanges = changePanel.get_statesChanges();
+        _transitionsChanges = changePanel.get_transitionsChanges();
+
     }
+
+    // изменения для состояний / там все данные достанем и соберем последовательные сеты данных для запуска шагов...
+    private ArrayList<changeStat> _statesChanges;
+
+    // изменения для переходов
+    private ArrayList<changeTransaction> _transitionsChanges;
+
 
     // просчитав сеть загружаем новую и повторяем.
 

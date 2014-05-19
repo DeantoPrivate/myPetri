@@ -30,6 +30,10 @@ public class changeStat extends JPanel {
     private ArrayList<Token> _tokens;
     // изменения для этих токенов
     private ArrayList<TokenChanges> _tokenChanges;
+
+    public ArrayList<Token> get_tokens(){return _tokens;}
+    public ArrayList<TokenChanges> get_tokenChanges(){return _tokenChanges;}
+
     // панельки для отображения этих токенов
     private ArrayList<JPanel> tokenPanels;
 
@@ -119,7 +123,7 @@ public class changeStat extends JPanel {
 
     private JButton Construct, newToken, changeToken;
 
-    private class TokenChanges{
+    public class TokenChanges{
         // есть ли потери этого токена
         public boolean losses = false;
         // незапланированное появление токена
