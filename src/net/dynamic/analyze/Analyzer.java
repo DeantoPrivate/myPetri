@@ -124,6 +124,7 @@ public class Analyzer {
 // TODO так получится пробежать только по отдельности все комбинации. а например чтоб состояние теряло и 1 и 2 токен??
 // хер с ним. пусть будут не все варианты. всеравно все не сделать.. только комбинации по одному условию пока
 
+        // todo изменить логику.. сейчас тестируется только один вариант от каждого состояния, перехода и правила.
         for (ChangeOneState stateChange : _stateChanges)
             for (ChangeOneTransitionWorking transitionWorkingChange : _tWorkChanges)
                 for (ChangeOneTransitionDelay transitionDelayChange : _tDelayChanges)
@@ -137,8 +138,6 @@ public class Analyzer {
 
                         // TODO применить изменения
 
-
-
                         // TODO запускать шаги и если наступает условие изменений - применять их
 
                         // TODO закончили выполнение - сохранить статистику и текущий набор условий.
@@ -149,13 +148,27 @@ public class Analyzer {
 
     }
 
+    private int currentAnalyzingStep = 0;
+
     private void CheckAndApplyChangeOneState(ChangeOneState state){
         // применить изменение к текущей сети если условие выполняется
-
+        
     }
 
     private void CheckAndApplyChangeOneTransitionWorking(ChangeOneTransitionWorking working){
         // применить изменение к текущей сети если условие выполняется
+        if (working.notWork){
+
+                if (working.stepL==currentAnalyzeStep){
+                Transition transition = currentNet.getTransition(working.TransitionName);
+                transition.StopByAnalyze();
+            }
+            else if(working.stepR==currentAnalyzeStep){
+                Transition transition = currentNet.getTransition(working.TransitionName);
+                transition.AllowByAnalyze();
+            }
+
+        }
     }
 
     private void ApplyChangeOneTransitionDelay(ChangeOneTransitionDelay delay){
@@ -178,7 +191,7 @@ public class Analyzer {
     private ArrayList<changeTransaction> _transitionsChanges;
 
 
-    // списки возможных изменений. указаны конкретные параметры изменения
+    // списки возможных изменений. указаны конкретные параметры изменения todo возможно тут прийдется разбить на списки списков от каждого объекта. чтоб тестировать вместе хотяб по варианту но от каждого
     private ArrayList<ChangeOneRule> _ruleChanges;
     private ArrayList<ChangeOneState> _stateChanges;
     private ArrayList<ChangeOneTransitionDelay> _tDelayChanges;

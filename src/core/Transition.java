@@ -27,9 +27,22 @@ public class Transition {
         for (OutgoingTransitionRule o : _outgoingTransitionRules)
             if (o.toString().equals(rule))
                 return o;
+
+        return null;
+    }
+
+    // для анализа нужно иметь возможность прекратить проверки.
+    private boolean stoppedByAnalyzis = false;
+    public void StopByAnalyze(){
+        stoppedByAnalyzis = true;
+    }
+    public void AllowByAnalyze(){
+        stoppedByAnalyzis = false;
     }
 
     public boolean canBeActivated(){
+
+        if (stoppedByAnalyzis) return false;
 
         // workaround
         if (stepswait!=-1) return true;
