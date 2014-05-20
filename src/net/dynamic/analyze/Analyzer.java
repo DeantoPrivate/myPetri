@@ -36,13 +36,14 @@ public class Analyzer {
         currentNet = NetSaver.ReadNet(false);
         currentNet.SyncGElements();
 
-
         LiveNet.setNextAnalyzeStep();
         currentAnalyzeStep++;
 
+        statPanel.ShowPanel();
         statusPanel.Clear();
 
         // установим параметры в сеть
+
 
 
         // начнем выполнение.
@@ -90,8 +91,14 @@ public class Analyzer {
     private ArrayList<changeTransaction> _transitionsChanges;
 
 
-    // просчитав сеть загружаем новую и повторяем.
+    // списки возможных изменений. указаны конкретные параметры изменения
+    private ArrayList<ChangeOneRule> _ruleChanges;
+    private ArrayList<ChangeOneState> _stateChanges;
+    private ArrayList<ChangeOneTransitionDelay> _tDelayChanges;
+    private ArrayList<ChangeOneTransitionWorking> _tWorkChanges;
 
+
+    // представление комбинации для тестирования.тут каждому объекту указано что нужно изменить.
 
 
 }

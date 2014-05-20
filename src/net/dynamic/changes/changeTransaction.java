@@ -4,6 +4,9 @@ import core.IncomingTransitionRule;
 import core.OutgoingTransitionRule;
 import core.Transition;
 import core.TransitionRule;
+import net.dynamic.analyze.ChangeOneRule;
+import net.dynamic.analyze.ChangeOneTransitionDelay;
+import net.dynamic.analyze.ChangeOneTransitionWorking;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
@@ -326,12 +329,74 @@ public class changeTransaction extends JPanel {
         public int notWorkStepL = 0;
         public int notWorkStepR = 0;
 
-        public ArrayList<TransactionRuleChanges> _transactionRulesChanges;
+        public ArrayList<TransitionRuleChanges> _transactionRulesChanges;
 
     }
 
-    private class TransactionRuleChanges{
-        // в правиле уже определен шаблон. меняем параметры выполнения правила
-        public int tokensInStep = 0;
+    public ArrayList<ChangeOneTransitionDelay> getChangeOneTransitionDelays(){
+
+        ChangeOneTransitionDelay cos;
+        ArrayList<ChangeOneTransitionDelay> answer = new ArrayList<ChangeOneTransitionDelay>();
+
+        for (int i=_transactionChanges.notWorkStepL;i<=_transactionChanges.notWorkStepR;i++){
+            cos = new ChangeOneTransitionDelay();
+            cos.delay = i;
+            cos.TransitionName = _transition.getName();
+            answer.add(cos);
+        }
+
+        return answer;
+
     }
+
+
+    public ArrayList<ChangeOneTransitionWorking> getChangeOneTransitionWorkings(){
+        ChangeOneTransitionWorking cos;
+        ArrayList<ChangeOneTransitionWorking> answer  = new ArrayList<ChangeOneTransitionWorking>();
+
+        if (_transactionChanges.notWork){
+            // если он не работает. есть выбор. тестим когда работает и тестим когда не работает
+
+            cos = new ChangeOneTransitionWorking();
+            cos.notWork = true;
+            cos.stepL = _transactionChanges.sleepL;
+            cos.stepR = _transactionChanges.sleepR;
+            cos.TransitionName = _transition.getName();
+
+            answer.add(cos);
+        }
+
+        // всегда есть вариант что он работает.
+        cos = new ChangeOneTransitionWorking();
+        cos.notWork = false;
+
+        answer.add(cos);
+
+        return answer;
+
+    }
+
+    public ArrayList<ChangeOneRule> getChangeOneRules(){
+        // тут просмотрим все правила и вернем для каждого несколько(из диапазона)
+        ChangeOneRule cor = new ChangeOneRule();
+        ArrayList<ChangeOneRule> answer = new ArrayList<ChangeOneRule>();
+
+        for (int i=0;i<_rules.size();i++)
+            for (int j=_rulesChanges.get(i).tokenCountL;j<=_rulesChanges.get(i).getTokenCountR;j++){
+                cor = new ChangeOneRule();
+                cor.param = j;
+                cor.RuleString = _rules.get(i).toString();
+                cor.TransitionName = _transition.getName();
+
+                answer.add(cor);
+        }
+
+        return answer;
+    }
+
+    // класс сам дает все возможные комбинации по очереди. исходя из диапазонов
+
+
+
+
 }

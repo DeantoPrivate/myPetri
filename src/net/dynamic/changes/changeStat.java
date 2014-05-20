@@ -4,6 +4,7 @@ import base.TokensBase;
 import components.TokenManager.*;
 import core.State;
 import core.Token;
+import net.dynamic.analyze.ChangeOneState;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
@@ -134,6 +135,25 @@ public class changeStat extends JPanel {
         public int Count = 0;
         // через сколько шагов повторяется
         public int Step = 0;
+    }
+
+    public ArrayList<ChangeOneState> getStateChanges(){
+
+        ChangeOneState cos;
+        ArrayList<ChangeOneState> answer = new ArrayList<ChangeOneState>();
+
+        for (int i=0;i<_tokens.size();i++){
+            cos = new ChangeOneState();
+            cos.appearance = _tokenChanges.get(i).appearance;
+            cos.count = _tokenChanges.get(i).Count;
+            cos.loose = _tokenChanges.get(i).losses;
+            cos.State = _state.GetName();
+            cos.Token = _tokens.get(i).GetName();
+
+            answer.add(cos);
+        }
+
+        return answer;
     }
 
     private int tPos = 20;
