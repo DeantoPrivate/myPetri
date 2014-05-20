@@ -13,7 +13,15 @@ public class transactionStat extends JPanel implements CountActionListener {
 
     public void Clear(){
         WorkCount = 0;
+        Reassign();
+        text.setText(toString());
         repaint();
+    }
+
+    public void Reassign(){
+        Transition Newtransaction = netStaticImpl.getNet().getTransition(_transaction.getName());
+        _transaction = Newtransaction;
+        _transaction.AssignTransactionStat(this);
     }
 
     private Transition _transaction = null;

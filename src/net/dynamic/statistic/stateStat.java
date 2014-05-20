@@ -21,7 +21,19 @@ public class stateStat extends JPanel implements ContextChangeListener{
             tS.countNow = 0;
         }
 
+        Reassign();
+        text.setText(toString());
         repaint();
+    }
+
+    public void Reassign(){
+        // переопределить состояние
+
+
+        State newState = netStaticImpl.getNet().getState(_state.GetName());
+        _state = newState;
+        _state.AssignTransactionStat(this);
+
     }
 
     private State _state;

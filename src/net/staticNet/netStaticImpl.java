@@ -7,6 +7,8 @@ import components.GraphicalElements.TransactionElement;
 import components.GraphicalElements.TransactionRuleElement;
 import core.*;
 import net.dynamic.statistic.CountActionListener;
+import net.dynamic.statistic.statPanel;
+import net.liveNet.LiveNet;
 
 import javax.swing.*;
 import java.io.BufferedWriter;
@@ -93,6 +95,12 @@ public class netStaticImpl {
 
     public static void changeInstance(netStaticImpl newNet){
         _instance = newNet;
+
+        statPanel.ShowPanel();
+        statPanel.getPanel().Clear();
+
+        LiveNet.Reload();
+
     }
 
     private static netStaticImpl _instance;

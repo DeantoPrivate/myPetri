@@ -39,6 +39,10 @@ public class statPanel extends JDialog implements CountActionListener {
     private ArrayList<stateStat> _stateStats;
 
     public void Clear(){
+
+        CurrentStep = 0;
+        CurrentStepLable.setText("Текущий шаг в сети: "+CurrentStep.toString());
+
         for (stateStat sS : _stateStats)
             sS.Clear();
 

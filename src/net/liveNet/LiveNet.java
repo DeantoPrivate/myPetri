@@ -29,12 +29,23 @@ public class LiveNet {
         return _instance;
     }
 
-    CountActionListener cl;
+    public static void Reload(){
+        if ( _instance.ControlPanel!=null)
+            _instance.ControlPanel.setVisible(false);
+        _instance = new LiveNet(netStaticImpl.getNet());
+        _instance.ActivatePanel();
+        _instance.currentStep = 0;
+        _instance.statusText.setText("Статус:> начало работы");
+        _instance.ControlPanel.repaint();
+
+    }
+
+    static CountActionListener cl;
     public void AssignCountChangeListener(CountActionListener listener){
         cl = listener;
     }
 
-    private netStaticImpl _staticNet;
+    private static netStaticImpl _staticNet;
 
     public LiveNet (netStaticImpl constructedNet){
         _staticNet = constructedNet;
@@ -50,6 +61,7 @@ public class LiveNet {
     private static JLabel analyzeStatus;
 
     public void ActivatePanel(){
+
         if (ControlPanel==null){
 
             ControlPanel = new JDialog();
@@ -187,9 +199,6 @@ public class LiveNet {
     private boolean processing = false;
     private synchronized boolean isProcessing(){return processing;}
     private synchronized void setProcessing(boolean flag){processing = flag;}
-
-
-
 
     private int currentStep = 0;
     private void doNextNetStep(){

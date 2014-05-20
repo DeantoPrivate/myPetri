@@ -11,6 +11,8 @@ import core.State;
 import core.Token;
 import fileSavers.FSRStateWrap;
 import fileSavers.FSRTransactionWrap;
+import net.dynamic.statistic.statPanel;
+import net.liveNet.LiveNet;
 import net.staticNet.StateWrap;
 import net.staticNet.TransactionRuleWrap;
 import net.staticNet.TransactionWrap;
@@ -125,6 +127,7 @@ public class NetSaver {
     public static netStaticImpl ReadNet(boolean initial){
 
         netStaticImpl newNet = netStaticImpl.newNet();
+
         if(initial)
             Dialog.ShowDialog();
 
