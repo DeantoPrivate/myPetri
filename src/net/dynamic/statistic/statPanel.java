@@ -18,7 +18,7 @@ public class statPanel extends JDialog implements CountActionListener {
 
     private JPanel Panel;
     private Integer CurrentStep = 0;
-    private JLabel CurrentStepLable;
+    private JLabel CurrentStepLable = null;
 
     private static statPanel _instance;
     private statPanel(){
