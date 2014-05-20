@@ -5,6 +5,7 @@ import components.Constructor.StateStatusPanel;
 import components.Constructor.TransitionStatusPanel;
 import components.Constructor.WorkingNetStatusPanel;
 import core.Transition;
+import net.dynamic.analyze.Analyzer;
 import net.dynamic.statistic.CountActionListener;
 import net.staticNet.netStaticImpl;
 import sun.awt.windows.ThemeReader;
@@ -133,6 +134,18 @@ public class LiveNet {
 
             analyze = new JButton("Анализ");
             analyze.setBounds(10,150,190,20);
+            analyze.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    if (_analyzer!=null)
+                        JOptionPane.showMessageDialog(null,"Анализатор уже запущен");
+
+                    else{
+                        _analyzer = new Analyzer();
+                        analyze.setEnabled(false);
+                    }
+                }
+            });
 
             ControlPanel.add(analyze);
 
@@ -146,6 +159,8 @@ public class LiveNet {
         ControlPanel.setVisible(true);
     }
 
+    // он не меняется в процессе работы. его не надо сбрасывать при перезагрузке
+    private static Analyzer _analyzer;
 
     private static int currentAnalyzeStep = 0;
     public static void setNextAnalyzeStep(){

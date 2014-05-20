@@ -136,6 +136,8 @@ public class changeTransaction extends JPanel {
 
         }
 
+
+        _transactionChanges = transactionChanges;
         text.setText(s.toString());
     }
 
