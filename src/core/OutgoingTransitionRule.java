@@ -36,6 +36,11 @@ public class OutgoingTransitionRule implements TransitionRule{
         return str;
     }
 
+    @Override
+    public void setCount(int count) {
+        _tokenCount = count;
+    }
+
     public void constructRule(){
 
         JOptionPane.showMessageDialog(null,"Строим исходящее правило транзакции");

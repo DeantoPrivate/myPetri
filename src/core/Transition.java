@@ -18,6 +18,17 @@ public class Transition {
     private ArrayList<IncomingTransitionRule> _incomingTransitionRules;
     private ArrayList<OutgoingTransitionRule> _outgoingTransitionRules;
 
+    // для анализа нам нужно доставать правило по строке состояния
+    public TransitionRule getRule(String rule){
+        for (IncomingTransitionRule i : _incomingTransitionRules)
+            if (i.toString().equals(rule))
+                return i;
+
+        for (OutgoingTransitionRule o : _outgoingTransitionRules)
+            if (o.toString().equals(rule))
+                return o;
+    }
+
     public boolean canBeActivated(){
 
         // workaround

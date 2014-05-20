@@ -3,6 +3,7 @@ package net.dynamic.analyze;
 import core.State;
 import core.Token;
 import core.Transition;
+import core.TransitionRule;
 import net.dynamic.changes.changePanel;
 import net.dynamic.changes.changeStat;
 import net.dynamic.changes.changeTransaction;
@@ -136,6 +137,8 @@ public class Analyzer {
 
                         // TODO применить изменения
 
+
+
                         // TODO запускать шаги и если наступает условие изменений - применять их
 
                         // TODO закончили выполнение - сохранить статистику и текущий набор условий.
@@ -146,7 +149,26 @@ public class Analyzer {
 
     }
 
+    private void CheckAndApplyChangeOneState(ChangeOneState state){
+        // применить изменение к текущей сети если условие выполняется
 
+    }
+
+    private void CheckAndApplyChangeOneTransitionWorking(ChangeOneTransitionWorking working){
+        // применить изменение к текущей сети если условие выполняется
+    }
+
+    private void ApplyChangeOneTransitionDelay(ChangeOneTransitionDelay delay){
+        // применить изменение к текущей сети
+        Transition transition = currentNet.getTransition(delay.TransitionName);
+        transition.SetSleepSteps(delay.delay);
+    }
+
+    private void ApplyChangeOneRule(ChangeOneRule rule){
+        // применить изменение к текущей сети
+        TransitionRule tRule = currentNet.getTransition(rule.TransitionName).getRule(rule.RuleString);
+        tRule.setCount(rule.param);
+    }
 
 
     // изменения для состояний / там все данные достанем и соберем последовательные сеты данных для запуска шагов...

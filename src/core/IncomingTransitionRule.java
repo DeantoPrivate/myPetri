@@ -41,6 +41,11 @@ public class IncomingTransitionRule implements TransitionRule{
         return str;
     }
 
+    @Override
+    public void setCount(int count) {
+        _tokenCount = count;
+    }
+
     public void setState(State state){
         _state = state;
     }

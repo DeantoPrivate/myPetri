@@ -5,4 +5,5 @@ package core;
  */
 public interface TransitionRule {
     String toString();
+    void setCount(int count);
 }
