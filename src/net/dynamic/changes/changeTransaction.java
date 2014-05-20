@@ -345,6 +345,13 @@ public class changeTransaction extends JPanel {
             answer.add(cos);
         }
 
+        // добавим первоначальный вариант.
+        cos = new ChangeOneTransitionDelay();
+        cos.delay = _transactionChanges.sleep;
+        cos.TransitionName = _transition.getName();
+        answer.add(cos);
+
+
         return answer;
 
     }
@@ -355,7 +362,7 @@ public class changeTransaction extends JPanel {
         ArrayList<ChangeOneTransitionWorking> answer  = new ArrayList<ChangeOneTransitionWorking>();
 
         if (_transactionChanges.notWork){
-            // если он не работает. есть выбор. тестим когда работает и тестим когда не работает
+            // только если не работает возвращаем. прогон когда работает и так будет.
 
             cos = new ChangeOneTransitionWorking();
             cos.notWork = true;
@@ -366,11 +373,12 @@ public class changeTransaction extends JPanel {
             answer.add(cos);
         }
 
-        // всегда есть вариант что он работает.
+        // вариант что он работает
         cos = new ChangeOneTransitionWorking();
         cos.notWork = false;
 
         answer.add(cos);
+
 
         return answer;
 
@@ -381,7 +389,7 @@ public class changeTransaction extends JPanel {
         ChangeOneRule cor = new ChangeOneRule();
         ArrayList<ChangeOneRule> answer = new ArrayList<ChangeOneRule>();
 
-        for (int i=0;i<_rules.size();i++)
+        for (int i=0;i<_rules.size();i++){
             for (int j=_rulesChanges.get(i).tokenCountL;j<=_rulesChanges.get(i).getTokenCountR;j++){
                 cor = new ChangeOneRule();
                 cor.param = j;
@@ -389,6 +397,13 @@ public class changeTransaction extends JPanel {
                 cor.TransitionName = _transition.getName();
 
                 answer.add(cor);
+            }
+            // начальное условие тоже сделаем
+            cor = new ChangeOneRule();
+            cor.TransitionName = _transition.getName();
+            cor.RuleString = _rules.get(i).toString();
+            cor.param = _rulesChanges.get(i).tokenCountNow;
+            answer.add(cor);
         }
 
         return answer;

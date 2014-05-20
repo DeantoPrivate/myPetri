@@ -30,7 +30,7 @@ public class Analyzer {
 
 
 
-    private void nextStep(){
+    private void nextStepPreparing(){
 
         // скачаем новую сеть и загрузим ее.
         currentNet = NetSaver.ReadNet(false);
@@ -42,12 +42,7 @@ public class Analyzer {
         statPanel.ShowPanel();
         statusPanel.Clear();
 
-        // установим параметры в сеть
-
-
-
-        // начнем выполнение.
-
+        // все готово для применения следующего набора параметров
 
     }
 
@@ -67,6 +62,41 @@ public class Analyzer {
         _statesChanges = changePanel.get_statesChanges();
         _transitionsChanges = changePanel.get_transitionsChanges();
 
+
+        _stateChanges = new ArrayList<ChangeOneState>();
+        ArrayList<ChangeOneState> tmp;
+        for(changeStat cS : _statesChanges){
+            tmp = new ArrayList<ChangeOneState>();
+            for (ChangeOneState s : tmp)
+                _stateChanges.add(s);
+        }
+
+        _ruleChanges = new ArrayList<ChangeOneRule>();
+            ArrayList<ChangeOneRule> tmp2 = new ArrayList<ChangeOneRule>();
+        _tDelayChanges = new ArrayList<ChangeOneTransitionDelay>();
+            ArrayList<ChangeOneTransitionDelay> tmp3 = new ArrayList<ChangeOneTransitionDelay>();
+        _tWorkChanges = new ArrayList<ChangeOneTransitionWorking>();
+            ArrayList<ChangeOneTransitionWorking> tmp4 = new ArrayList<ChangeOneTransitionWorking>();
+
+        for (changeTransaction tc : _transitionsChanges){
+            tmp2 = tc.getChangeOneRules();
+            tmp3 = tc.getChangeOneTransitionDelays();
+            tmp4 = tc.getChangeOneTransitionWorkings();
+
+            for (ChangeOneRule c:tmp2)
+                _ruleChanges.add(c);
+            for (ChangeOneTransitionDelay c:tmp3)
+                _tDelayChanges.add(c);
+            for (ChangeOneTransitionWorking c:tmp4)
+                _tWorkChanges.add(c);
+
+        }
+
+
+        // теперь правила загружены. каждое правило можно применить или не применить.
+        // можно перебрать все комбинации - это и будет прогоном всех вариантов для этой сети
+
+
         // потеря токенов отслеживается в процессе - каждый прогон сети. в зависимости от параметров.
         // изменения переходов(задержка,) и изменения правил (количество токенов) указываются для сети в начале прогона
         // изменениия в работе переходов (не работаем какие-то шаги) - отслеживаем в процессе в зависимости отслеживаем
@@ -83,6 +113,16 @@ public class Analyzer {
 
 
     }
+
+
+    private void Analyze(){
+
+        // тут реализуется прогон. просто берем все комбинации по вариантам.
+
+    }
+
+
+
 
     // изменения для состояний / там все данные достанем и соберем последовательные сеты данных для запуска шагов...
     private ArrayList<changeStat> _statesChanges;
