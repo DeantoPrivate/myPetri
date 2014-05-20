@@ -71,7 +71,7 @@
       <file leaf-file-name="statPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="58" selection-start="729" selection-end="729" vertical-scroll-proportion="0.5645757" vertical-offset="0" max-vertical-offset="2023">
+            <state line="53" column="0" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.53222835" vertical-offset="459" max-vertical-offset="2023">
               <folding>
                 <element signature="method#getPanel#0;class#statPanel#0" expanded="true" />
               </folding>
@@ -144,8 +144,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="11" />
+    <option name="x" value="17" />
+    <option name="y" value="31" />
     <option name="width" value="1678" />
     <option name="height" value="966" />
   </component>
@@ -175,7 +175,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -372,7 +372,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,6 +454,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -479,19 +492,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -578,7 +578,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="11" width="1678" height="966" extended-state="0" />
+    <frame x="17" y="31" width="1678" height="966" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -586,9 +586,8 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31914893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29151732" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29032257" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19986764" sideWeight="0.5006435" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -602,8 +601,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31914893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -681,16 +681,12 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/JOptionPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="438" column="0" selection-start="17977" selection-end="17977" vertical-scroll-proportion="-6.2" vertical-offset="6696" max-vertical-offset="42789">
-          <folding />
-        </state>
+        <state line="438" column="0" selection-start="17977" selection-end="17977" vertical-scroll-proportion="-6.2" vertical-offset="6696" max-vertical-offset="42789" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRStateWrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="39" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1275">
-          <folding />
-        </state>
+        <state line="44" column="39" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRToken.java">
@@ -717,9 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StateStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="-25.16" vertical-offset="0" max-vertical-offset="1241">
-          <folding />
-        </state>
+        <state line="45" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="-25.16" vertical-offset="0" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/TransactionRuleElement.java">
@@ -746,13 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/GraphPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="0" selection-start="9640" selection-end="9640" vertical-scroll-proportion="-9.72" vertical-offset="3803" max-vertical-offset="4522">
-          <folding>
-            <element signature="method#actionPerformed#0;class#GraphPanel#0" expanded="false" />
-            <element signature="method#AddTransaction#0;class#GraphPanel#0" expanded="false" />
-            <element signature="method#mouseDragged#0;class#GraphPanel#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="302" column="0" selection-start="9640" selection-end="9640" vertical-scroll-proportion="-9.72" vertical-offset="3803" max-vertical-offset="4522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/CountActionListener.java">
@@ -764,15 +752,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="280" selection-end="290" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="731">
-          <folding>
-            <element signature="docComment;class#TokensBase#0" expanded="false" />
-            <element signature="method#GetTokenBase#0;class#TokensBase#0" expanded="false" />
-            <element signature="method#Clear#0;class#TokensBase#0" expanded="false" />
-            <element signature="method#AddToken#0;class#TokensBase#0" expanded="false" />
-            <element signature="method#ShowTokensInSystem#0;class#TokensBase#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="15" column="40" selection-start="280" selection-end="290" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/ContextChangeListener.java">
@@ -784,35 +764,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="83" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="2125">
-          <folding />
-        </state>
+        <state line="91" column="83" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="2125" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="41" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-6.96" vertical-offset="931" max-vertical-offset="1955">
-          <folding />
-        </state>
+        <state line="68" column="41" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-6.96" vertical-offset="931" max-vertical-offset="1955" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/Transition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="31" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="1904">
-          <folding>
-            <element signature="docComment;class#Transition#0" expanded="false" />
-            <element signature="method#canBeActivated#0;class#Transition#0" expanded="false" />
-            <element signature="method#get_incomingTransitionRules#0;class#Transition#0" expanded="false" />
-            <element signature="method#Transition#0;class#Transition#0" expanded="false" />
-            <element signature="method#AddIncomingTransitionRule#0;class#Transition#0" expanded="false" />
-            <element signature="method#AddOutgoingTransitionRule#0;class#Transition#0" expanded="false" />
-            <element signature="method#addUIChangeActionListener#0;class#Transition#0" expanded="false" />
-            <element signature="method#SetSleepSteps#0;class#Transition#0" expanded="false" />
-            <element signature="method#getSleepSteps#0;class#Transition#0" expanded="false" />
-            <element signature="method#Activate#0;class#Transition#0" expanded="false" />
-            <element signature="method#Deactivate#0;class#Transition#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="40" column="31" selection-start="1103" selection-end="1103" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="1904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/TransitionRule.java">
@@ -822,9 +784,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="49" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.36879432" vertical-offset="1032" max-vertical-offset="50881">
-          <folding />
-        </state>
+        <state line="92" column="49" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.36879432" vertical-offset="1032" max-vertical-offset="50881" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/OutgoingTransitionRule.java">
@@ -851,23 +811,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRIncomingTransitionRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="345" selection-end="393" vertical-scroll-proportion="-6.6" vertical-offset="5" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="16" column="8" selection-start="345" selection-end="393" vertical-scroll-proportion="-6.6" vertical-offset="5" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TokenManager/Dialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="19" selection-start="3992" selection-end="3992" vertical-scroll-proportion="-0.33090025" vertical-offset="2159" max-vertical-offset="4981">
-          <folding />
-        </state>
+        <state line="127" column="19" selection-start="3992" selection-end="3992" vertical-scroll-proportion="-0.33090025" vertical-offset="2159" max-vertical-offset="4981" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="24" selection-start="903" selection-end="903" vertical-scroll-proportion="0.33938295" vertical-offset="221" max-vertical-offset="1802">
-          <folding />
-        </state>
+        <state line="34" column="24" selection-start="903" selection-end="903" vertical-scroll-proportion="0.33938295" vertical-offset="221" max-vertical-offset="1802" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRState.java">
@@ -917,9 +871,7 @@
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="29" selection-start="17907" selection-end="17907" vertical-scroll-proportion="0.42250922" vertical-offset="5874" max-vertical-offset="9129">
-          <folding />
-        </state>
+        <state line="364" column="29" selection-start="17907" selection-end="17907" vertical-scroll-proportion="0.42250922" vertical-offset="5874" max-vertical-offset="9129" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/AbstractButton.java">
@@ -931,14 +883,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1365" selection-end="1365" vertical-scroll-proportion="-7.0" vertical-offset="284" max-vertical-offset="1394">
-          <folding>
-            <element signature="e#1239#1419#0" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1954#2149#0" expanded="true" />
-            <element signature="e#2138#2139#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="43" column="24" selection-start="1365" selection-end="1365" vertical-scroll-proportion="-7.0" vertical-offset="284" max-vertical-offset="1394" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/netSaver/NetSaver.java">
@@ -989,7 +934,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="58" selection-start="729" selection-end="729" vertical-scroll-proportion="0.5645757" vertical-offset="0" max-vertical-offset="2023">
+        <state line="53" column="0" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.53222835" vertical-offset="459" max-vertical-offset="2023">
           <folding>
             <element signature="method#getPanel#0;class#statPanel#0" expanded="true" />
           </folding>
