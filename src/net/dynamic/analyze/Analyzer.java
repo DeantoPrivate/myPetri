@@ -135,12 +135,24 @@ public class Analyzer {
         ArrayList<Boolean> mask = new ArrayList<Boolean>();
         while (mask.size()<=allCount){
 
+            nextStepPreparing();
+
             // будем по очереди брать маски от счетчика и применять их к нашим правилам))
 
             mask = Combination(currentVar);
+            if (mask.size() > allCount) return;
 
             // в этом массиве нули и еденицы поочереди. это соответственно признаки применяем или не применяем правило в нашем порядке.
             // правила упорядочены в функции getRule(int pos)
+
+            for (int i =0;i<mask.size();i++){
+                if (mask.get(i)){
+                    // если следующее правило надо применить.
+                    ChangeOne c = getRule(i);
+                    if (c instanceof )
+                    CheckAndApplyChangeOne(c);
+                }
+            }
 
             currentVar ++;
         }
@@ -168,9 +180,15 @@ public class Analyzer {
 
     private int currentAnalyzingStep = 0;
 
-    private void CheckAndApplyChangeOneState(ChangeOneState state){
-        // применить изменение к текущей сети если условие выполняется
-
+    private void CheckAndApplyChangeOne(ChangeOne c){
+        if (c instanceof ChangeOneState)
+            CheckAndApplyChangeOneState((ChangeOneState)c);
+        if (c instanceof ChangeOneTransitionWorking)
+            CheckAndApplyChangeOneTransitionWorking((ChangeOneTransitionWorking)c);
+        if (c instanceof ChangeOneTransitionDelay)
+            ApplyChangeOneTransitionDelay((ChangeOneTransitionDelay)c);
+        if (c instanceof ChangeOneRule)
+            ApplyChangeOneRule((ChangeOneRule)c);
     }
 
     // возвращает значит массив нулей и 1 - берем или не берем правило. если короткий - то значит дальше ничего не берем
@@ -183,6 +201,11 @@ public class Analyzer {
             else answer.add(true);
 //todo возможно надо поменять порядок следования.. надо посмотреть еще
         return answer;
+    }
+
+    private void CheckAndApplyChangeOneState(ChangeOneState state){
+        // применить изменение к текущей сети если условие выполняется
+
     }
 
     private void CheckAndApplyChangeOneTransitionWorking(ChangeOneTransitionWorking working){

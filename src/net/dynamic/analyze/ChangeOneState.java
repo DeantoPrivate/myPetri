@@ -8,4 +8,5 @@ public class ChangeOneState implements ChangeOne{
     public boolean loose;
     public boolean appearance;
     public int count;
+    public int step;
 }

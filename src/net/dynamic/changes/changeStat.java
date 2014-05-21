@@ -149,6 +149,7 @@ public class changeStat extends JPanel {
             cos.loose = _tokenChanges.get(i).losses;
             cos.State = _state.GetName();
             cos.Token = _tokens.get(i).GetName();
+            cos.step = _tokenChanges.get(i).Step;
 
             answer.add(cos);
         }
