@@ -1,5 +1,6 @@
 package net.dynamic.analyze;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import core.State;
 import core.Token;
 import core.Transition;
@@ -152,8 +153,22 @@ public class Analyzer {
 
     private void CheckAndApplyChangeOneState(ChangeOneState state){
         // применить изменение к текущей сети если условие выполняется
-        
+
     }
+
+    // возвращает значит массив нулей и 1 - берем или не берем правило. если короткий - то значит дальше ничего не берем
+    private ArrayList<Boolean> Combination(int i){
+        String s = Integer.toBinaryString(i);
+        ArrayList<Boolean> answer = new ArrayList<Boolean>();
+        for (int t=0;t<s.length();t++)
+            if (s.charAt(t) == '0')
+                answer.add(false);
+            else answer.add(true);
+//todo возможно надо поменять порядок следования.. надо посмотреть еще
+        return answer;
+    }
+
+
 
     private void CheckAndApplyChangeOneTransitionWorking(ChangeOneTransitionWorking working){
         // применить изменение к текущей сети если условие выполняется
