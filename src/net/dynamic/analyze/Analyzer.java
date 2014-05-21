@@ -119,34 +119,51 @@ public class Analyzer {
 
     private void Analyze(){
 
-        // тут реализуется прогон. просто берем все комбинации по вариантам. for(for(for(for)))))
-        // так просмотрим все. когда находимся внутри. то применяем все что есть к сети - и запускаем сеть.
-        // в процессе смотрим опять же только те условия и применяем которые у нас в цикле сейчас.
-// TODO так получится пробежать только по отдельности все комбинации. а например чтоб состояние теряло и 1 и 2 токен??
-// хер с ним. пусть будут не все варианты. всеравно все не сделать.. только комбинации по одному условию пока
-
-        // todo изменить логику.. сейчас тестируется только один вариант от каждого состояния, перехода и правила.
-        for (ChangeOneState stateChange : _stateChanges)
-            for (ChangeOneTransitionWorking transitionWorkingChange : _tWorkChanges)
-                for (ChangeOneTransitionDelay transitionDelayChange : _tDelayChanges)
-                    for (ChangeOneRule ruleChange : _ruleChanges){
+        // у нас есть набор комбинаций. посчитаем сколько всего сочетаний - это n!.
+        // пойдем до этого числа от 0 - будем стоить бинарную маску 01010111100 - какие берем правила какие не берем
+        // нужно только следить чтоб правила не противоречили друг другу. это касается диапазонов для какого-то параметра
+        // они должны идти по очереди. находим такие и сколько их. и применяем только битовые маски 0001 0010 0100 1000
+        // или просто пропускаем генерацию битовых масок именно в этой части с этими правилами. и потом дальше.
 
 
-                        // к этому моменту у нас есть уже некая комбинация
-                        // что-то из этого - статическое изменение - нужно применить к сети
-//                      // что-то из этого - динамическое изменение - за ним надо следить в процессе выполнения
-                        // TODO надо продумать отключение графического интерфейса чтоб он не обновлялся и быстрее работал
+        int allCount = _ruleChanges.size() + _stateChanges.size()+_tDelayChanges.size()+_tWorkChanges.size();
+        int currentVar = 1;
 
-                        // TODO применить изменения
+        initRules();
 
-                        // TODO запускать шаги и если наступает условие изменений - применять их
+        // не будем факториал считать. просто увидим, когда размер массив двоичных масок превысит это число.
+        ArrayList<Boolean> mask = new ArrayList<Boolean>();
+        while (mask.size()<=allCount){
 
-                        // TODO закончили выполнение - сохранить статистику и текущий набор условий.
+            // будем по очереди брать маски от счетчика и применять их к нашим правилам))
 
-                        // TODO подготовка к следующему шагу
+            mask = Combination(currentVar);
 
-                    }
+            // в этом массиве нули и еденицы поочереди. это соответственно признаки применяем или не применяем правило в нашем порядке.
+            // правила упорядочены в функции getRule(int pos)
 
+            currentVar ++;
+        }
+
+    }
+
+    private ArrayList<ChangeOne> _rules;
+    private void initRules(){
+        _rules = new ArrayList<ChangeOne>();
+        for (ChangeOneState a : _stateChanges)
+            _rules.add(a);
+
+        for (ChangeOneTransitionWorking a : _tWorkChanges)
+            _rules.add(a);
+
+        for (ChangeOneTransitionDelay a : _tDelayChanges)
+            _rules.add(a);
+
+        for (ChangeOneRule a : _ruleChanges)
+            _rules.add(a);
+    }
+    public ChangeOne getRule(int i){
+        return _rules.get(i);
     }
 
     private int currentAnalyzingStep = 0;
@@ -167,8 +184,6 @@ public class Analyzer {
 //todo возможно надо поменять порядок следования.. надо посмотреть еще
         return answer;
     }
-
-
 
     private void CheckAndApplyChangeOneTransitionWorking(ChangeOneTransitionWorking working){
         // применить изменение к текущей сети если условие выполняется
@@ -204,6 +219,7 @@ public class Analyzer {
 
     // изменения для переходов
     private ArrayList<changeTransaction> _transitionsChanges;
+
 
 
     // списки возможных изменений. указаны конкретные параметры изменения todo возможно тут прийдется разбить на списки списков от каждого объекта. чтоб тестировать вместе хотяб по варианту но от каждого
