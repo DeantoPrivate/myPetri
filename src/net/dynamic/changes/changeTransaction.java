@@ -344,7 +344,7 @@ public class changeTransaction extends JPanel {
             cos.TransitionName = _transition.getName();
             answer.add(cos);
         }
-
+//todo it looks like this is next function.... it is related to notwork. next function is related to sleep
         // добавим первоначальный вариант.
         cos = new ChangeOneTransitionDelay();
         cos.delay = _transactionChanges.sleep;

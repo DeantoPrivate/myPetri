@@ -143,6 +143,7 @@ public class LiveNet {
                     else{
                         _analyzer = new Analyzer();
                         analyze.setEnabled(false);
+                        _analyzer.Analyze();
                     }
                 }
             });
@@ -216,6 +217,11 @@ public class LiveNet {
     private synchronized void setProcessing(boolean flag){processing = flag;}
 
     private int currentStep = 0;
+
+    public void NextStep(){
+        doNextNetStep();
+    }
+
     private void doNextNetStep(){
 
         netStaticImpl.startProcessing();

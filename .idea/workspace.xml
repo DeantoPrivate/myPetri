@@ -21,7 +21,23 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" line="69" class="net.dynamic.analyze.Analyzer" package="net.dynamic.analyze">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -68,22 +84,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Analyzer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Analyzer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="78" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.41939712" vertical-offset="700" max-vertical-offset="2278">
+            <state line="161" column="0" selection-start="6078" selection-end="6078" vertical-scroll-proportion="-7.96" vertical-offset="1620" max-vertical-offset="3162">
               <folding>
                 <element signature="docComment;class#Analyzer#0" expanded="false" />
                 <element signature="method#nextStepPreparing#0;class#Analyzer#0" expanded="false" />
-                <element signature="method#Analyzer#0;class#Analyzer#0" expanded="false" />
-                <element signature="e#2998#3075#0" expanded="false" />
-                <element signature="e#5099#5108#0" expanded="true" />
-                <element signature="method#initRules#0;class#Analyzer#0" expanded="false" />
-                <element signature="method#getRule#0;class#Analyzer#0" expanded="false" />
+                <element signature="e#2188#2203#0" expanded="true" />
+                <element signature="e#2343#2369#0" expanded="true" />
+                <element signature="e#2512#2540#0" expanded="true" />
+                <element signature="e#3033#3110#0" expanded="false" />
+                <element signature="e#4267#4342#0" expanded="false" />
+                <element signature="e#5452#5575#0" expanded="false" />
                 <element signature="method#CheckAndApplyChangeOne#0;class#Analyzer#0" expanded="false" />
                 <element signature="method#Combination#0;class#Analyzer#0" expanded="false" />
                 <element signature="method#CheckAndApplyChangeOneState#0;class#Analyzer#0" expanded="false" />
+                <element signature="method#CheckAndApplyChangeOneTransitionWorking#0;class#Analyzer#0" expanded="false" />
+                <element signature="method#ApplyChangeOneTransitionDelay#0;class#Analyzer#0" expanded="false" />
+                <element signature="method#ApplyChangeOneRule#0;class#Analyzer#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changeTransaction.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="346" column="106" selection-start="11086" selection-end="11086" vertical-scroll-proportion="0.3273196" vertical-offset="970" max-vertical-offset="2533">
+              <folding>
+                <element signature="docComment;class#changeTransaction#0" expanded="false" />
+                <element signature="method#SetAssociatedState#0;class#changeTransaction#0" expanded="false" />
+                <element signature="method#SetAssociatedTransaction#0;class#changeTransaction#0" expanded="false" />
+                <element signature="method#getStateName#0;class#changeTransaction#0" expanded="false" />
+                <element signature="method#InputChangeInfoTransition#0;class#changeTransaction#0" expanded="false" />
+                <element signature="method#constructRuleChanges#0;class#changeTransaction#0" expanded="false" />
+                <element signature="method#changeTransaction#0;class#changeTransaction#0" expanded="false" />
+                <element signature="e#10683#10709#0" expanded="true" />
+                <element signature="e#11526#11554#0" expanded="true" />
+                <element signature="e#12388#12403#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changePanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="23" selection-start="992" selection-end="992" vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="527">
+              <folding>
+                <element signature="docComment;class#changePanel#0" expanded="false" />
+                <element signature="method#ShowPanel#0;class#changePanel#0" expanded="false" />
+                <element signature="method#get_statesChanges#0;class#changePanel#0" expanded="true" />
+                <element signature="method#Init#0;class#changePanel#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiveNet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="143" column="0" selection-start="4420" selection-end="4420" vertical-scroll-proportion="-12.2" vertical-offset="1650" max-vertical-offset="4046">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,7 +228,6 @@
         <option value="$PROJECT_DIR$/src/net/dynamic/statistic/stateStat.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/statistic/transactionStat.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java" />
-        <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/StateOneChange.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/OneChange.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOne.java" />
@@ -173,7 +235,6 @@
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/b.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/v.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/c.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java" />
         <option value="$PROJECT_DIR$/src/core/TransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/IncomingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
@@ -184,13 +245,15 @@
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" />
         <option value="$PROJECT_DIR$/src/core/State.java" />
+        <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="195" />
-    <option name="y" value="12" />
+    <option name="x" value="254" />
+    <option name="y" value="140" />
     <option name="width" value="1610" />
     <option name="height" value="956" />
   </component>
@@ -611,7 +674,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="195" y="12" width="1610" height="956" extended-state="0" />
+    <frame x="254" y="140" width="1610" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -620,10 +683,11 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14519651" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19951633" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19986764" sideWeight="0.5006435" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3129176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981685" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -634,7 +698,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31801692" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3129176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -840,40 +903,6 @@
         <state line="53" column="0" selection-start="1330" selection-end="1330" vertical-scroll-proportion="0.4268833" vertical-offset="459" max-vertical-offset="2023" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="23" selection-start="908" selection-end="908" vertical-scroll-proportion="-6.6" vertical-offset="124" max-vertical-offset="3944">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="822" selection-end="822" vertical-scroll-proportion="-8.6" vertical-offset="278" max-vertical-offset="1462">
-          <folding>
-            <element signature="method#get_statesChanges#0;class#changePanel#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="46" selection-start="11116" selection-end="11116" vertical-scroll-proportion="-20.84" vertical-offset="754" max-vertical-offset="2533">
-          <folding>
-            <element signature="docComment;class#changeTransaction#0" expanded="false" />
-            <element signature="method#SetAssociatedState#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#SetAssociatedTransaction#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#getStateName#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#InputChangeInfoTransition#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#constructRuleChanges#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#changeTransaction#0;class#changeTransaction#0" expanded="false" />
-            <element signature="e#10683#10709#0" expanded="true" />
-            <element signature="e#11420#11448#0" expanded="true" />
-            <element signature="e#12282#12297#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="15" selection-start="1819" selection-end="1819" vertical-scroll-proportion="-10.08" vertical-offset="547" max-vertical-offset="3281" />
@@ -890,8 +919,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="28" selection-start="998" selection-end="998" vertical-scroll-proportion="-22.44" vertical-offset="34" max-vertical-offset="1377">
           <folding>
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -900,8 +929,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="28" selection-start="1263" selection-end="1263" vertical-scroll-proportion="-25.16" vertical-offset="85" max-vertical-offset="2108">
           <folding>
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="false" />
+            <element signature="e#1268#1269#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -969,20 +998,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="23" selection-start="992" selection-end="992" vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="527">
+          <folding>
+            <element signature="docComment;class#changePanel#0" expanded="false" />
+            <element signature="method#ShowPanel#0;class#changePanel#0" expanded="false" />
+            <element signature="method#get_statesChanges#0;class#changePanel#0" expanded="true" />
+            <element signature="method#Init#0;class#changePanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="0" selection-start="4420" selection-end="4420" vertical-scroll-proportion="-12.2" vertical-offset="1650" max-vertical-offset="4046">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="78" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.41939712" vertical-offset="700" max-vertical-offset="2278">
+        <state line="161" column="0" selection-start="6078" selection-end="6078" vertical-scroll-proportion="-7.96" vertical-offset="1620" max-vertical-offset="3162">
           <folding>
             <element signature="docComment;class#Analyzer#0" expanded="false" />
             <element signature="method#nextStepPreparing#0;class#Analyzer#0" expanded="false" />
-            <element signature="method#Analyzer#0;class#Analyzer#0" expanded="false" />
-            <element signature="e#2998#3075#0" expanded="false" />
-            <element signature="e#5099#5108#0" expanded="true" />
-            <element signature="method#initRules#0;class#Analyzer#0" expanded="false" />
-            <element signature="method#getRule#0;class#Analyzer#0" expanded="false" />
+            <element signature="e#2188#2203#0" expanded="true" />
+            <element signature="e#2343#2369#0" expanded="true" />
+            <element signature="e#2512#2540#0" expanded="true" />
+            <element signature="e#3033#3110#0" expanded="false" />
+            <element signature="e#4267#4342#0" expanded="false" />
+            <element signature="e#5452#5575#0" expanded="false" />
             <element signature="method#CheckAndApplyChangeOne#0;class#Analyzer#0" expanded="false" />
             <element signature="method#Combination#0;class#Analyzer#0" expanded="false" />
             <element signature="method#CheckAndApplyChangeOneState#0;class#Analyzer#0" expanded="false" />
+            <element signature="method#CheckAndApplyChangeOneTransitionWorking#0;class#Analyzer#0" expanded="false" />
+            <element signature="method#ApplyChangeOneTransitionDelay#0;class#Analyzer#0" expanded="false" />
+            <element signature="method#ApplyChangeOneRule#0;class#Analyzer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="346" column="106" selection-start="11086" selection-end="11086" vertical-scroll-proportion="0.3273196" vertical-offset="970" max-vertical-offset="2533">
+          <folding>
+            <element signature="docComment;class#changeTransaction#0" expanded="false" />
+            <element signature="method#SetAssociatedState#0;class#changeTransaction#0" expanded="false" />
+            <element signature="method#SetAssociatedTransaction#0;class#changeTransaction#0" expanded="false" />
+            <element signature="method#getStateName#0;class#changeTransaction#0" expanded="false" />
+            <element signature="method#InputChangeInfoTransition#0;class#changeTransaction#0" expanded="false" />
+            <element signature="method#constructRuleChanges#0;class#changeTransaction#0" expanded="false" />
+            <element signature="method#changeTransaction#0;class#changeTransaction#0" expanded="false" />
+            <element signature="e#10683#10709#0" expanded="true" />
+            <element signature="e#11526#11554#0" expanded="true" />
+            <element signature="e#12388#12403#0" expanded="true" />
           </folding>
         </state>
       </provider>

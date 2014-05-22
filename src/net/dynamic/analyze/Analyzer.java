@@ -16,6 +16,7 @@ import net.liveNet.LiveNet;
 import net.netSaver.NetSaver;
 import net.staticNet.netStaticImpl;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 /**
@@ -71,7 +72,7 @@ public class Analyzer {
         for(changeStat cS : _statesChanges){
             tmp = new ArrayList<ChangeOneState>();
             for (ChangeOneState s : tmp)
-                _stateChanges.add(s);
+                _stateChanges.add(s); //todo ??WTF
         }
 
         _ruleChanges = new ArrayList<ChangeOneRule>();
@@ -118,7 +119,7 @@ public class Analyzer {
     }
 
 
-    private void Analyze(){
+    public void Analyze(){
 
         // у нас есть набор комбинаций. посчитаем сколько всего сочетаний - это n!.
         // пойдем до этого числа от 0 - будем стоить бинарную маску 01010111100 - какие берем правила какие не берем
@@ -137,6 +138,7 @@ public class Analyzer {
         while (mask.size()<=allCount){
 
             nextStepPreparing();
+            currentAnalyzeStep = 0;
 
             // будем по очереди брать маски от счетчика и применять их к нашим правилам))
 
@@ -155,6 +157,21 @@ public class Analyzer {
             }
 
             // правила применились. запускаем сеть. (сколько шагов то емае...?)
+            for (int w=0;w<100;w++){
+
+                for (int i =0;i<mask.size();i++){
+                    if (mask.get(i)){
+                        // если следующее правило надо применить. todo реализовать непересечение несовместимых условий
+                        ChangeOne c = getRule(i);
+                        CheckAndApplyChangeOne(c);
+                    }
+                }
+
+                LiveNet.GetInstance().NextStep();
+                currentAnalyzeStep++;
+            }
+
+            JOptionPane.showMessageDialog(null,"один цикл анализа прошел");
 
             currentVar ++;
         }
