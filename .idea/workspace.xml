@@ -71,18 +71,37 @@
       <file leaf-file-name="Analyzer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="0" selection-start="7633" selection-end="7633" vertical-scroll-proportion="0.328" vertical-offset="1179" max-vertical-offset="2312">
+            <state line="156" column="78" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.41939712" vertical-offset="700" max-vertical-offset="2278">
               <folding>
                 <element signature="docComment;class#Analyzer#0" expanded="false" />
                 <element signature="method#nextStepPreparing#0;class#Analyzer#0" expanded="false" />
                 <element signature="method#Analyzer#0;class#Analyzer#0" expanded="false" />
-                <element signature="e#2974#3051#0" expanded="false" />
-                <element signature="e#5075#5084#0" expanded="true" />
+                <element signature="e#2998#3075#0" expanded="false" />
+                <element signature="e#5099#5108#0" expanded="true" />
                 <element signature="method#initRules#0;class#Analyzer#0" expanded="false" />
                 <element signature="method#getRule#0;class#Analyzer#0" expanded="false" />
                 <element signature="method#CheckAndApplyChangeOne#0;class#Analyzer#0" expanded="false" />
                 <element signature="method#Combination#0;class#Analyzer#0" expanded="false" />
+                <element signature="method#CheckAndApplyChangeOneState#0;class#Analyzer#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TokensBase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="110" column="17" selection-start="2732" selection-end="2732" vertical-scroll-proportion="-10.68" vertical-offset="1501" max-vertical-offset="2380">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="0" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-11.36" vertical-offset="1093" max-vertical-offset="1955">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +109,7 @@
       <file leaf-file-name="ChangeOneState.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="85" selection-end="99" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="306">
+            <state line="5" column="19" selection-start="85" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -99,17 +118,8 @@
       <file leaf-file-name="changeStat.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="49" selection-start="4505" selection-end="4505" vertical-scroll-proportion="-15.32" vertical-offset="739" max-vertical-offset="1462">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#changeStat#0" expanded="false" />
-                <element signature="method#SetAssociatedState#0;class#changeStat#0" expanded="false" />
-                <element signature="method#getStateName#0;class#changeStat#0" expanded="false" />
-                <element signature="method#ConstructTokenChanges#0;class#changeStat#0" expanded="false" />
-                <element signature="method#AddTokenTemplate#0;class#changeStat#0" expanded="false" />
-                <element signature="e#4092#4108#0" expanded="true" />
-                <element signature="method#changeStat#0;class#changeStat#0" expanded="false" />
-              </folding>
+            <state line="151" column="49" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0" vertical-offset="2567" max-vertical-offset="3978">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/net/dynamic/statistic/statConstructor.java" />
         <option value="$PROJECT_DIR$/src/base/TokensBase.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/statistic/ContextChangeListener.java" />
-        <option value="$PROJECT_DIR$/src/core/State.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/changes/changingNetPanel.java" />
         <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java" />
@@ -174,13 +183,14 @@
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionWorking.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" />
+        <option value="$PROJECT_DIR$/src/core/State.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="255" />
-    <option name="y" value="56" />
+    <option name="x" value="195" />
+    <option name="y" value="12" />
     <option name="width" value="1610" />
     <option name="height" value="956" />
   </component>
@@ -210,6 +220,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,8 +406,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,19 +487,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -515,6 +512,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -601,7 +611,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="255" y="56" width="1610" height="956" extended-state="0" />
+    <frame x="195" y="12" width="1610" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -609,7 +619,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31801692" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14519651" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
@@ -624,9 +633,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31801692" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3129176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -744,11 +754,6 @@
         <state line="5" column="36" selection-start="91" selection-end="110" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="280" selection-end="290" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/ContextChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="32" selection-start="147" selection-end="147" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="238" />
@@ -757,11 +762,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="83" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="2125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="41" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-6.96" vertical-offset="931" max-vertical-offset="1955" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/String.java">
@@ -943,40 +943,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="85" selection-end="99" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="306">
+        <state line="5" column="19" selection-start="85" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="306">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="49" selection-start="4505" selection-end="4505" vertical-scroll-proportion="-15.32" vertical-offset="739" max-vertical-offset="1462">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#changeStat#0" expanded="false" />
-            <element signature="method#SetAssociatedState#0;class#changeStat#0" expanded="false" />
-            <element signature="method#getStateName#0;class#changeStat#0" expanded="false" />
-            <element signature="method#ConstructTokenChanges#0;class#changeStat#0" expanded="false" />
-            <element signature="method#AddTokenTemplate#0;class#changeStat#0" expanded="false" />
-            <element signature="e#4092#4108#0" expanded="true" />
-            <element signature="method#changeStat#0;class#changeStat#0" expanded="false" />
-          </folding>
+        <state line="151" column="49" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0" vertical-offset="2567" max-vertical-offset="3978">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2072" selection-end="2072" vertical-scroll-proportion="-11.36" vertical-offset="1093" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/TokensBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="17" selection-start="2732" selection-end="2732" vertical-scroll-proportion="-10.68" vertical-offset="1501" max-vertical-offset="2380">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="0" selection-start="7633" selection-end="7633" vertical-scroll-proportion="0.328" vertical-offset="1179" max-vertical-offset="2312">
+        <state line="156" column="78" selection-start="5968" selection-end="5968" vertical-scroll-proportion="0.41939712" vertical-offset="700" max-vertical-offset="2278">
           <folding>
             <element signature="docComment;class#Analyzer#0" expanded="false" />
             <element signature="method#nextStepPreparing#0;class#Analyzer#0" expanded="false" />
             <element signature="method#Analyzer#0;class#Analyzer#0" expanded="false" />
-            <element signature="e#2974#3051#0" expanded="false" />
-            <element signature="e#5075#5084#0" expanded="true" />
+            <element signature="e#2998#3075#0" expanded="false" />
+            <element signature="e#5099#5108#0" expanded="true" />
             <element signature="method#initRules#0;class#Analyzer#0" expanded="false" />
             <element signature="method#getRule#0;class#Analyzer#0" expanded="false" />
             <element signature="method#CheckAndApplyChangeOne#0;class#Analyzer#0" expanded="false" />
             <element signature="method#Combination#0;class#Analyzer#0" expanded="false" />
+            <element signature="method#CheckAndApplyChangeOneState#0;class#Analyzer#0" expanded="false" />
           </folding>
         </state>
       </provider>

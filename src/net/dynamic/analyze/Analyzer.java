@@ -1,5 +1,6 @@
 package net.dynamic.analyze;
 
+import base.TokensBase;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import core.State;
 import core.Token;
@@ -147,12 +148,13 @@ public class Analyzer {
 
             for (int i =0;i<mask.size();i++){
                 if (mask.get(i)){
-                    // если следующее правило надо применить.
+                    // если следующее правило надо применить. todo реализовать непересечение несовместимых условий
                     ChangeOne c = getRule(i);
-                    if (c instanceof )
                     CheckAndApplyChangeOne(c);
                 }
             }
+
+            // правила применились. запускаем сеть. (сколько шагов то емае...?)
 
             currentVar ++;
         }
@@ -205,7 +207,21 @@ public class Analyzer {
 
     private void CheckAndApplyChangeOneState(ChangeOneState state){
         // применить изменение к текущей сети если условие выполняется
+        if (currentAnalyzeStep % state.step == 0){
+            // самое время потерять\приобрести токен состоянию
+            State s = currentNet.getState(state.State);
+            if (state.loose){
+                for (Token t : s.GetTokens())
+                    if (t.GetName().equals(state.Token)){
+                        s.TokenGone(t);
+                        return;
+                    }
+            }else if (state.appearance){
+                Token t = TokensBase.GetTokenBase().getToken(state.Token);
+                s.LocateToken(t);
+            }
 
+        }
     }
 
     private void CheckAndApplyChangeOneTransitionWorking(ChangeOneTransitionWorking working){
