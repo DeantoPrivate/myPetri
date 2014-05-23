@@ -33,6 +33,10 @@ public class changeTransaction extends JPanel {
     }
     public String getStateName(){return _transition.getName();}
 
+    public String toString(){
+        return text.getText();
+    }
+
     private JLabel text;
     private JButton newTransactionRule;
 

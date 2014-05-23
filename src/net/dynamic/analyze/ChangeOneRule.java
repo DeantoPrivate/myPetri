@@ -6,4 +6,10 @@ package net.dynamic.analyze;
 public class ChangeOneRule implements ChangeOne{
     public String TransitionName,RuleString;
     public int param;
+
+    @Override
+    public String getString() {
+
+        return "параметр для правила "+RuleString + " в переходе " +TransitionName +" = "+param;
+    }
 }

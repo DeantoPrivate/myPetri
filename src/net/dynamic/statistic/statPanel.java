@@ -35,6 +35,19 @@ public class statPanel extends JDialog implements CountActionListener {
         _instance.setVisible(true);
     }
 
+    public StringBuilder GetStatictics(){
+
+        StringBuilder answer = new StringBuilder();
+        String n = System.getProperty("line.separator");
+        for (stateStat s : _stateStats)
+            answer.append(s+n);
+
+        for (transactionStat t : _transactionStats)
+            answer.append(t+n);
+
+        return answer;
+    }
+
     private ArrayList<transactionStat> _transactionStats;
     private ArrayList<stateStat> _stateStats;
 

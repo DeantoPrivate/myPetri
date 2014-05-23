@@ -38,6 +38,18 @@ public class changeStat extends JPanel {
     // панельки для отображения этих токенов
     private ArrayList<JPanel> tokenPanels;
 
+    private ArrayList<String> _TokenChangesStrings;
+
+    public StringBuilder toStrings(){
+        String n = System.getProperty("line.separator");
+        StringBuilder answer = new StringBuilder();
+        answer.append("Изменения для состояния ["+_state.GetName()+"]"+n);
+        for (String s : _TokenChangesStrings)
+            answer.append(s+n);
+
+        return answer;
+    }
+
     private JPanel ConstructTokenChanges(){
 
         String sName = "";
@@ -107,6 +119,7 @@ public class changeStat extends JPanel {
 
             s.append( tokenChanges.Count+" токен(а), каждый " + tokenChanges.Step + "-й шаг.");
 
+            _TokenChangesStrings.add(s.toString());
 
             JLabel text = new JLabel();
             text.setText(s.toString());
@@ -190,7 +203,7 @@ public class changeStat extends JPanel {
                 _tokens = new ArrayList<Token>();
                 _tokenChanges = new ArrayList<TokenChanges>();
                 tokenPanels = new ArrayList<JPanel>();
-
+                _TokenChangesStrings = new ArrayList<String>();
                 SetAssociatedState(state);
 
                 newToken.setEnabled(true);

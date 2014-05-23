@@ -6,4 +6,9 @@ package net.dynamic.analyze;
 public class ChangeOneTransitionDelay implements ChangeOne{
     public String TransitionName;
     public int delay;
+
+    @Override
+    public String getString() {
+        return "задержка перехода "+TransitionName + " = "+ delay;
+    }
 }

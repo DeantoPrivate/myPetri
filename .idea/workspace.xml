@@ -22,7 +22,22 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" line="141" class="net.dynamic.changes.changeStat" package="net.dynamic.changes">
+      <breakpoint url="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" line="154" class="net.dynamic.changes.changeStat" package="net.dynamic.changes">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" line="182" class="net.dynamic.analyze.Analyzer" package="net.dynamic.analyze">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -87,7 +102,54 @@
       <file leaf-file-name="Analyzer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="13" selection-start="6034" selection-end="6034" vertical-scroll-proportion="0.677643" vertical-offset="1989" max-vertical-offset="4777">
+            <state line="177" column="13" selection-start="6788" selection-end="6788" vertical-scroll-proportion="0.5164645" vertical-offset="2422" max-vertical-offset="4896">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeOne.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOne.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="238">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeOneState.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="30" selection-start="191" selection-end="191" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="578">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeOneTransitionDelay.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionDelay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="66" selection-start="301" selection-end="301" vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="340">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeOneTransitionWorking.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionWorking.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="1" selection-start="564" selection-end="564" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeOneRule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneRule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="3" selection-start="71" selection-end="71" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -96,37 +158,27 @@
       <file leaf-file-name="statPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="15" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-16.0" vertical-offset="280" max-vertical-offset="2125">
+            <state line="40" column="19" selection-start="1037" selection-end="1074" vertical-scroll-proportion="-21.08" vertical-offset="0" max-vertical-offset="2295">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changePanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="25" selection-start="651" selection-end="651" vertical-scroll-proportion="-10.04" vertical-offset="140" max-vertical-offset="901">
               <folding>
-                <element signature="e#1931#2421#0" expanded="true" />
-                <element signature="e#2406#2407#0" expanded="true" />
+                <element signature="method#Init#0;class#changePanel#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetSaver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/netSaver/NetSaver.java">
+      <file leaf-file-name="changeStat.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="28" selection-start="6825" selection-end="6825" vertical-scroll-proportion="-11.36" vertical-offset="3218" max-vertical-offset="3808">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="netStaticImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="8" selection-start="2835" selection-end="2895" vertical-scroll-proportion="-9.88" vertical-offset="1181" max-vertical-offset="3281">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="transactionStat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/transactionStat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="356" selection-end="356" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="1428">
+            <state line="42" column="34" selection-start="1134" selection-end="1134" vertical-scroll-proportion="-6.8" vertical-offset="357" max-vertical-offset="3910">
               <folding />
             </state>
           </provider>
@@ -135,82 +187,8 @@
       <file leaf-file-name="changeTransaction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="363" column="0" selection-start="11436" selection-end="11436" vertical-scroll-proportion="-37.08" vertical-offset="586" max-vertical-offset="2550">
-              <folding>
-                <element signature="docComment;class#changeTransaction#0" expanded="false" />
-                <element signature="method#SetAssociatedState#0;class#changeTransaction#0" expanded="false" />
-                <element signature="method#SetAssociatedTransaction#0;class#changeTransaction#0" expanded="false" />
-                <element signature="method#getStateName#0;class#changeTransaction#0" expanded="false" />
-                <element signature="method#InputChangeInfoTransition#0;class#changeTransaction#0" expanded="false" />
-                <element signature="method#constructRuleChanges#0;class#changeTransaction#0" expanded="false" />
-                <element signature="method#changeTransaction#0;class#changeTransaction#0" expanded="false" />
-                <element signature="e#10691#10719#0" expanded="true" />
-                <element signature="e#11541#11567#0" expanded="true" />
-                <element signature="e#12333#12348#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="23" selection-start="992" selection-end="992" vertical-scroll-proportion="4.08" vertical-offset="646" max-vertical-offset="1462">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#getPanel#0;class#changePanel#0" expanded="false" />
-                <element signature="method#get_statesChanges#0;class#changePanel#0" expanded="false" />
-                <element signature="method#get_transitionsChanges#0;class#changePanel#0" expanded="false" />
-                <element signature="e#1444#1893#0" expanded="false" />
-                <element signature="e#1882#1883#0" expanded="false" />
-                <element signature="e#2210#2639#0" expanded="false" />
-                <element signature="e#2628#2629#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LiveNet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="0" selection-start="4420" selection-end="4420" vertical-scroll-proportion="31.28" vertical-offset="2737" max-vertical-offset="4046">
+            <state line="35" column="29" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-14.96" vertical-offset="0" max-vertical-offset="6953">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateElement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="83" selection-start="2454" selection-end="2454" vertical-scroll-proportion="-1.48" vertical-offset="1391" max-vertical-offset="2006">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#get_name#0;class#StateElement#0" expanded="false" />
-                <element signature="method#getXcenter#0;class#StateElement#0" expanded="false" />
-                <element signature="method#getYcenter#0;class#StateElement#0" expanded="false" />
-                <element signature="method#getRadius#0;class#StateElement#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatusPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="41" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-10.32" vertical-offset="388" max-vertical-offset="1309">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#855#1041#0" expanded="false" />
-                <element signature="e#1030#1031#0" expanded="false" />
-                <element signature="e#1239#1419#0" expanded="false" />
-                <element signature="e#1408#1409#0" expanded="false" />
-                <element signature="e#1626#1809#0" expanded="false" />
-                <element signature="e#1798#1799#0" expanded="false" />
-                <element signature="e#2318#2482#0" expanded="false" />
-                <element signature="e#2471#2472#0" expanded="false" />
-                <element signature="e#2655#2821#0" expanded="false" />
-                <element signature="e#2810#2811#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -250,12 +228,10 @@
         <option value="$PROJECT_DIR$/src/components/TokenManager/Dialog.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/TransitionStatusPanel.java" />
         <option value="$PROJECT_DIR$/src/components/Constructor/StatusPanel.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java" />
         <option value="$PROJECT_DIR$/src/net/netSaver/NetSaver.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/statistic/stateStat.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/StateOneChange.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/OneChange.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOne.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/a.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/b.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/v.java" />
@@ -264,24 +240,26 @@
         <option value="$PROJECT_DIR$/src/core/IncomingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/Transition.java" />
+        <option value="$PROJECT_DIR$/src/core/State.java" />
+        <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
+        <option value="$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/statistic/transactionStat.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOne.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneRule.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionDelay.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionWorking.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" />
-        <option value="$PROJECT_DIR$/src/core/State.java" />
-        <option value="$PROJECT_DIR$/src/net/liveNet/LiveNet.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java" />
-        <option value="$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/statistic/transactionStat.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="132" />
-    <option name="y" value="126" />
+    <option name="x" value="77" />
+    <option name="y" value="81" />
     <option name="width" value="1610" />
     <option name="height" value="956" />
   </component>
@@ -311,8 +289,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -485,64 +463,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="myPetri" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Constructor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -626,19 +546,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -664,6 +571,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -750,7 +670,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="132" y="126" width="1610" height="956" extended-state="0" />
+    <frame x="77" y="81" width="1610" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -758,7 +678,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31801692" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18742442" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19951633" sideWeight="0.7846154" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30451128" sideWeight="0.21538462" order="8" side_tool="true" content_ui="tabs" />
@@ -774,8 +694,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23476298" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -801,11 +721,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="598" column="33" selection-start="22916" selection-end="22916" vertical-scroll-proportion="1.5635062" vertical-offset="9054" max-vertical-offset="30957" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/AbstractGElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="250" selection-end="250" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="901" />
@@ -930,11 +845,6 @@
         <state line="34" column="24" selection-start="903" selection-end="903" vertical-scroll-proportion="0.33938295" vertical-offset="221" max-vertical-offset="1802" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="32" selection-start="717" selection-end="755" vertical-scroll-proportion="0.38516405" vertical-offset="70" max-vertical-offset="1003" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="364" column="29" selection-start="17907" selection-end="17907" vertical-scroll-proportion="0.42250922" vertical-offset="5874" max-vertical-offset="9129" />
@@ -943,13 +853,6 @@
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/javax/swing/AbstractButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2322" column="10" selection-start="81890" selection-end="81890" vertical-scroll-proportion="0.4889299" vertical-offset="38138" max-vertical-offset="51357" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/stateStat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="18" selection-start="550" selection-end="550" vertical-scroll-proportion="-11.56" vertical-offset="0" max-vertical-offset="2584">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/TransitionRule.java">
@@ -979,34 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOne.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="89" selection-end="98" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionDelay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="58" selection-start="130" selection-end="130" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionWorking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="226" selection-end="226" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="85" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/State.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="0" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2006">
@@ -1021,20 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="49" selection-start="4505" selection-end="4505" vertical-scroll-proportion="-17.0" vertical-offset="1955" max-vertical-offset="3689">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="72" selection-end="72" vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/Transition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="16" selection-start="1693" selection-end="1693" vertical-scroll-proportion="1.8658537" vertical-offset="0" max-vertical-offset="2839">
@@ -1042,113 +903,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="23" selection-start="992" selection-end="992" vertical-scroll-proportion="4.08" vertical-offset="646" max-vertical-offset="1462">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#getPanel#0;class#changePanel#0" expanded="false" />
-            <element signature="method#get_statesChanges#0;class#changePanel#0" expanded="false" />
-            <element signature="method#get_transitionsChanges#0;class#changePanel#0" expanded="false" />
-            <element signature="e#1444#1893#0" expanded="false" />
-            <element signature="e#1882#1883#0" expanded="false" />
-            <element signature="e#2210#2639#0" expanded="false" />
-            <element signature="e#2628#2629#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/netSaver/NetSaver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="28" selection-start="6825" selection-end="6825" vertical-scroll-proportion="-11.36" vertical-offset="3218" max-vertical-offset="3808">
+        <state line="227" column="28" selection-start="6825" selection-end="6825" vertical-scroll-proportion="0.0" vertical-offset="3859" max-vertical-offset="4165">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/liveNet/LiveNet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="0" selection-start="4420" selection-end="4420" vertical-scroll-proportion="31.28" vertical-offset="2737" max-vertical-offset="4046">
+        <state line="143" column="0" selection-start="4420" selection-end="4420" vertical-scroll-proportion="0.0" vertical-offset="2431" max-vertical-offset="4539">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/GraphicalElements/StateElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="83" selection-start="2454" selection-end="2454" vertical-scroll-proportion="-1.48" vertical-offset="1391" max-vertical-offset="2006">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#get_name#0;class#StateElement#0" expanded="false" />
-            <element signature="method#getXcenter#0;class#StateElement#0" expanded="false" />
-            <element signature="method#getYcenter#0;class#StateElement#0" expanded="false" />
-            <element signature="method#getRadius#0;class#StateElement#0" expanded="false" />
-          </folding>
+        <state line="91" column="83" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="2125">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructor/StatusPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="41" selection-start="2097" selection-end="2097" vertical-scroll-proportion="-10.32" vertical-offset="388" max-vertical-offset="1309">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#855#1041#0" expanded="false" />
-            <element signature="e#1030#1031#0" expanded="false" />
-            <element signature="e#1239#1419#0" expanded="false" />
-            <element signature="e#1408#1409#0" expanded="false" />
-            <element signature="e#1626#1809#0" expanded="false" />
-            <element signature="e#1798#1799#0" expanded="false" />
-            <element signature="e#2318#2482#0" expanded="false" />
-            <element signature="e#2471#2472#0" expanded="false" />
-            <element signature="e#2655#2821#0" expanded="false" />
-            <element signature="e#2810#2811#0" expanded="false" />
-          </folding>
+        <state line="64" column="41" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1921">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="8" selection-start="2835" selection-end="2895" vertical-scroll-proportion="-9.88" vertical-offset="1181" max-vertical-offset="3281">
+        <state line="98" column="8" selection-start="2835" selection-end="2895" vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="3519">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/transactionStat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="190" selection-end="190" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/stateStat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="283" selection-end="283" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="2584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fileSavers/FSRState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="31" selection-start="716" selection-end="755" vertical-scroll-proportion="-10.8" vertical-offset="70" max-vertical-offset="1003">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.6.0_10/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7691" column="18" selection-start="285178" selection-end="285178" vertical-scroll-proportion="0.34666666" vertical-offset="128482" max-vertical-offset="157862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="34" selection-start="1134" selection-end="1134" vertical-scroll-proportion="-6.8" vertical-offset="357" max-vertical-offset="3910">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changeTransaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="363" column="0" selection-start="11436" selection-end="11436" vertical-scroll-proportion="-37.08" vertical-offset="586" max-vertical-offset="2550">
+        <state line="35" column="29" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-14.96" vertical-offset="0" max-vertical-offset="6953">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/changes/changePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="25" selection-start="651" selection-end="651" vertical-scroll-proportion="-10.04" vertical-offset="140" max-vertical-offset="901">
           <folding>
-            <element signature="docComment;class#changeTransaction#0" expanded="false" />
-            <element signature="method#SetAssociatedState#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#SetAssociatedTransaction#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#getStateName#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#InputChangeInfoTransition#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#constructRuleChanges#0;class#changeTransaction#0" expanded="false" />
-            <element signature="method#changeTransaction#0;class#changeTransaction#0" expanded="false" />
-            <element signature="e#10691#10719#0" expanded="true" />
-            <element signature="e#11541#11567#0" expanded="true" />
-            <element signature="e#12333#12348#0" expanded="true" />
+            <element signature="method#Init#0;class#changePanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/statPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="15" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-16.0" vertical-offset="280" max-vertical-offset="2125">
+        <state line="40" column="19" selection-start="1037" selection-end="1074" vertical-scroll-proportion="-21.08" vertical-offset="0" max-vertical-offset="2295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="3" selection-start="71" selection-end="71" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="30" selection-start="191" selection-end="191" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="578">
           <folding>
-            <element signature="e#1931#2421#0" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/statistic/transactionStat.java">
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionDelay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="356" selection-end="356" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="1428">
+        <state line="11" column="66" selection-start="301" selection-end="301" vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneTransitionWorking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="564" selection-end="564" vertical-scroll-proportion="-13.6" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="238">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="13" selection-start="6034" selection-end="6034" vertical-scroll-proportion="0.677643" vertical-offset="1989" max-vertical-offset="4777">
+        <state line="177" column="13" selection-start="6788" selection-end="6788" vertical-scroll-proportion="0.5164645" vertical-offset="2422" max-vertical-offset="4896">
           <folding />
         </state>
       </provider>

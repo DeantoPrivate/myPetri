@@ -27,6 +27,19 @@ public class changePanel extends JDialog {
         _instance.setVisible(true);
     }
 
+    public StringBuilder GetChanges(){
+        StringBuilder answer = new StringBuilder();
+        String n = System.getProperty("line.separator");
+
+        for (changeStat s : _statesChanges)
+            answer.append(s.toStrings().toString()+n);
+
+        for (changeTransaction t : _transitionsChanges)
+            answer.append(t);
+
+        return answer;
+    }
+
     private int sPos = 430;
     private int tPos = 100;
 

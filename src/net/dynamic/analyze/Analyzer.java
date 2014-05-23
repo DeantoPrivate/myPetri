@@ -149,11 +149,16 @@ public class Analyzer {
             // в этом массиве нули и еденицы поочереди. это соответственно признаки применяем или не применяем правило в нашем порядке.
             // правила упорядочены в функции getRule(int pos)
 
+            StringBuilder actualchanges = new StringBuilder();
+            String n = System.getProperty("line.separator");
+
+
             for (int i =0;i<mask.size();i++){
                 if (mask.get(i)){
                     // если следующее правило надо применить. todo реализовать непересечение несовместимых условий
                     ChangeOne c = getRule(i);
                     CheckAndApplyChangeOne(c);
+                    actualchanges.append(c.getString()+n);
                 }
             }
 
@@ -171,6 +176,9 @@ public class Analyzer {
                 LiveNet.GetInstance().NextStep();
                 currentAnalyzeStep++;
             }
+
+            StringBuilder staticstic = statPanel.getPanel().GetStatictics();
+            StringBuilder DefaultChanges = changePanel.GetChanges();
 
             JOptionPane.showMessageDialog(null,"один цикл анализа прошел");
 
@@ -219,7 +227,6 @@ public class Analyzer {
             if (s.charAt(t) == '0')
                 answer.add(false);
             else answer.add(true);
-//todo возможно надо поменять порядок следования.. надо посмотреть еще
         return answer;
     }
 
