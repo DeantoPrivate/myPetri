@@ -86,7 +86,7 @@ public class netStaticImpl {
 
     public static netStaticImpl newNet(){
         if (_instance!=null)
-            JOptionPane.showMessageDialog(null,"Внимание. предыдущая сеть будет перезаписана!");
+           // JOptionPane.showMessageDialog(null,"Внимание. предыдущая сеть будет перезаписана!");
 
         _instance = new netStaticImpl();
 

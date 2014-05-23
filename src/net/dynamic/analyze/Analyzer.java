@@ -18,6 +18,7 @@ import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
@@ -121,16 +122,37 @@ public class Analyzer {
 
     }
 
-    private void saveInformation(StringBuilder GeneralChanges, StringBuilder currentChanges, StringBuilder statistic,){
+    private void selectFile(){
+
+        while(filename==null) {
+
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setDialogTitle("Сохранить сеть");
+            fileChooser.showSaveDialog(null);
+            File file = fileChooser.getSelectedFile();
+            filename = file.getAbsolutePath();
+        }
+    }
+
+    private String filename = null;
+
+    private void saveInformation(StringBuilder GeneralChanges, StringBuilder currentChanges, StringBuilder statistic){
         try {
 
-            FileWriter fw = new FileWriter("c://analyze"+currentAnalyzeStep+".txt");
+            if (filename == null)
+                selectFile();
+
+            String sp = filename+currentAnalyzeStep+".txt";
+            FileWriter fw = new FileWriter(sp);
             BufferedWriter bw = new BufferedWriter(fw);
 
             String n = System.getProperty("line.separator");
 
-            bw.write("Общие изменения:" + n + GeneralChanges.toString());
-            // todo дописать
+            StringBuffer s = new StringBuffer();
+            s.append("Общие изменения:" + n + GeneralChanges.toString() + n);
+            s.append("Примененные изменения:"+n+currentChanges.toString() + n);
+            s.append("Собранная статистика" + n + statistic);
+            bw.write(s.toString());
             bw.close();
             fw.close();
 
@@ -160,7 +182,7 @@ public class Analyzer {
         while (mask.size()<=allCount){
 
             nextStepPreparing();
-            currentAnalyzeStep = 0;
+            currentAnalyzeStep++;
 
             // будем по очереди брать маски от счетчика и применять их к нашим правилам))
 
@@ -184,7 +206,7 @@ public class Analyzer {
             }
 
             // правила применились. запускаем сеть. (сколько шагов то емае...?)
-            for (int w=0;w<10;w++){
+            for (int w=0;w<100;w++){
 
                 for (int i =0;i<mask.size();i++){
                     if (mask.get(i)){
@@ -195,13 +217,14 @@ public class Analyzer {
                 }
 
                 LiveNet.GetInstance().NextStep();
-                currentAnalyzeStep++;
             }
 
             StringBuilder staticstic = statPanel.getPanel().GetStatictics();
             StringBuilder DefaultChanges = changePanel.GetChanges();
 
-            JOptionPane.showMessageDialog(null,"один цикл анализа прошел");
+            saveInformation(DefaultChanges,actualchanges,staticstic);
+
+           // JOptionPane.showMessageDialog(null, "один цикл анализа прошел. данные сохранились");
 
             currentVar ++;
         }
