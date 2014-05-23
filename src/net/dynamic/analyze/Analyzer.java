@@ -17,6 +17,8 @@ import net.netSaver.NetSaver;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
@@ -119,8 +121,27 @@ public class Analyzer {
 
     }
 
+    private void saveInformation(StringBuilder GeneralChanges, StringBuilder currentChanges, StringBuilder statistic,){
+        try {
+
+            FileWriter fw = new FileWriter("c://analyze"+currentAnalyzeStep+".txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            String n = System.getProperty("line.separator");
+
+            bw.write("Общие изменения:" + n + GeneralChanges.toString());
+            // todo дописать
+            bw.close();
+            fw.close();
+
+        }catch (Exception e){
+
+        }
+    }
 
     public void Analyze(){
+
+
 
         // у нас есть набор комбинаций. посчитаем сколько всего сочетаний - это n!.
         // пойдем до этого числа от 0 - будем стоить бинарную маску 01010111100 - какие берем правила какие не берем
