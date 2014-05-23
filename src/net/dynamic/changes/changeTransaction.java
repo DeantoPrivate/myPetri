@@ -333,52 +333,53 @@ public class changeTransaction extends JPanel {
 
     }
 
-    public ArrayList<ChangeOneTransitionDelay> getChangeOneTransitionDelays(){
+    public ArrayList<ChangeOneTransitionWorking> getChangeOneTransitionWorkings(){
 
-        ChangeOneTransitionDelay cos;
-        ArrayList<ChangeOneTransitionDelay> answer = new ArrayList<ChangeOneTransitionDelay>();
+        ChangeOneTransitionWorking cos;
+        ArrayList<ChangeOneTransitionWorking> answer = new ArrayList<ChangeOneTransitionWorking>();
 
-        for (int i=_transactionChanges.notWorkStepL;i<=_transactionChanges.notWorkStepR;i++){
-            cos = new ChangeOneTransitionDelay();
-            cos.delay = i;
+        if (_transactionChanges.notWork){
+            cos = new ChangeOneTransitionWorking();
+            cos.notWork = true;
             cos.TransitionName = _transition.getName();
+            cos.stepR = _transactionChanges.notWorkStepR;
+            cos.stepL = _transactionChanges.notWorkStepL;
             answer.add(cos);
         }
-//todo it looks like this is next function.... it is related to notwork. next function is related to sleep
-        // добавим первоначальный вариант.
-        cos = new ChangeOneTransitionDelay();
-        cos.delay = _transactionChanges.sleep;
-        cos.TransitionName = _transition.getName();
-        answer.add(cos);
 
+        // у нас два варианта - работает как работал. не отключаясь. и отключение на определенный период.
+
+        cos = new ChangeOneTransitionWorking();
+        cos.notWork = false;
+        cos.TransitionName = _transition.getName();
+
+        answer.add(cos);
 
         return answer;
 
     }
 
 
-    public ArrayList<ChangeOneTransitionWorking> getChangeOneTransitionWorkings(){
-        ChangeOneTransitionWorking cos;
-        ArrayList<ChangeOneTransitionWorking> answer  = new ArrayList<ChangeOneTransitionWorking>();
+    public ArrayList<ChangeOneTransitionDelay> getChangeOneTransitionDelays(){
+        ChangeOneTransitionDelay cos;
+        ArrayList<ChangeOneTransitionDelay> answer  = new ArrayList<ChangeOneTransitionDelay>();
 
-        if (_transactionChanges.notWork){
-            // только если не работает возвращаем. прогон когда работает и так будет.
+            for(int i=_transactionChanges.sleepL;i<=_transactionChanges.sleepR;i++)
+            {
 
-            cos = new ChangeOneTransitionWorking();
-            cos.notWork = true;
-            cos.stepL = _transactionChanges.sleepL;
-            cos.stepR = _transactionChanges.sleepR;
+            cos = new ChangeOneTransitionDelay();
             cos.TransitionName = _transition.getName();
+            cos.delay = i;
 
             answer.add(cos);
-        }
+            }
 
         // вариант что он работает
-        cos = new ChangeOneTransitionWorking();
-        cos.notWork = false;
+        cos = new ChangeOneTransitionDelay();
+        cos.TransitionName = _transition.getName();
+        cos.delay = _transition.getSleepSteps();
 
         answer.add(cos);
-
 
         return answer;
 

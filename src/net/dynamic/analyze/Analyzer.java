@@ -43,9 +43,10 @@ public class Analyzer {
         LiveNet.setNextAnalyzeStep();
         currentAnalyzeStep++;
 
-        statPanel.ShowPanel();
-        statusPanel.Clear();
+        //statPanel.ShowPanel();
+        statPanel.getPanel().Clear();
 
+        //JOptionPane.showMessageDialog(null,"обновили сесть.");
         // все готово для применения следующего набора параметров
 
     }
@@ -157,7 +158,7 @@ public class Analyzer {
             }
 
             // правила применились. запускаем сеть. (сколько шагов то емае...?)
-            for (int w=0;w<100;w++){
+            for (int w=0;w<10;w++){
 
                 for (int i =0;i<mask.size();i++){
                     if (mask.get(i)){

@@ -46,10 +46,13 @@ public class statPanel extends JDialog implements CountActionListener {
         for (stateStat sS : _stateStats)
             sS.Clear();
 
-        for (transactionStat tS : _transactionStats)
+        for (transactionStat tS : _transactionStats){
             tS.Clear();
+            tS.repaint();
+        }
 
-        repaint();
+
+        Panel.repaint();
     }
 
     private int tPos = 30;

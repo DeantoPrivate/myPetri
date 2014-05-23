@@ -15,7 +15,6 @@ public class transactionStat extends JPanel implements CountActionListener {
         WorkCount = 0;
         Reassign();
         text.setText(toString());
-        repaint();
     }
 
     public void Reassign(){
