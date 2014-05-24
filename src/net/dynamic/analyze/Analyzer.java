@@ -28,7 +28,6 @@ import java.util.ArrayList;
 public class Analyzer {
 
     // анализ начинается с текущего положения сети и панелей статистики и настроек
-    private netStaticImpl netV0;
     private int currentAnalyzeStep = 0;
 
     // панельки для обновления и сбора информации
@@ -39,9 +38,9 @@ public class Analyzer {
 
     private void nextStepPreparing(){
 
-        // скачаем новую сеть и загрузим ее.
-        currentNet = NetSaver.ReadNet(false);
-        currentNet.SyncGElements();
+        // скачаем новую сеть и загрузим ее/ она в статической переменной. все обращение через нее
+        NetSaver.ReadNet(false);
+
 
         LiveNet.setNextAnalyzeStep();
         currentAnalyzeStep++;
@@ -54,13 +53,10 @@ public class Analyzer {
 
     }
 
-    private netStaticImpl currentNet = null;
-
     public Analyzer(){
 
         // зарузим данные. все должно быть сконфигурено...
 
-        netV0 = netStaticImpl.getNet();
         statusPanel = statPanel.getPanel();
         changePanel = net.dynamic.changes.changePanel.getPanel();
 
@@ -149,9 +145,9 @@ public class Analyzer {
             String n = System.getProperty("line.separator");
 
             StringBuffer s = new StringBuffer();
-            s.append("Общие изменения:" + n + GeneralChanges.toString() + n);
-            s.append("Примененные изменения:"+n+currentChanges.toString() + n);
-            s.append("Собранная статистика" + n + statistic);
+            s.append("__________Общие изменения:" + n + GeneralChanges.toString() + n);
+            s.append(n+"__________Примененные изменения: "+ n + currentChanges.toString() + n);
+            s.append("__________Собранная статистика" + n + statistic);
             bw.write(s.toString());
             bw.close();
             fw.close();
@@ -182,7 +178,6 @@ public class Analyzer {
         while (mask.size()<=allCount){
 
             nextStepPreparing();
-            currentAnalyzeStep++;
 
             // будем по очереди брать маски от счетчика и применять их к нашим правилам))
 
@@ -200,7 +195,7 @@ public class Analyzer {
                 if (mask.get(i)){
                     // если следующее правило надо применить. todo реализовать непересечение несовместимых условий
                     ChangeOne c = getRule(i);
-                    CheckAndApplyChangeOne(c);
+                    CheckAndApplyChangeOne(c,true);
                     actualchanges.append(c.getString()+n);
                 }
             }
@@ -212,7 +207,7 @@ public class Analyzer {
                     if (mask.get(i)){
                         // если следующее правило надо применить. todo реализовать непересечение несовместимых условий
                         ChangeOne c = getRule(i);
-                        CheckAndApplyChangeOne(c);
+                        CheckAndApplyChangeOne(c, false);
                     }
                 }
 
@@ -252,14 +247,14 @@ public class Analyzer {
 
     private int currentAnalyzingStep = 0;
 
-    private void CheckAndApplyChangeOne(ChangeOne c){
+    private void CheckAndApplyChangeOne(ChangeOne c, boolean init){
         if (c instanceof ChangeOneState)
             CheckAndApplyChangeOneState((ChangeOneState)c);
         if (c instanceof ChangeOneTransitionWorking)
             CheckAndApplyChangeOneTransitionWorking((ChangeOneTransitionWorking)c);
-        if (c instanceof ChangeOneTransitionDelay)
+        if (c instanceof ChangeOneTransitionDelay && init)
             ApplyChangeOneTransitionDelay((ChangeOneTransitionDelay)c);
-        if (c instanceof ChangeOneRule)
+        if (c instanceof ChangeOneRule && init)
             ApplyChangeOneRule((ChangeOneRule)c);
     }
 
@@ -278,7 +273,7 @@ public class Analyzer {
         // применить изменение к текущей сети если условие выполняется
         if (currentAnalyzeStep % state.step == 0){
             // самое время потерять\приобрести токен состоянию
-            State s = currentNet.getState(state.State);
+            State s = netStaticImpl.getNet().getState(state.State);
             if (state.loose){
                 for (Token t : s.GetTokens())
                     if (t.GetName().equals(state.Token)){
@@ -298,11 +293,11 @@ public class Analyzer {
         if (working.notWork){
 
                 if (working.stepL==currentAnalyzeStep){
-                Transition transition = currentNet.getTransition(working.TransitionName);
+                Transition transition = netStaticImpl.getNet().getTransition(working.TransitionName);
                 transition.StopByAnalyze();
             }
             else if(working.stepR==currentAnalyzeStep){
-                Transition transition = currentNet.getTransition(working.TransitionName);
+                Transition transition = netStaticImpl.getNet().getTransition(working.TransitionName);
                 transition.AllowByAnalyze();
             }
 
@@ -311,13 +306,13 @@ public class Analyzer {
 
     private void ApplyChangeOneTransitionDelay(ChangeOneTransitionDelay delay){
         // применить изменение к текущей сети
-        Transition transition = currentNet.getTransition(delay.TransitionName);
+        Transition transition = netStaticImpl.getNet().getTransition(delay.TransitionName);
         transition.SetSleepSteps(delay.delay);
     }
 
     private void ApplyChangeOneRule(ChangeOneRule rule){
         // применить изменение к текущей сети
-        TransitionRule tRule = currentNet.getTransition(rule.TransitionName).getRule(rule.RuleString);
+        TransitionRule tRule = netStaticImpl.getNet().getTransition(rule.TransitionName).getRule(rule.RuleString);
         tRule.setCount(rule.param);
     }
 

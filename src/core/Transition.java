@@ -94,7 +94,6 @@ public class Transition {
     private int sleepSteps = 0;
     public void SetSleepSteps(int sleep){
         sleepSteps = sleep;
-        stepswait = -1;
     }
     public int getSleepSteps(){return sleepSteps;}
 

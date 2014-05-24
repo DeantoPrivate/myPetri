@@ -62,7 +62,7 @@ public class StatusPanel extends JPanel {
         readNet.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                netStaticImpl.changeInstance(NetSaver.ReadNet(true));
+                NetSaver.ReadNet(true);
             }
         });
         add(readNet);

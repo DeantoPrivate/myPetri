@@ -85,7 +85,7 @@ public class netStaticImpl {
     }
 
     public static netStaticImpl newNet(){
-        if (_instance!=null)
+        //if (_instance!=null)
            // JOptionPane.showMessageDialog(null,"Внимание. предыдущая сеть будет перезаписана!");
 
         _instance = new netStaticImpl();
@@ -93,14 +93,12 @@ public class netStaticImpl {
         return _instance;
     }
 
-    public static void changeInstance(netStaticImpl newNet){
-        _instance = newNet;
+    public static void changeInstance(){
 
         statPanel.ShowPanel();
         statPanel.getPanel().Clear();
 
         LiveNet.Reload();
-
     }
 
     private static netStaticImpl _instance;
@@ -196,6 +194,7 @@ public class netStaticImpl {
             allElements.add(trw.get_element());
 
         GraphPanel.SetElements(allElements);
+        changeInstance();
     }
 
 }

@@ -96,11 +96,6 @@ public class NetSaver {
 
     public static String lastRead;
 
-    public static netStaticImpl GetNetCopy(){
-        netStaticImpl intialCopy = ReadNet(false);
-        return intialCopy;
-    }
-
     private static String readFiles(){
         // сначала загрузим базу.
         Dialog.Load();
@@ -124,9 +119,9 @@ public class NetSaver {
         return filename;
     }
 
-    public static netStaticImpl ReadNet(boolean initial){
+    public static void ReadNet(boolean initial){
 
-        netStaticImpl newNet = netStaticImpl.newNet();
+        netStaticImpl.newNet();
 
         if(initial)
             Dialog.ShowDialog();
@@ -178,8 +173,8 @@ public class NetSaver {
         // теперь все нужно положить в сеть
 
 
-            newNet.AddStates(states);
-            newNet.AddTransactions(transactions);
+            netStaticImpl.getNet().AddStates(states);
+            netStaticImpl.getNet().AddTransactions(transactions);
 
 
             ArrayList<TransactionRuleWrap> transactionRuleWraps = new ArrayList<TransactionRuleWrap>();
@@ -223,15 +218,13 @@ public class NetSaver {
 
             }
 
-            newNet.AddTransactionRules(transactionRuleWraps);
+            netStaticImpl.getNet().AddTransactionRules(transactionRuleWraps);
             reader.close();
-            newNet.SyncGElements();
-            return newNet;
+            netStaticImpl.getNet().SyncGElements();
 
 
         } catch (Exception e){
             JOptionPane.showMessageDialog(null,"Чтение сети не удалось!");
-            return null;
         }
 
 
