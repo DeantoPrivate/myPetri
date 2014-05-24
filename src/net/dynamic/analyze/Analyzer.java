@@ -6,6 +6,7 @@ import core.State;
 import core.Token;
 import core.Transition;
 import core.TransitionRule;
+import javafx.beans.binding.When;
 import net.dynamic.changes.changePanel;
 import net.dynamic.changes.changeStat;
 import net.dynamic.changes.changeTransaction;
@@ -17,6 +18,7 @@ import net.netSaver.NetSaver;
 import net.staticNet.netStaticImpl;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -34,6 +36,7 @@ public class Analyzer {
     private statPanel statusPanel;
     private changePanel changePanel;
 
+    private int desiredSteps = 100;
 
 
     private void nextStepPreparing(){
@@ -132,7 +135,25 @@ public class Analyzer {
 
     private String filename = null;
 
+    private ArrayList<OneTest> _tests;
+
+    private class OneTest{
+        public StringBuilder applyedChanges;
+        public StringBuilder statistic;
+        public OneTest(StringBuilder changes, StringBuilder stat){
+            applyedChanges = changes;
+            statistic = stat;
+        }
+    }
+
+    private boolean nosave = false;
+
     private void saveInformation(StringBuilder GeneralChanges, StringBuilder currentChanges, StringBuilder statistic){
+
+        _tests.add(new OneTest(currentChanges,statistic));
+
+        if (nosave) return;
+
         try {
 
             if (filename == null)
@@ -160,6 +181,24 @@ public class Analyzer {
     public void Analyze(){
 
 
+        int steps = -1;
+        while(steps==-1) {
+            String stepsD = JOptionPane.showInputDialog("Сколько шагов сети хотим?", "100");
+            int col = 1;
+            if (stepsD != null)
+                try {
+                    Integer a = new Integer(stepsD.toString());
+                    if (a != null) {
+                        col = a;
+
+                        desiredSteps = col;
+                        steps = col;
+                    }
+                } catch (Exception e) {
+
+                }
+
+        }
 
         // у нас есть набор комбинаций. посчитаем сколько всего сочетаний - это n!.
         // пойдем до этого числа от 0 - будем стоить бинарную маску 01010111100 - какие берем правила какие не берем
@@ -170,6 +209,7 @@ public class Analyzer {
 
         int allCount = _ruleChanges.size() + _stateChanges.size()+_tDelayChanges.size()+_tWorkChanges.size();
         int currentVar = 1;
+        _tests = new ArrayList<OneTest>();
 
         initRules();
 
@@ -201,7 +241,7 @@ public class Analyzer {
             }
 
             // правила применились. запускаем сеть. (сколько шагов то емае...?)
-            for (int w=0;w<100;w++){
+            for (int w=0;w<desiredSteps;w++){
 
                 currentAnalyzingStep = w;
 
