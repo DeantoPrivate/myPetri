@@ -172,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analyzer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Analyzer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3779" max-vertical-offset="5236">
-              <caret line="273" column="52" selection-start-line="273" selection-start-column="52" selection-end-line="273" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.37530863" vertical-offset="3775" max-vertical-offset="5287">
+              <caret line="276" column="54" selection-start-line="276" selection-start-column="54" selection-end-line="276" selection-end-column="54" />
               <folding>
                 <element signature="e#2206#2221#0" expanded="true" />
                 <element signature="e#2361#2387#0" expanded="true" />
@@ -189,11 +189,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChangeOneState.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ChangeOneState.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52870816" vertical-offset="0" max-vertical-offset="612">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -267,9 +267,9 @@
         <option value="$PROJECT_DIR$/src/net/staticNet/netStaticImpl.java" />
         <option value="$PROJECT_DIR$/src/core/IncomingTransitionRule.java" />
         <option value="$PROJECT_DIR$/src/core/OutgoingTransitionRule.java" />
-        <option value="$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/changes/changeStat.java" />
         <option value="$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java" />
+        <option value="$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java" />
       </list>
     </option>
   </component>
@@ -1175,10 +1175,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/Analyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3779" max-vertical-offset="5236">
-          <caret line="273" column="52" selection-start-line="273" selection-start-column="52" selection-end-line="273" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.37530863" vertical-offset="3775" max-vertical-offset="5287">
+          <caret line="276" column="54" selection-start-line="276" selection-start-column="54" selection-end-line="276" selection-end-column="54" />
           <folding>
             <element signature="e#2206#2221#0" expanded="true" />
             <element signature="e#2361#2387#0" expanded="true" />
@@ -1187,14 +1195,6 @@
             <element signature="e#6400#6409#0" expanded="true" />
             <element signature="e#9694#9703#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/dynamic/analyze/ChangeOneState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52870816" vertical-offset="0" max-vertical-offset="612">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

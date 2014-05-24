@@ -273,6 +273,9 @@ public class Analyzer {
 
     private void CheckAndApplyChangeOneState(ChangeOneState state){
         // применить изменение к текущей сети если условие выполняется
+
+        if (!state.appearance && !state.loose) return;
+
         int ost = currentAnalyzingStep % state.step; // остаток от деления
         if (ost == 0 && currentAnalyzingStep!=0){
             // самое время потерять\приобрести токен состоянию
