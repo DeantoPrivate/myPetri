@@ -50,11 +50,14 @@ public class stateStat extends JPanel implements ContextChangeListener{
     private class tokenStat{
         public int countNow = 0;
         public int countMax = 0;
-
+        public int critical = 0;
 
         @Override
         public String toString() {
-            return "сейчас: " + countNow+", максимум одновременно было: "+countMax;
+            String s = "сейчас: " + countNow+", максимум одновременно было: "+countMax;
+            if (critical<=countMax)
+                s +=" !Критично.";
+            return s;
         }
     }
 
@@ -76,23 +79,44 @@ public class stateStat extends JPanel implements ContextChangeListener{
                 Token token = TokensBase.GetTokenBase().getToken(tName);
                 if (token == null){
                     JOptionPane.showMessageDialog(null,"нет такого токена!");
-                } else
-                    AddTokenTemplate(token);
+                } else {
+
+                    int critical = -1;
+                    while(critical==-1) {
+                        String c = JOptionPane.showInputDialog("Критическое количество токенов одновременно в состоянии", "1");
+                        int col = 0;
+                        if (c != null)
+                            try {
+                                Integer a = new Integer(c.toString());
+                                if (a != null) {
+                                    col = a;
+
+                                    critical = col;
+
+                                }
+                            } catch (Exception e) {
+
+                            }
+
+                    }
+
+                    AddTokenTemplate(token,critical);
+                }
 
 
             if (!tName.equals("СТОП"))
                 tName = "";
-
-
         }
 
         _state.AssignTransactionStat(this);
         return true;
     }
 
-    public void AddTokenTemplate(Token template){
+    public void AddTokenTemplate(Token template,int critical){
         _tokens.add(template);
-        _tokenStats.add(new tokenStat());
+        tokenStat ts = new tokenStat();
+        ts.critical = critical;
+        _tokenStats.add(ts);
     }
 
     @Override

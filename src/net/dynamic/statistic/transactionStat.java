@@ -42,6 +42,26 @@ public class transactionStat extends JPanel implements CountActionListener {
         while (tName.equals(""))
             tName = JOptionPane.showInputDialog("Введите имя транзакции","");
 
+        int criticallly = -1;
+        while(criticallly==-1) {
+            String c = JOptionPane.showInputDialog("Критическое количество срабатывания перехода", "1");
+            int col = 0;
+            if (c != null)
+                try {
+                    Integer a = new Integer(c.toString());
+                    if (a != null) {
+                        col = a;
+
+                        critical = col;
+                        criticallly = col;
+                    }
+                } catch (Exception e) {
+
+                }
+
+        }
+
+
         _transaction = netStaticImpl.getNet().getTransition(tName);
         if (_transaction == null){
             JOptionPane.showMessageDialog(null,"нет такого!");
@@ -53,12 +73,17 @@ public class transactionStat extends JPanel implements CountActionListener {
     }
 
 
+    private int critical = 0;
+
     @Override
     public String toString() {
 
         String answer = "";
-        if (_transaction!=null)
-            answer = "$: Переход [" + _transaction.getName()+"] сработал " + WorkCount + " раз.";
+        if (_transaction!=null) {
+            answer = "$: Переход [" + _transaction.getName() + "] сработал " + WorkCount + " раз.";
+            if (WorkCount>critical)
+                answer+=" !Критично.";
+        }
         else return "нет статистики";
 
         return answer;

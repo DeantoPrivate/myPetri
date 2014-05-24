@@ -148,11 +148,18 @@ public class Analyzer {
 
     private boolean nosave = false;
 
+    private boolean CheckCritical(StringBuilder stat){
+        if (stat.toString().contains("!Критично")) return true;
+        return false;
+    }
+
     private void saveInformation(StringBuilder GeneralChanges, StringBuilder currentChanges, StringBuilder statistic){
 
         _tests.add(new OneTest(currentChanges,statistic));
 
         if (nosave) return;
+
+        if (!CheckCritical(statistic)) return;
 
         try {
 
@@ -327,8 +334,10 @@ public class Analyzer {
                         return;
                     }
             }else if (state.appearance){
-                Token t = TokensBase.GetTokenBase().getToken(state.Token);
-                s.LocateToken(t);
+                for (int i = 0; i < state.count; i++){
+                    Token t = TokensBase.GetTokenBase().getToken(state.Token);
+                    s.LocateToken(t);
+                }
             }
 
         }
