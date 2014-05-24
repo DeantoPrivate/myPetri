@@ -70,9 +70,9 @@ public class Analyzer {
         _stateChanges = new ArrayList<ChangeOneState>();
         ArrayList<ChangeOneState> tmp;
         for(changeStat cS : _statesChanges){
-            tmp = new ArrayList<ChangeOneState>();
+            tmp = cS.getStateChanges();
             for (ChangeOneState s : tmp)
-                _stateChanges.add(s); //todo ??WTF
+                _stateChanges.add(s);
         }
 
         _ruleChanges = new ArrayList<ChangeOneRule>();
@@ -203,6 +203,8 @@ public class Analyzer {
             // правила применились. запускаем сеть. (сколько шагов то емае...?)
             for (int w=0;w<100;w++){
 
+                currentAnalyzingStep = w;
+
                 for (int i =0;i<mask.size();i++){
                     if (mask.get(i)){
                         // если следующее правило надо применить. todo реализовать непересечение несовместимых условий
@@ -271,7 +273,8 @@ public class Analyzer {
 
     private void CheckAndApplyChangeOneState(ChangeOneState state){
         // применить изменение к текущей сети если условие выполняется
-        if (currentAnalyzeStep % state.step == 0){
+        int ost = currentAnalyzingStep % state.step; // остаток от деления
+        if (ost == 0 && currentAnalyzingStep!=0){
             // самое время потерять\приобрести токен состоянию
             State s = netStaticImpl.getNet().getState(state.State);
             if (state.loose){
@@ -292,15 +295,19 @@ public class Analyzer {
         // применить изменение к текущей сети если условие выполняется
         if (working.notWork){
 
-                if (working.stepL==currentAnalyzeStep){
+                if (working.stepL==currentAnalyzingStep){
                 Transition transition = netStaticImpl.getNet().getTransition(working.TransitionName);
                 transition.StopByAnalyze();
             }
-            else if(working.stepR==currentAnalyzeStep){
+            else if(working.stepR==currentAnalyzingStep){
                 Transition transition = netStaticImpl.getNet().getTransition(working.TransitionName);
                 transition.AllowByAnalyze();
             }
 
+        }
+        if (!working.notWork){
+            Transition transition = netStaticImpl.getNet().getTransition(working.TransitionName);
+            transition.AllowByAnalyze();
         }
     }
 
@@ -313,7 +320,9 @@ public class Analyzer {
     private void ApplyChangeOneRule(ChangeOneRule rule){
         // применить изменение к текущей сети
         TransitionRule tRule = netStaticImpl.getNet().getTransition(rule.TransitionName).getRule(rule.RuleString);
-        tRule.setCount(rule.param);
+        try{tRule.setCount(rule.param);}catch (Exception e){
+            int t =0;
+        }
     }
 
 

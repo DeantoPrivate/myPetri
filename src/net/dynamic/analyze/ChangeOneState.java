@@ -8,8 +8,8 @@ import core.Token;
  */
 public class ChangeOneState implements ChangeOne{
     public String State,Token;
-    public boolean loose;
-    public boolean appearance;
+    public boolean loose = false;
+    public boolean appearance = false;
     public int count;
     public int step;
 
@@ -22,7 +22,10 @@ public class ChangeOneState implements ChangeOne{
         if (appearance)
             answer.append(", приобретает ");
 
+        if (loose || appearance)
         answer.append(count + " токен(a) ["+ Token + "], каждые "+step+" шага.");
+        else
+        answer.append(" не изменяется.");
         return answer.toString();
     }
 }

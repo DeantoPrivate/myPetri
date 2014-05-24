@@ -167,6 +167,12 @@ public class changeStat extends JPanel {
             answer.add(cos);
         }
 
+        // добавить НЕ изменение
+        cos = new ChangeOneState();
+        cos.State=_state.GetName();
+
+        answer.add(cos);
+
         return answer;
     }
 

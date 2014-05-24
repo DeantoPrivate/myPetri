@@ -29,7 +29,10 @@ public class IncomingTransitionRule implements TransitionRule{
 
     public String _actionIncomingToken = Transition.INCOMING_TOKEN_REMOVE;
 
+    private String initialName = null;
+
     public String toString() {
+        if (initialName != null) return initialName;
 
         String str = "";
         str += "Из [" + _state.GetName() + "] берем " + _tokenCount + " токен(ов) #" + _tokenPattern.GetName() +"#";
@@ -37,7 +40,7 @@ public class IncomingTransitionRule implements TransitionRule{
         if (_actionIncomingToken.equals(Transition.INCOMING_TOKEN_KEEP)){
             str += " и оставляем на месте";
         }
-
+        initialName = str;
         return str;
     }
 
