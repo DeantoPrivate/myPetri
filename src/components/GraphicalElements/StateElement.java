@@ -1,6 +1,7 @@
 package components.GraphicalElements;
 
 import com.sun.org.apache.regexp.internal.recompile;
+import components.Constructor.GraphPanel;
 import components.Constructor.StateStatusPanel;
 import net.staticNet.netStaticImpl;
 
@@ -14,7 +15,7 @@ import java.awt.image.BufferedImage;
  */
 public class StateElement extends AbstractGElement {
 
-    private int radius=50;
+    private int radius=30;
     private String _name = "State";
     public String get_name(){return _name;}
 
@@ -25,7 +26,8 @@ public class StateElement extends AbstractGElement {
 
     public void setValues(String name,int r,int xC,int yC){
         _name = name;
-        radius = r;
+        //radius = r;
+
         xCenterPos = xC;
         yCenterPos = yC;
     }
@@ -60,17 +62,17 @@ public class StateElement extends AbstractGElement {
             UpdateImg();
         }
 
-        _gp.getGraphics().drawImage(img,xCenterPos-radius,yCenterPos-radius,radius*2+100,radius*2,null);
+        _gp.getGraphics().drawImage(img,xCenterPos-radius,yCenterPos-radius,radius*2+200,radius*2,null);
     }
 
     private void UpdateImg(){
-        img = new BufferedImage(radius*2+100,radius*2,BufferedImage.TYPE_INT_ARGB);
+        img = new BufferedImage(radius*2+200,radius*2,BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg = img.createGraphics();
 
         gg.setColor(Color.BLACK);
         gg.fillOval(0,0,radius*2,radius*2);
         gg.setColor(Color.WHITE);
-        gg.fillOval(5,5,radius*2-10,radius*2-10);
+        gg.fillOval(3,3,radius*2-6,radius*2-6);
 
         String tmpName = _name;
 
@@ -82,20 +84,20 @@ public class StateElement extends AbstractGElement {
         gg.setColor(Color.BLACK);
         Font font1 = new Font("Arial", Font.PLAIN, 15);
         gg.setFont(font1);
-        gg.drawString(tmpName,radius/5, radius);
+        gg.drawString(tmpName,radius*2,radius);
     }
 
     public StateElement(JPanel gp, boolean read){
 
         super(gp);
 
-        img = new BufferedImage(radius*2+100,radius*2,BufferedImage.TYPE_INT_ARGB);
+        img = new BufferedImage(radius*2+200,radius*2,BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg = img.createGraphics();
 
         gg.setColor(Color.BLACK);
         gg.fillOval(0,0,radius*2,radius*2);
         gg.setColor(Color.WHITE);
-        gg.fillOval(5,5,radius*2-10,radius*2-10);
+        gg.fillOval(3,3,radius*2-6,radius*2-6);
 
         if (!read){
             String newName = JOptionPane.showInputDialog("Укажите имя для нового состояния.");
@@ -107,7 +109,7 @@ public class StateElement extends AbstractGElement {
         gg.setColor(Color.BLACK);
         Font font1 = new Font("Arial", Font.PLAIN, 15);
         gg.setFont(font1);
-        gg.drawString(_name,radius/5, radius);
+        gg.drawString(_name,radius*2, radius);
 
         _lastInfo = new StateElementInfo();
     }

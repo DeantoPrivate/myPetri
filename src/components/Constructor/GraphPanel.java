@@ -314,12 +314,13 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         }
     }
 
-    private void repaintAllElements(){
+    public void repaintAllElements(){
 
-        panel.getGraphics().drawImage(b2,0,0,800,800,null);
+    panel.getGraphics().drawImage(b2, 0, 0, 800, 800, null);
 
-           for (int i=0;i<_gElements.size();i++)
-               _gElements.get(i).Drow();
+    for (int i = 0; i < _gElements.size(); i++)
+        _gElements.get(i).Drow();
+
     }
 
 

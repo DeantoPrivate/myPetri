@@ -30,12 +30,12 @@ public class TransactionElement extends AbstractGElement {
         gg.setColor(Color.BLACK);
         gg.fillRect(0,0,width,heigth);
         gg.setColor(Color.WHITE);
-        gg.fillRect(4,4,width-4*2,heigth-4*2);
+        gg.fillRect(2,2,width-4*2,heigth-4*2);
 
         gg.setColor(Color.BLACK);
-        Font font1 = new Font("Arial", Font.PLAIN, 20);
+        Font font1 = new Font("Arial", Font.PLAIN, 15);
         gg.setFont(font1);
-        gg.drawString(_name, 20, heigth);
+        gg.drawString(_name, 10, heigth-10);
     }
 
     public TransactionElement(JPanel gp,boolean read) {
@@ -58,7 +58,7 @@ public class TransactionElement extends AbstractGElement {
         gg.setColor(Color.BLACK);
         gg.fillRect(0,0,width,heigth);
         gg.setColor(Color.WHITE);
-        gg.fillRect(4,4,width-4*2,heigth-4*2);
+        gg.fillRect(2,2,width-2*2,heigth-2*2);
 
         if (!read){
             String newName = JOptionPane.showInputDialog("Укажите имя для нового перехода.");
@@ -68,9 +68,9 @@ public class TransactionElement extends AbstractGElement {
         }
 
         gg.setColor(Color.BLACK);
-        Font font1 = new Font("Arial", Font.PLAIN, 20);
+        Font font1 = new Font("Arial", Font.PLAIN, 15);
         gg.setFont(font1);
-        gg.drawString(_name, 20, heigth);
+        gg.drawString(_name, 10, heigth-10);
 
         _info = new TransactionElementInfo();
 
@@ -117,7 +117,7 @@ public class TransactionElement extends AbstractGElement {
         y2=yCenterPos+heigth/2;
     }
 
-    private int heigth = 70,width = 10;
+    private int heigth = 50,width = 5;
     public int getHeigth(){return heigth;}
     public int getWidth(){return width;}
     private int x1,y1,x2,y2;
@@ -125,8 +125,8 @@ public class TransactionElement extends AbstractGElement {
     public void setValues(String name,int h,int w,int xC, int yC){
         _name = name;
 
-        heigth = h;
-        width = w;
+       // heigth = h;
+       // width = w;
         xCenterPos = xC;
         yCenterPos = yC;
 

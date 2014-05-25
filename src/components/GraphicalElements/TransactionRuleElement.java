@@ -79,11 +79,25 @@ public class TransactionRuleElement extends AbstractGElement {
         UpdateCoords();
 
         Graphics2D g = (Graphics2D)_gp.getGraphics();
-        g.setColor(Color.LIGHT_GRAY);
+        g.setColor(Color.BLUE);
         g.setStroke(new BasicStroke(2));
         g.drawLine(s1x, s1y, s2x, s2y);
 
-        g.fillOval(pcenterx-radius,pcentery-radius,radius*2,radius*2);
+        double beta = Math.atan2(s1y-s2y,s2x-s1x);
+        double alfa = Math.PI/18;
+        double r = 15;
+
+        int xx = (int)(s2x - r*Math.cos(beta + alfa));
+        int yy = (int)(s2y + r*Math.sin(beta + alfa));
+
+        g.drawLine(s2x, s2y, xx, yy);
+
+        xx = (int)(s2x - r*Math.cos(beta - alfa));
+        yy = (int)(s2y + r*Math.sin(beta - alfa));
+
+        g.drawLine(s2x, s2y, xx, yy);
+
+        //g.fillOval(pcenterx-radius,pcentery-radius,radius*2,radius*2);
 
     }
 }
