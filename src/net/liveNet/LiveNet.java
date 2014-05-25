@@ -69,7 +69,7 @@ public class LiveNet {
             ControlPanel.setAlwaysOnTop(true);
             ControlPanel.setTitle("Управления сетью.");
             ControlPanel.setLayout(null);
-            ControlPanel.setBounds(600,400,225,300);
+            ControlPanel.setBounds(900,0,225,300);
 
             statusText = new JTextArea();
             statusText.setBounds(10,5,190,20);

@@ -34,7 +34,7 @@ public class StatusPanel extends JPanel {
             }
         });
 
-        openTokenManager.setBounds(0,0,480,30);
+        openTokenManager.setBounds(0,0,290,30);
         add(openTokenManager);
 
         openNetControlPanel = new JButton("Open Net Control Pane");
@@ -44,11 +44,11 @@ public class StatusPanel extends JPanel {
                 LiveNet.GetInstance().ActivatePanel();
             }
         });
-        openNetControlPanel.setBounds(0,30,480,30);
+        openNetControlPanel.setBounds(0,30,290,30);
         add(openNetControlPanel);
 
         saveNet = new JButton("Save Net");
-        saveNet.setBounds(0,60,240,30);
+        saveNet.setBounds(0,60,145,30);
         saveNet.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,7 +58,7 @@ public class StatusPanel extends JPanel {
         add(saveNet);
 
         readNet = new JButton("Read Net");
-        readNet.setBounds(240,60,240,30);
+        readNet.setBounds(145,60,145,30);
         readNet.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,7 +69,7 @@ public class StatusPanel extends JPanel {
 
 
         statisticPanel = new JButton("Stat Panel");
-        statisticPanel.setBounds(380,90,100,30);
+        statisticPanel.setBounds(145,90,145,30);
         statisticPanel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,7 +80,7 @@ public class StatusPanel extends JPanel {
 
 
         changesPanel = new JButton("Changes Panel");
-        changesPanel.setBounds(200,90,180,30);
+        changesPanel.setBounds(0,90,145,30);
         changesPanel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -27,26 +27,26 @@ public class GraphicalConstructor extends JDialog implements ActionListener {
         setLayout(null);
 
         graphPanel = new GraphPanel();
-        graphPanel.setBounds(0,0,800,800);
+        graphPanel.setBounds(0,0,600,580);
         graphPanel.Init();
 
             add(graphPanel);
 
             statusPanel = new StatusPanel();
-            statusPanel.setBounds(800,0,480,800);
+            statusPanel.setBounds(600,0,292,800);
             statusPanel.Init();
             add(statusPanel);
 
         stateStatusPanel = new StateStatusPanel();
-        stateStatusPanel.setBounds(800,0,480,800);
+        stateStatusPanel.setBounds(600,0,292,800);
         stateStatusPanel.Init();
         add(stateStatusPanel);
 
         transitionStatusPanel = new TransitionStatusPanel();
         add(transitionStatusPanel);
 
-        setBounds(0, 0, 1286, 828);
-        setResizable(false);
+        setBounds(0, 0, 897, 600);
+        //setResizable(false);
 
         _instance = this;
 

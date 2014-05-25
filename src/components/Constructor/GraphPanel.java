@@ -47,7 +47,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         setBorder(BorderFactory.createLineBorder(Color.RED));
 
         panel = new JPanel();
-        panel.setBounds(10,buttonSize,800-10*2,800-buttonSize*2);
+        panel.setBounds(10,10,600-10*2,560-buttonSize);
         add(panel);
 
         panel.addMouseListener(this);
@@ -65,44 +65,44 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
         viewIncrease = new JButton("+");
             viewIncrease.setBounds(t,0,buttonSize,buttonSize);
-            add(viewIncrease);
+            //add(viewIncrease);
         viewReduce = new JButton("-");
             viewReduce.setBounds(t+buttonSize,0,buttonSize,buttonSize);
-            add(viewReduce);
+            //add(viewReduce);
         viewLeft = new JButton("<");
             viewLeft.setBounds(t+buttonSize*2,0,buttonSize,buttonSize);
-            add(viewLeft);
+            //add(viewLeft);
         viewRight = new JButton(">");
             viewRight.setBounds(t+buttonSize*3,0,buttonSize,buttonSize);
-            add(viewRight);
+            //add(viewRight);
         viewUp = new JButton("^");
             viewUp.setBounds(t+buttonSize*4,0,buttonSize,buttonSize);
-            add(viewUp);
+            //add(viewUp);
         viewDown = new JButton("v");
             viewDown.setBounds(t+buttonSize*5,0,buttonSize,buttonSize);
-            add(viewDown);
+            //add(viewDown);
 
 
-        int b = 800/2 - 3*buttonSize;
+        int b = 600/2 - 2*buttonSize;
 
         newState = new JButton("+O");
-            newState.setBounds(b,800-buttonSize,buttonSize,buttonSize);
+            newState.setBounds(b,580-buttonSize,buttonSize,buttonSize);
             add(newState);
             newState.addActionListener(this);
         newTransaction = new JButton("++");
-            newTransaction.setBounds(b+buttonSize,800-buttonSize,buttonSize,buttonSize);
+            newTransaction.setBounds(b+buttonSize,580-buttonSize,buttonSize,buttonSize);
             add(newTransaction);
             newTransaction.addActionListener(this);
         addArc = new JButton("->");
-            addArc.setBounds(b+buttonSize*2,800-buttonSize,buttonSize,buttonSize);
+            addArc.setBounds(b+buttonSize*2,580-buttonSize,buttonSize,buttonSize);
             add(addArc);
             addArc.addActionListener(this);
         deleteState = new JButton("-O");
-            deleteState.setBounds(b+buttonSize*3,800-buttonSize,buttonSize,buttonSize);
-            add(deleteState);
+            deleteState.setBounds(b+buttonSize*3,580-buttonSize,buttonSize,buttonSize);
+           // add(deleteState);
         deleteTransaction = new JButton("-+");
-            deleteTransaction.setBounds(b+buttonSize*4,800-buttonSize,buttonSize,buttonSize);
-            add(deleteTransaction);
+            deleteTransaction.setBounds(b+buttonSize*4,580-buttonSize,buttonSize,buttonSize);
+            //add(deleteTransaction);
 
 
 
@@ -314,7 +314,7 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
         }
     }
 
-    public void repaintAllElements(){
+    private void repaintAllElements(){
 
     panel.getGraphics().drawImage(b2, 0, 0, 800, 800, null);
 
@@ -323,6 +323,9 @@ public class GraphPanel extends JPanel implements MouseListener,ActionListener,M
 
     }
 
+    public static void Repaint(){
+        _instance.repaintAllElements();
+    }
 
     private int xPosLast,yPosLast;
     @Override

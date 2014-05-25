@@ -6,6 +6,7 @@ import core.OutgoingTransitionRule;
 import core.Transition;
 
 import javax.swing.*;
+import javax.swing.text.DefaultCaret;
 import javax.swing.text.html.ObjectView;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -46,16 +47,20 @@ public class TransitionStatusPanel extends StatusPanel {
 
         for (IncomingTransitionRule itr : _transaction.get_incomingTransitionRules()){
             tmp = new JTextArea(itr.toString());
-            tmp.setBounds(10,100+r,390,20);
-            tmp.setColumns(390);
+            tmp.setBounds(5,100+r,270,20);
+            tmp.setColumns(270);
+            DefaultCaret caret = (DefaultCaret)tmp.getCaret();
+            caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
             _instance.textAreas.add(tmp);
             r+=20;
         }
 
         for (OutgoingTransitionRule itr : _transaction.get_outgoingTransitionRules()){
             tmp = new JTextArea(itr.toString());
-            tmp.setBounds(10,100+r,390,20);
-            tmp.setColumns(390);
+            tmp.setBounds(5,100+r,270,20);
+            tmp.setColumns(270);
+            DefaultCaret caret = (DefaultCaret)tmp.getCaret();
+            caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
             _instance.textAreas.add(tmp);
             r+=20;
         }
@@ -64,12 +69,12 @@ public class TransitionStatusPanel extends StatusPanel {
             _instance.add(_instance.textAreas.get(i));
 
         JTextArea sleep = new JTextArea("задержка = "+_transaction.getSleepSteps());
-        sleep.setBounds(10,100+r,390,20);
+        sleep.setBounds(5,100+r,270,20);
         r+=20;
         _instance.add(sleep);
 
         JButton changeTransactionSleep  = new JButton("sleep change");
-        changeTransactionSleep.setBounds(10, 100 + r, 390, 20);
+        changeTransactionSleep.setBounds(5, 100 + r, 270, 20);
         changeTransactionSleep.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -104,8 +109,8 @@ public class TransitionStatusPanel extends StatusPanel {
 
         super.Init();
 
-        setBounds(800,0,480,800);
-        setBackground(Color.ORANGE);
+        setBounds(600,0,292,800);
+        setBackground(Color.darkGray);
 
         _instance = this;
     }

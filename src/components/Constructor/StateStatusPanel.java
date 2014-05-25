@@ -52,7 +52,7 @@ public class StateStatusPanel extends StatusPanel {
 
         for (int i=0;i<_tokensList.size();i++){
             JButton tmp = _tokensList.get(i);
-            tmp.setBounds(100,230+ii,300,20);
+            tmp.setBounds(10,170+ii,270,20);
             ii+=20;
             _instance.add(_tokensList.get(i));
         }
@@ -66,7 +66,7 @@ public class StateStatusPanel extends StatusPanel {
         setBackground(Color.WHITE);
 
         _textName = new JLabel("Состояние: ");
-        _textName.setBounds(100,200,300,20);
+        _textName.setBounds(10,150,270,20);
 
         add(_textName);
         _instance = this;

@@ -62,7 +62,7 @@ public class StateElement extends AbstractGElement {
             UpdateImg();
         }
 
-        _gp.getGraphics().drawImage(img,xCenterPos-radius,yCenterPos-radius,radius*2+200,radius*2,null);
+       _gp.getGraphics().drawImage(img,xCenterPos-radius,yCenterPos-radius,radius*2+200,radius*2,null);
     }
 
     private void UpdateImg(){

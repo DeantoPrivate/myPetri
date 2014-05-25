@@ -40,8 +40,8 @@ public class changePanel extends JDialog {
         return answer;
     }
 
-    private int sPos = 430;
-    private int tPos = 100;
+    private int sPos = 420;
+    private int tPos = 20;
 
     private ArrayList<changeStat> _statesChanges;
     private ArrayList<changeTransaction> _transitionsChanges;
@@ -51,7 +51,7 @@ public class changePanel extends JDialog {
 
     private void Init(){
         setTitle("Панель изменений сети.");
-        setBounds(10, 10, 1000, 800);
+        setBounds(200, 0, 800, 770);
 
         Panel = new JPanel();
         Panel.setLayout(null);
@@ -66,7 +66,7 @@ public class changePanel extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 changeTransaction cT = new changeTransaction();
-                cT.setBounds(100,tPos,860,100);
+                cT.setBounds(0,tPos,790,100);
                 tPos +=100;
                 cT.setBorder(BorderFactory.createLineBorder(Color.BLUE));
                 Panel.add(cT);
@@ -79,16 +79,17 @@ public class changePanel extends JDialog {
 
 
         JLabel StatesSectionTitle = new JLabel("Состояния:");
-        StatesSectionTitle.setBounds(0,400,100,20);
+        StatesSectionTitle.setBounds(0,sPos,100,20);
         Panel.add(StatesSectionTitle);
 
         JButton AddState = new JButton("+");
-        AddState.setBounds(100,400,50,20);
+        AddState.setBounds(100,sPos,50,20);
+        sPos +=20;
         AddState.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 changeStat cS = new changeStat();
-                cS.setBounds(100,sPos,860,100);
+                cS.setBounds(0,sPos,790,100);
                 sPos += 100;
                 cS.setBorder(BorderFactory.createLineBorder(Color.RED));
                 Panel.add(cS);

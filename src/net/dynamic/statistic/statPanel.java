@@ -69,10 +69,10 @@ public class statPanel extends JDialog implements CountActionListener {
     }
 
     private int tPos = 30;
-    private int sPos = 430;
+    private int sPos = 150;
     private void Init(){
         setTitle("Панель сбора статистики");
-        setBounds(10, 10, 1000, 800);
+        setBounds(0, 400, 600, 300);
 
 
         Panel = new JPanel();
@@ -89,7 +89,7 @@ public class statPanel extends JDialog implements CountActionListener {
                 public void actionPerformed(ActionEvent e) {
                     transactionStat ts = transactionStat.create();
                     if (ts.Consctuct()){
-                        ts.setBounds(0,tPos,1000,20);
+                        ts.setBounds(0,tPos,600,20);
                         tPos+=20;
                         _transactionStats.add(ts);
                         Panel.add(ts);
@@ -100,21 +100,23 @@ public class statPanel extends JDialog implements CountActionListener {
             Panel.add(AddTransaction);
 
             CurrentStepLable = new JLabel("Текущий шаг в сети: "+CurrentStep.toString());
-            CurrentStepLable.setBounds(700,10,300,20);
+            CurrentStepLable.setBounds(400,0,300,20);
             Panel.add(CurrentStepLable);
 
             JLabel StatesSectionTitle = new JLabel("Состояния:");
-            StatesSectionTitle.setBounds(0,400,100,20);
+            StatesSectionTitle.setBounds(0,sPos,100,20);
+
             Panel.add(StatesSectionTitle);
 
             JButton AddState = new JButton("+");
-            AddState.setBounds(100,400,50,20);
+            AddState.setBounds(100,sPos,50,20);
+            sPos+=20;
             AddState.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     stateStat sS = new stateStat();
                     if (sS.Consctuct()){
-                        sS.setBounds(0,sPos,1000,20);
+                        sS.setBounds(0,sPos,600,20);
                         sPos+=20;
                         _stateStats.add(sS);
                         Panel.add(sS);

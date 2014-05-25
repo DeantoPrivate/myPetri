@@ -31,10 +31,12 @@ public class OutgoingTransitionRule implements TransitionRule{
     private String initialName = null;
 
     public String toString() {
-if (initialName != null) return initialName;
+
+    if (initialName != null) return initialName;
         String str = "";
-        str += "в состояние [" + _state.GetName() + "] помещаем " + _tokenCount + " токен(ов) #" + _token.GetName() + "#";
-    initialName = str;
+        str += "В [" + _state.GetName() + "] помещаем " + _tokenCount + " токен(ов) #" + _token.GetName() + "#";
+        if (_tokenCount!=0)
+            initialName = str;
         return str;
     }
 

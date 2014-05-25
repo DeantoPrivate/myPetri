@@ -131,7 +131,7 @@ public class Dialog extends JDialog implements ActionListener, ListSelectionList
 
         updateStatus("initialized");
 
-        setBounds(1000, 300, 605, 645);
+        setBounds(900, 300, 605, 645);
         setResizable(false);
 
     }
