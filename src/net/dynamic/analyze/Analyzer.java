@@ -6,7 +6,7 @@ import core.State;
 import core.Token;
 import core.Transition;
 import core.TransitionRule;
-import javafx.beans.binding.When;
+//import javafx.beans.binding.When;
 import net.dynamic.changes.changePanel;
 import net.dynamic.changes.changeStat;
 import net.dynamic.changes.changeTransaction;
