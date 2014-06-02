@@ -159,7 +159,7 @@ public class Analyzer {
 
         if (nosave) return;
 
-        if (!CheckCritical(statistic)) return;
+      //  if (!CheckCritical(statistic)) return;
 
         try {
 
