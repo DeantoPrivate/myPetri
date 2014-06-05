@@ -26,7 +26,7 @@ public class StatusPanel extends JPanel {
         setBorder(BorderFactory.createLineBorder(Color.ORANGE));
         setLayout(null);
 
-        openTokenManager = new JButton("Open Token Manager");
+        openTokenManager = new JButton("Управление токенами");
         openTokenManager.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,7 +37,7 @@ public class StatusPanel extends JPanel {
         openTokenManager.setBounds(0,0,290,30);
         add(openTokenManager);
 
-        openNetControlPanel = new JButton("Open Net Control Pane");
+        openNetControlPanel = new JButton("Управление выполнением сети");
         openNetControlPanel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,7 +47,7 @@ public class StatusPanel extends JPanel {
         openNetControlPanel.setBounds(0,30,290,30);
         add(openNetControlPanel);
 
-        saveNet = new JButton("Save Net");
+        saveNet = new JButton("Сохранить");
         saveNet.setBounds(0,60,145,30);
         saveNet.addActionListener(new ActionListener() {
             @Override
@@ -57,7 +57,7 @@ public class StatusPanel extends JPanel {
         });
         add(saveNet);
 
-        readNet = new JButton("Read Net");
+        readNet = new JButton("Загрузить");
         readNet.setBounds(145,60,145,30);
         readNet.addActionListener(new ActionListener() {
             @Override
@@ -68,7 +68,7 @@ public class StatusPanel extends JPanel {
         add(readNet);
 
 
-        statisticPanel = new JButton("Stat Panel");
+        statisticPanel = new JButton("Последствия");
         statisticPanel.setBounds(145,90,145,30);
         statisticPanel.addActionListener(new ActionListener() {
             @Override
@@ -79,7 +79,7 @@ public class StatusPanel extends JPanel {
         add(statisticPanel);
 
 
-        changesPanel = new JButton("Changes Panel");
+        changesPanel = new JButton("Изменения");
         changesPanel.setBounds(0,90,145,30);
         changesPanel.addActionListener(new ActionListener() {
             @Override
